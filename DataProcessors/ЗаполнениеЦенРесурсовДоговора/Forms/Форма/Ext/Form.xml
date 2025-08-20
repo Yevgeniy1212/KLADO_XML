@@ -1,0 +1,1245 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаСохранить" id="47">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Сохранить</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьРасширеннаяПодсказка" id="48"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Договор" id="1">
+			<DataPath>Договор</DataPath>
+			<ContextMenu name="ДоговорКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ДоговорРасширеннаяПодсказка" id="3"/>
+			<Events>
+				<Event name="OnChange">ДоговорПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="Страницы" id="118">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="119"/>
+			<ChildItems>
+				<Page name="Персонал" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персонал</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персонал</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПерсоналРасширеннаяПодсказка" id="121"/>
+					<ChildItems>
+						<Table name="ПерсоналДинамическая" id="49">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ПерсоналДинамическая</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПерсоналДинамическаяКонтекстноеМеню" id="50"/>
+							<AutoCommandBar name="ПерсоналДинамическаяКоманднаяПанель" id="51">
+								<ChildItems>
+									<Popup name="ТаблицаВремяНаФормеГруппаЗаполнить" id="110">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить часы</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ТаблицаВремяНаФормеГруппаЗаполнитьРасширеннаяПодсказка" id="111"/>
+										<ChildItems>
+											<Button name="ТаблицаВремяНаФормеЗаполнитьВсе" id="112">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьВсеПерсонал</CommandName>
+												<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВсеРасширеннаяПодсказка" id="113"/>
+											</Button>
+											<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтроки" id="114">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьВыделенныеСтрокиПерсонал</CommandName>
+												<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтрокиРасширеннаяПодсказка" id="115"/>
+											</Button>
+											<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейки" id="116">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьВыделенныеЯчейкиПерсонал</CommandName>
+												<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейкиРасширеннаяПодсказка" id="117"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ПерсоналДинамическаяПересчитатьЦеныПерсонал" id="108">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьЦеныПерсонал</CommandName>
+										<ExtendedTooltip name="ПерсоналДинамическаяПересчитатьЦеныПерсоналРасширеннаяПодсказка" id="109"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПерсоналДинамическаяРасширеннаяПодсказка" id="52"/>
+							<SearchStringAddition name="ПерсоналДинамическаяСтрокаПоиска" id="53">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяСтрокаПоискаКонтекстноеМеню" id="54"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяСтрокаПоискаРасширеннаяПодсказка" id="55"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПерсоналДинамическаяСостояниеПросмотра" id="56">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяСостояниеПросмотраКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяСостояниеПросмотраРасширеннаяПодсказка" id="58"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПерсоналДинамическаяУправлениеПоиском" id="59">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяУправлениеПоискомКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяУправлениеПоискомРасширеннаяПодсказка" id="61"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ПерсоналДинамическаяПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<ColumnGroup name="ПерсоналДинамическаяГруппаДолжность" id="106">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Персонал динамическая группа должность</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Персонал динамическая группа должность</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ПерсоналДинамическаяГруппаДолжностьРасширеннаяПодсказка" id="107"/>
+									<ChildItems>
+										<InputField name="ПерсоналДинамическаяДолжность" id="62">
+											<DataPath>ПерсоналДинамическая.Должность</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяДолжностьКонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяДолжностьРасширеннаяПодсказка" id="64"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяДолжностьГрафикРаботы" id="100">
+											<DataPath>ПерсоналДинамическая.Должность.ГрафикРаботы</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяДолжностьГрафикРаботыКонтекстноеМеню" id="101"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяДолжностьГрафикРаботыРасширеннаяПодсказка" id="102"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяДолжностьМестоОказанияУслуг" id="103">
+											<DataPath>ПерсоналДинамическая.Должность.МестоОказанияУслуг</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяДолжностьМестоОказанияУслугКонтекстноеМеню" id="104"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяДолжностьМестоОказанияУслугРасширеннаяПодсказка" id="105"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<InputField name="ПерсоналДинамическаяСтатьяЗатрат" id="65">
+									<DataPath>ПерсоналДинамическая.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПерсоналДинамическаяСтатьяЗатратКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ПерсоналДинамическаяСтатьяЗатратРасширеннаяПодсказка" id="67"/>
+								</InputField>
+								<ColumnGroup name="ПерсоналДинамическаяГруппаТекущийПериод" id="92">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текущий период</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текущий период</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ПерсоналДинамическаяГруппаТекущийПериодРасширеннаяПодсказка" id="93"/>
+									<ChildItems>
+										<InputField name="ПерсоналДинамическаяЦена" id="68">
+											<DataPath>ПерсоналДинамическая.Цена</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяЦенаКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяЦенаРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяСумма" id="71">
+											<DataPath>ПерсоналДинамическая.Сумма</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+											<ContextMenu name="ПерсоналДинамическаяСуммаКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяСуммаРасширеннаяПодсказка" id="73"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПерсоналДинамическаяГруппаПрошлыйПериод" id="94">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прошлый период</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прошлый период</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ПерсоналДинамическаяГруппаПрошлыйПериодРасширеннаяПодсказка" id="95"/>
+									<ChildItems>
+										<InputField name="ПерсоналДинамическаяЦенаПрошлогоПериода" id="74">
+											<DataPath>ПерсоналДинамическая.ЦенаПрошлогоПериода</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цена</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяЦенаПрошлогоПериодаКонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяЦенаПрошлогоПериодаРасширеннаяПодсказка" id="76"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяСуммаПрошлогоПериода" id="77">
+											<DataPath>ПерсоналДинамическая.СуммаПрошлогоПериода</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+											<ContextMenu name="ПерсоналДинамическаяСуммаПрошлогоПериодаКонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяСуммаПрошлогоПериодаРасширеннаяПодсказка" id="79"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПерсоналДинамическаяГруппаПрошлыйПериод103" id="96">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прош. период + ст. 103</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прош. период со ст. 103</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ПерсоналДинамическаяГруппаПрошлыйПериод103РасширеннаяПодсказка" id="97"/>
+									<ChildItems>
+										<InputField name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоСтатьей103" id="80">
+											<DataPath>ПерсоналДинамическая.ЦенаПрошлогоПериодаСоСтатьей103</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цена</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоСтатьей103КонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоСтатьей103РасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоСтатьей103" id="83">
+											<DataPath>ПерсоналДинамическая.СуммаПрошлогоПериодаСоСтатьей103</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+											<ContextMenu name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоСтатьей103КонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоСтатьей103РасширеннаяПодсказка" id="85"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ПерсоналДинамическаяГруппаПрошлыйПериодСоцПакет" id="98">
+									<Visible>false</Visible>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прош. период + соц. пакет</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Прош. период + соц. пакет</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ShowInHeader>true</ShowInHeader>
+									<ExtendedTooltip name="ПерсоналДинамическаяГруппаПрошлыйПериодСоцПакетРасширеннаяПодсказка" id="99"/>
+									<ChildItems>
+										<InputField name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоцПакет" id="86">
+											<DataPath>ПерсоналДинамическая.ЦенаПрошлогоПериодаСоцПакет</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Цена</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоцПакетКонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяЦенаПрошлогоПериодаСоцПакетРасширеннаяПодсказка" id="88"/>
+										</InputField>
+										<InputField name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоцПакет" id="89">
+											<DataPath>ПерсоналДинамическая.СуммаПрошлогоПериодаСоцПакет</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Сумма</v8:content>
+												</v8:item>
+											</Title>
+											<EditMode>EnterOnInput</EditMode>
+											<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+											<ContextMenu name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоцПакетКонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ПерсоналДинамическаяСуммаПрошлогоПериодаСоцПакетРасширеннаяПодсказка" id="91"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Инструменты" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструменты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструменты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ИнструментыРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<Table name="ИнструментыДинамическая" id="126">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ИнструментыДинамическая</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИнструментыДинамическаяКонтекстноеМеню" id="127"/>
+							<AutoCommandBar name="ИнструментыДинамическаяКоманднаяПанель" id="128">
+								<ChildItems>
+									<Button name="ИнструментыДинамическаяПересчитатьЦены" id="169">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьЦеныИнструменты</CommandName>
+										<ExtendedTooltip name="ИнструментыДинамическаяПересчитатьЦеныРасширеннаяПодсказка" id="170"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИнструментыДинамическаяРасширеннаяПодсказка" id="129"/>
+							<SearchStringAddition name="ИнструментыДинамическаяСтрокаПоиска" id="130">
+								<AdditionSource>
+									<Item>ИнструментыДинамическая</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыДинамическаяСтрокаПоискаКонтекстноеМеню" id="131"/>
+								<ExtendedTooltip name="ИнструментыДинамическаяСтрокаПоискаРасширеннаяПодсказка" id="132"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИнструментыДинамическаяСостояниеПросмотра" id="133">
+								<AdditionSource>
+									<Item>ИнструментыДинамическая</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыДинамическаяСостояниеПросмотраКонтекстноеМеню" id="134"/>
+								<ExtendedTooltip name="ИнструментыДинамическаяСостояниеПросмотраРасширеннаяПодсказка" id="135"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИнструментыДинамическаяУправлениеПоиском" id="136">
+								<AdditionSource>
+									<Item>ИнструментыДинамическая</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыДинамическаяУправлениеПоискомКонтекстноеМеню" id="137"/>
+								<ExtendedTooltip name="ИнструментыДинамическаяУправлениеПоискомРасширеннаяПодсказка" id="138"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">ИнструментыДинамическаяПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ИнструментыДинамическаяИнструмент" id="204">
+									<DataPath>ИнструментыДинамическая.Инструмент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяИнструментКонтекстноеМеню" id="205"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяИнструментРасширеннаяПодсказка" id="206"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяСтатьяЗатрат" id="207">
+									<DataPath>ИнструментыДинамическая.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяСтатьяЗатратКонтекстноеМеню" id="208"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяСтатьяЗатратРасширеннаяПодсказка" id="209"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяЦена" id="210">
+									<DataPath>ИнструментыДинамическая.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяЦенаКонтекстноеМеню" id="211"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяЦенаРасширеннаяПодсказка" id="212"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяСумма" id="213">
+									<DataPath>ИнструментыДинамическая.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИнструментыДинамическаяСуммаКонтекстноеМеню" id="214"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяСуммаРасширеннаяПодсказка" id="215"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяЦенаПрошлогоПериода" id="216">
+									<DataPath>ИнструментыДинамическая.ЦенаПрошлогоПериода</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяЦенаПрошлогоПериодаКонтекстноеМеню" id="217"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяЦенаПрошлогоПериодаРасширеннаяПодсказка" id="218"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяСуммаПрошлогоПериода" id="219">
+									<DataPath>ИнструментыДинамическая.СуммаПрошлогоПериода</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИнструментыДинамическаяСуммаПрошлогоПериодаКонтекстноеМеню" id="220"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяСуммаПрошлогоПериодаРасширеннаяПодсказка" id="221"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоСтатьей103" id="222">
+									<DataPath>ИнструментыДинамическая.ЦенаПрошлогоПериодаСоСтатьей103</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоСтатьей103КонтекстноеМеню" id="223"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоСтатьей103РасширеннаяПодсказка" id="224"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоСтатьей103" id="225">
+									<DataPath>ИнструментыДинамическая.СуммаПрошлогоПериодаСоСтатьей103</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоСтатьей103КонтекстноеМеню" id="226"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоСтатьей103РасширеннаяПодсказка" id="227"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоцПакет" id="228">
+									<DataPath>ИнструментыДинамическая.ЦенаПрошлогоПериодаСоцПакет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоцПакетКонтекстноеМеню" id="229"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяЦенаПрошлогоПериодаСоцПакетРасширеннаяПодсказка" id="230"/>
+								</InputField>
+								<InputField name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоцПакет" id="231">
+									<DataPath>ИнструментыДинамическая.СуммаПрошлогоПериодаСоцПакет</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterHorizontalAlign>Right</FooterHorizontalAlign>
+									<ContextMenu name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоцПакетКонтекстноеМеню" id="232"/>
+									<ExtendedTooltip name="ИнструментыДинамическаяСуммаПрошлогоПериодаСоцПакетРасширеннаяПодсказка" id="233"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаМатериалы" id="124">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаМатериалыРасширеннаяПодсказка" id="125"/>
+					<ChildItems>
+						<Table name="Материалы" id="171">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Материалы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МатериалыКонтекстноеМеню" id="172"/>
+							<AutoCommandBar name="МатериалыКоманднаяПанель" id="173">
+								<ChildItems>
+									<Button name="МатериалыПересчитатьЦены" id="202">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПересчитатьЦеныМатериалы</CommandName>
+										<ExtendedTooltip name="МатериалыПересчитатьЦеныРасширеннаяПодсказка" id="203"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МатериалыРасширеннаяПодсказка" id="174"/>
+							<SearchStringAddition name="МатериалыСтрокаПоиска" id="175">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыСтрокаПоискаКонтекстноеМеню" id="176"/>
+								<ExtendedTooltip name="МатериалыСтрокаПоискаРасширеннаяПодсказка" id="177"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МатериалыСостояниеПросмотра" id="178">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыСостояниеПросмотраКонтекстноеМеню" id="179"/>
+								<ExtendedTooltip name="МатериалыСостояниеПросмотраРасширеннаяПодсказка" id="180"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МатериалыУправлениеПоиском" id="181">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыУправлениеПоискомКонтекстноеМеню" id="182"/>
+								<ExtendedTooltip name="МатериалыУправлениеПоискомРасширеннаяПодсказка" id="183"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">МатериалыПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="МатериалыМатериал" id="234">
+									<DataPath>Материалы.Материал</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыМатериалКонтекстноеМеню" id="235"/>
+									<ExtendedTooltip name="МатериалыМатериалРасширеннаяПодсказка" id="236"/>
+								</InputField>
+								<InputField name="МатериалыСтатьяЗатрат" id="237">
+									<DataPath>Материалы.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыСтатьяЗатратКонтекстноеМеню" id="238"/>
+									<ExtendedTooltip name="МатериалыСтатьяЗатратРасширеннаяПодсказка" id="239"/>
+								</InputField>
+								<InputField name="МатериалыКоличество" id="240">
+									<DataPath>Материалы.Количество</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыКоличествоКонтекстноеМеню" id="241"/>
+									<ExtendedTooltip name="МатериалыКоличествоРасширеннаяПодсказка" id="242"/>
+								</InputField>
+								<InputField name="МатериалыЦена" id="243">
+									<DataPath>Материалы.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыЦенаКонтекстноеМеню" id="244"/>
+									<ExtendedTooltip name="МатериалыЦенаРасширеннаяПодсказка" id="245"/>
+								</InputField>
+								<InputField name="МатериалыСумма" id="246">
+									<DataPath>Материалы.Сумма</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыСуммаКонтекстноеМеню" id="247"/>
+									<ExtendedTooltip name="МатериалыСуммаРасширеннаяПодсказка" id="248"/>
+								</InputField>
+								<InputField name="МатериалыДатаПотребности" id="249">
+									<DataPath>Материалы.ДатаПотребности</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыДатаПотребностиКонтекстноеМеню" id="250"/>
+									<ExtendedTooltip name="МатериалыДатаПотребностиРасширеннаяПодсказка" id="251"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ЗаполнениеЦенРесурсовДоговора</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Договор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПерсоналДинамическая" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персонал динамическая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Должность" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Персонал</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатьяЗатрат" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья затрат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиЗатрат</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Цена" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериода" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериода" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериодаСоСтатьей103" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода (со статьей 103)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериодаСоСтатьей103" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода (со статьей 103)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериодаСоцПакет" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода (соц. пакет)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериодаСоцПакет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода (соц. пакет)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СоответствиеПериодовНазванийКолонок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствие периодов названий колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяКолонки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Месяц" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКолонкиИспользовано" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКолонкиСумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКолонкиСуммаПрошлыйПериод" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКолонкиСуммаПрошлыйПериод103" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяКолонкиСуммаПрошлыйПериодСоцПакет" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИнструментыДинамическая" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Инструменты динамическая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Инструмент" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструмент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Инструменты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатьяЗатрат" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья затрат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиЗатрат</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Цена" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериода" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериода" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериодаСоСтатьей103" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода (со статьей 103)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериодаСоСтатьей103" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода (со статьей 103)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦенаПрошлогоПериодаСоцПакет" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена прошлого периода (соц. пакет)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПрошлогоПериодаСоцПакет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма прошлого периода (соц. пакет)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Материалы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Материалы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Материал" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Материалы</v8:Type>
+					</Type>
+				</Column>
+				<Column name="СтатьяЗатрат" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статья затрат</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.СтатьиЗатрат</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Количество" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Количество</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>3</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Цена" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цена</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Сумма" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДатаПотребности" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата потребности</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Сохранить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Сохранить</Action>
+		</Command>
+		<Command name="ПересчитатьЦеныПерсонал" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены персонал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьЦеныПерсонал</Action>
+		</Command>
+		<Command name="ЗаполнитьВсеПерсонал" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всё</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить всё</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВсе</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеСтрокиПерсонал" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные строки персонал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеСтроки</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеЯчейкиПерсонал" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные ячейки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные ячейки персонал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеЯчейки</Action>
+		</Command>
+		<Command name="ПересчитатьЦеныИнструменты" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены инструменты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьЦеныИнструменты</Action>
+		</Command>
+		<Command name="ПересчитатьЦеныМатериалы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пересчитать цены персонал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПересчитатьЦеныМатериалы</Action>
+		</Command>
+	</Commands>
+</Form>

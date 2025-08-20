@@ -1,0 +1,431 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Table name="БТС_МСП" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.БТС_МСП</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="БТС_МСПКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="БТС_МСПКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="БТС_МСПРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="БТС_МСПСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>БТС_МСП</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="БТС_МСПСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="БТС_МСПСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="БТС_МСПСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>БТС_МСП</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="БТС_МСПСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="БТС_МСПСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="БТС_МСПУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>БТС_МСП</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="БТС_МСПУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="БТС_МСПУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="БТС_МСПНомерСтроки" id="23">
+					<DataPath>Объект.БТС_МСП.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="БТС_МСПНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="БТС_МСППодразделение" id="26">
+					<DataPath>Объект.БТС_МСП.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППодразделениеКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="БТС_МСППодразделениеРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="БТС_МСПДолжность" id="29">
+					<DataPath>Объект.БТС_МСП.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПДолжностьКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="БТС_МСПДолжностьРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="БТС_МСППерсонал" id="32">
+					<DataPath>Объект.БТС_МСП.Персонал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППерсоналКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="БТС_МСППерсоналРасширеннаяПодсказка" id="34"/>
+				</InputField>
+				<InputField name="БТС_МСПРазряд" id="35">
+					<DataPath>Объект.БТС_МСП.Разряд</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПРазрядКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="БТС_МСПРазрядРасширеннаяПодсказка" id="37"/>
+				</InputField>
+				<InputField name="БТС_МСПКомпанияПредоставляющаяУслугиПоАутстаффингу" id="38">
+					<DataPath>Объект.БТС_МСП.КомпанияПредоставляющаяУслугиПоАутстаффингу</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПКомпанияПредоставляющаяУслугиПоАутстаффингуКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="БТС_МСПКомпанияПредоставляющаяУслугиПоАутстаффингуРасширеннаяПодсказка" id="40"/>
+				</InputField>
+				<InputField name="БТС_МСПКуратор" id="41">
+					<DataPath>Объект.БТС_МСП.Куратор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПКураторКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="БТС_МСПКураторРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="БТС_МСПФИО" id="44">
+					<DataPath>Объект.БТС_МСП.ФИО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПФИОКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="БТС_МСПФИОРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="БТС_МСПЧисленностьДетейДляРасчетаНа1Сентября" id="47">
+					<DataPath>Объект.БТС_МСП.ЧисленностьДетейДляРасчетаНа1Сентября</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПЧисленностьДетейДляРасчетаНа1СентябряКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="БТС_МСПЧисленностьДетейДляРасчетаНа1СентябряРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="БТС_МСПЧисленность" id="50">
+					<DataPath>Объект.БТС_МСП.Численность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПЧисленностьКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="БТС_МСПЧисленностьРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="БТС_МСПОклад103" id="53">
+					<DataPath>Объект.БТС_МСП.Оклад103</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОклад103КонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="БТС_МСПОклад103РасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="БТС_МСПОклад10Арбитраж" id="56">
+					<DataPath>Объект.БТС_МСП.Оклад10Арбитраж</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОклад10АрбитражКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="БТС_МСПОклад10АрбитражРасширеннаяПодсказка" id="58"/>
+				</InputField>
+				<InputField name="БТС_МСПОкладСледующийПериод" id="59">
+					<DataPath>Объект.БТС_МСП.ОкладСледующийПериод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОкладСледующийПериодКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="БТС_МСПОкладСледующийПериодРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="БТС_МСПКоличествоМесяцев" id="62">
+					<DataPath>Объект.БТС_МСП.КоличествоМесяцев</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПКоличествоМесяцевКонтекстноеМеню" id="63"/>
+					<ExtendedTooltip name="БТС_МСПКоличествоМесяцевРасширеннаяПодсказка" id="64"/>
+				</InputField>
+				<InputField name="БТС_МСПРежимРаботы" id="65">
+					<DataPath>Объект.БТС_МСП.РежимРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПРежимРаботыКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="БТС_МСПРежимРаботыРасширеннаяПодсказка" id="67"/>
+				</InputField>
+				<InputField name="БТС_МСПЧасыРаботыВСутки" id="68">
+					<DataPath>Объект.БТС_МСП.ЧасыРаботыВСутки</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПЧасыРаботыВСуткиКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="БТС_МСПЧасыРаботыВСуткиРасширеннаяПодсказка" id="70"/>
+				</InputField>
+				<InputField name="БТС_МСПУстановленныйСреднемесячныйРежимРабочегоВремени" id="71">
+					<DataPath>Объект.БТС_МСП.УстановленныйСреднемесячныйРежимРабочегоВремени</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПУстановленныйСреднемесячныйРежимРабочегоВремениКонтекстноеМеню" id="72"/>
+					<ExtendedTooltip name="БТС_МСПУстановленныйСреднемесячныйРежимРабочегоВремениРасширеннаяПодсказка" id="73"/>
+				</InputField>
+				<InputField name="БТС_МСПСреднемесячныйБалансРабочегоВремениНаГод" id="74">
+					<DataPath>Объект.БТС_МСП.СреднемесячныйБалансРабочегоВремениНаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПСреднемесячныйБалансРабочегоВремениНаГодКонтекстноеМеню" id="75"/>
+					<ExtendedTooltip name="БТС_МСПСреднемесячныйБалансРабочегоВремениНаГодРасширеннаяПодсказка" id="76"/>
+				</InputField>
+				<InputField name="БТС_МСПМесячнаяТарифнаяСтавка" id="77">
+					<DataPath>Объект.БТС_МСП.МесячнаяТарифнаяСтавка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМесячнаяТарифнаяСтавкаКонтекстноеМеню" id="78"/>
+					<ExtendedTooltip name="БТС_МСПМесячнаяТарифнаяСтавкаРасширеннаяПодсказка" id="79"/>
+				</InputField>
+				<InputField name="БТС_МСПДоплатыИНадбавкиВсего" id="80">
+					<DataPath>Объект.БТС_МСП.ДоплатыИНадбавкиВсего</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПДоплатыИНадбавкиВсегоКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="БТС_МСПДоплатыИНадбавкиВсегоРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="БТС_МСПНочноеВремяЧасыЗаМесяц" id="83">
+					<DataPath>Объект.БТС_МСП.НочноеВремяЧасыЗаМесяц</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНочноеВремяЧасыЗаМесяцКонтекстноеМеню" id="84"/>
+					<ExtendedTooltip name="БТС_МСПНочноеВремяЧасыЗаМесяцРасширеннаяПодсказка" id="85"/>
+				</InputField>
+				<InputField name="БТС_МСПНочноеВремяСуммаЗаГод" id="86">
+					<DataPath>Объект.БТС_МСП.НочноеВремяСуммаЗаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНочноеВремяСуммаЗаГодКонтекстноеМеню" id="87"/>
+					<ExtendedTooltip name="БТС_МСПНочноеВремяСуммаЗаГодРасширеннаяПодсказка" id="88"/>
+				</InputField>
+				<InputField name="БТС_МСПСверхурочныеРаботыСуммаЗаГод" id="89">
+					<DataPath>Объект.БТС_МСП.СверхурочныеРаботыСуммаЗаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПСверхурочныеРаботыСуммаЗаГодКонтекстноеМеню" id="90"/>
+					<ExtendedTooltip name="БТС_МСПСверхурочныеРаботыСуммаЗаГодРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="БТС_МСППраздничныеВыходныеДниЧасыЗаМесяц" id="92">
+					<DataPath>Объект.БТС_МСП.ПраздничныеВыходныеДниЧасыЗаМесяц</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППраздничныеВыходныеДниЧасыЗаМесяцКонтекстноеМеню" id="93"/>
+					<ExtendedTooltip name="БТС_МСППраздничныеВыходныеДниЧасыЗаМесяцРасширеннаяПодсказка" id="94"/>
+				</InputField>
+				<InputField name="БТС_МСППраздничныеВыходныеДниСуммаЗаГод" id="95">
+					<DataPath>Объект.БТС_МСП.ПраздничныеВыходныеДниСуммаЗаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППраздничныеВыходныеДниСуммаЗаГодКонтекстноеМеню" id="96"/>
+					<ExtendedTooltip name="БТС_МСППраздничныеВыходныеДниСуммаЗаГодРасширеннаяПодсказка" id="97"/>
+				</InputField>
+				<InputField name="БТС_МСПЕжемесячнаяПремияЗаГод" id="98">
+					<DataPath>Объект.БТС_МСП.ЕжемесячнаяПремияЗаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПЕжемесячнаяПремияЗаГодКонтекстноеМеню" id="99"/>
+					<ExtendedTooltip name="БТС_МСПЕжемесячнаяПремияЗаГодРасширеннаяПодсказка" id="100"/>
+				</InputField>
+				<InputField name="БТС_МСПОтпускные" id="101">
+					<DataPath>Объект.БТС_МСП.Отпускные</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОтпускныеКонтекстноеМеню" id="102"/>
+					<ExtendedTooltip name="БТС_МСПОтпускныеРасширеннаяПодсказка" id="103"/>
+				</InputField>
+				<InputField name="БТС_МСПВсегоФЗПЗаГод" id="104">
+					<DataPath>Объект.БТС_МСП.ВсегоФЗПЗаГод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПВсегоФЗПЗаГодКонтекстноеМеню" id="105"/>
+					<ExtendedTooltip name="БТС_МСПВсегоФЗПЗаГодРасширеннаяПодсказка" id="106"/>
+				</InputField>
+				<InputField name="БТС_МСПРождениеРебенка" id="107">
+					<DataPath>Объект.БТС_МСП.РождениеРебенка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПРождениеРебенкаКонтекстноеМеню" id="108"/>
+					<ExtendedTooltip name="БТС_МСПРождениеРебенкаРасширеннаяПодсказка" id="109"/>
+				</InputField>
+				<InputField name="БТС_МСПДетямИнвалидамВыплатаНа1Июня" id="110">
+					<DataPath>Объект.БТС_МСП.ДетямИнвалидамВыплатаНа1Июня</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПДетямИнвалидамВыплатаНа1ИюняКонтекстноеМеню" id="111"/>
+					<ExtendedTooltip name="БТС_МСПДетямИнвалидамВыплатаНа1ИюняРасширеннаяПодсказка" id="112"/>
+				</InputField>
+				<InputField name="БТС_МСПЛагерь" id="113">
+					<DataPath>Объект.БТС_МСП.Лагерь</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПЛагерьКонтекстноеМеню" id="114"/>
+					<ExtendedTooltip name="БТС_МСПЛагерьРасширеннаяПодсказка" id="115"/>
+				</InputField>
+				<InputField name="БТС_МСПНа1сентябряДетямРаботников" id="116">
+					<DataPath>Объект.БТС_МСП.На1сентябряДетямРаботников</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНа1сентябряДетямРаботниковКонтекстноеМеню" id="117"/>
+					<ExtendedTooltip name="БТС_МСПНа1сентябряДетямРаботниковРасширеннаяПодсказка" id="118"/>
+				</InputField>
+				<InputField name="БТС_МСППодаркиНаНовыйГодДетямРаботников" id="119">
+					<DataPath>Объект.БТС_МСП.ПодаркиНаНовыйГодДетямРаботников</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППодаркиНаНовыйГодДетямРаботниковКонтекстноеМеню" id="120"/>
+					<ExtendedTooltip name="БТС_МСППодаркиНаНовыйГодДетямРаботниковРасширеннаяПодсказка" id="121"/>
+				</InputField>
+				<InputField name="БТС_МСПВосьмоеМарта" id="122">
+					<DataPath>Объект.БТС_МСП.ВосьмоеМарта</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПВосьмоеМартаКонтекстноеМеню" id="123"/>
+					<ExtendedTooltip name="БТС_МСПВосьмоеМартаРасширеннаяПодсказка" id="124"/>
+				</InputField>
+				<InputField name="БТС_МСПНаурыз" id="125">
+					<DataPath>Объект.БТС_МСП.Наурыз</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНаурызКонтекстноеМеню" id="126"/>
+					<ExtendedTooltip name="БТС_МСПНаурызРасширеннаяПодсказка" id="127"/>
+				</InputField>
+				<InputField name="БТС_МСПДеньНефтянников" id="128">
+					<DataPath>Объект.БТС_МСП.ДеньНефтянников</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПДеньНефтянниковКонтекстноеМеню" id="129"/>
+					<ExtendedTooltip name="БТС_МСПДеньНефтянниковРасширеннаяПодсказка" id="130"/>
+				</InputField>
+				<InputField name="БТС_МСПДеньНезависимости" id="131">
+					<DataPath>Объект.БТС_МСП.ДеньНезависимости</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПДеньНезависимостиКонтекстноеМеню" id="132"/>
+					<ExtendedTooltip name="БТС_МСПДеньНезависимостиРасширеннаяПодсказка" id="133"/>
+				</InputField>
+				<InputField name="БТС_МСПМатериальнаяПомощьКОтпуску" id="134">
+					<DataPath>Объект.БТС_МСП.МатериальнаяПомощьКОтпуску</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМатериальнаяПомощьКОтпускуКонтекстноеМеню" id="135"/>
+					<ExtendedTooltip name="БТС_МСПМатериальнаяПомощьКОтпускуРасширеннаяПодсказка" id="136"/>
+				</InputField>
+				<InputField name="БТС_МСПМСП" id="137">
+					<DataPath>Объект.БТС_МСП.МСП</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМСПКонтекстноеМеню" id="138"/>
+					<ExtendedTooltip name="БТС_МСПМСПРасширеннаяПодсказка" id="139"/>
+				</InputField>
+				<InputField name="БТС_МСПМедстрахование" id="140">
+					<DataPath>Объект.БТС_МСП.Медстрахование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМедстрахованиеКонтекстноеМеню" id="141"/>
+					<ExtendedTooltip name="БТС_МСПМедстрахованиеРасширеннаяПодсказка" id="142"/>
+				</InputField>
+				<InputField name="БТС_МСПОбязательныйПрофосмотр" id="143">
+					<DataPath>Объект.БТС_МСП.ОбязательныйПрофосмотр</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОбязательныйПрофосмотрКонтекстноеМеню" id="144"/>
+					<ExtendedTooltip name="БТС_МСПОбязательныйПрофосмотрРасширеннаяПодсказка" id="145"/>
+				</InputField>
+				<InputField name="БТС_МСПУслугиПитания" id="146">
+					<DataPath>Объект.БТС_МСП.УслугиПитания</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПУслугиПитанияКонтекстноеМеню" id="147"/>
+					<ExtendedTooltip name="БТС_МСПУслугиПитанияРасширеннаяПодсказка" id="148"/>
+				</InputField>
+				<InputField name="БТС_МСПКомандировочныеРасходы" id="149">
+					<DataPath>Объект.БТС_МСП.КомандировочныеРасходы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПКомандировочныеРасходыКонтекстноеМеню" id="150"/>
+					<ExtendedTooltip name="БТС_МСПКомандировочныеРасходыРасширеннаяПодсказка" id="151"/>
+				</InputField>
+				<InputField name="БТС_МСППроживание" id="152">
+					<DataPath>Объект.БТС_МСП.Проживание</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППроживаниеКонтекстноеМеню" id="153"/>
+					<ExtendedTooltip name="БТС_МСППроживаниеРасширеннаяПодсказка" id="154"/>
+				</InputField>
+				<InputField name="БТС_МСПТранспорт" id="155">
+					<DataPath>Объект.БТС_МСП.Транспорт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПТранспортКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="БТС_МСПТранспортРасширеннаяПодсказка" id="157"/>
+				</InputField>
+				<InputField name="БТС_МСПМолокоЗаУсловияТруда" id="158">
+					<DataPath>Объект.БТС_МСП.МолокоЗаУсловияТруда</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМолокоЗаУсловияТрудаКонтекстноеМеню" id="159"/>
+					<ExtendedTooltip name="БТС_МСПМолокоЗаУсловияТрудаРасширеннаяПодсказка" id="160"/>
+				</InputField>
+				<InputField name="БТС_МСПМоющиеСредства" id="161">
+					<DataPath>Объект.БТС_МСП.МоющиеСредства</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМоющиеСредстваКонтекстноеМеню" id="162"/>
+					<ExtendedTooltip name="БТС_МСПМоющиеСредстваРасширеннаяПодсказка" id="163"/>
+				</InputField>
+				<InputField name="БТС_МСПСИЗ" id="164">
+					<DataPath>Объект.БТС_МСП.СИЗ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПСИЗКонтекстноеМеню" id="165"/>
+					<ExtendedTooltip name="БТС_МСПСИЗРасширеннаяПодсказка" id="166"/>
+				</InputField>
+				<InputField name="БТС_МСПОбучение" id="167">
+					<DataPath>Объект.БТС_МСП.Обучение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОбучениеКонтекстноеМеню" id="168"/>
+					<ExtendedTooltip name="БТС_МСПОбучениеРасширеннаяПодсказка" id="169"/>
+				</InputField>
+				<InputField name="БТС_МСППредсменноеМедосвидетельствование" id="170">
+					<DataPath>Объект.БТС_МСП.ПредсменноеМедосвидетельствование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСППредсменноеМедосвидетельствованиеКонтекстноеМеню" id="171"/>
+					<ExtendedTooltip name="БТС_МСППредсменноеМедосвидетельствованиеРасширеннаяПодсказка" id="172"/>
+				</InputField>
+				<InputField name="БТС_МСПСоцотчисленияИСоцналог" id="173">
+					<DataPath>Объект.БТС_МСП.СоцотчисленияИСоцналог</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПСоцотчисленияИСоцналогКонтекстноеМеню" id="174"/>
+					<ExtendedTooltip name="БТС_МСПСоцотчисленияИСоцналогРасширеннаяПодсказка" id="175"/>
+				</InputField>
+				<InputField name="БТС_МСПУслугиБанка" id="176">
+					<DataPath>Объект.БТС_МСП.УслугиБанка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПУслугиБанкаКонтекстноеМеню" id="177"/>
+					<ExtendedTooltip name="БТС_МСПУслугиБанкаРасширеннаяПодсказка" id="178"/>
+				</InputField>
+				<InputField name="БТС_МСПНакладныеРасходы" id="179">
+					<DataPath>Объект.БТС_МСП.НакладныеРасходы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПНакладныеРасходыКонтекстноеМеню" id="180"/>
+					<ExtendedTooltip name="БТС_МСПНакладныеРасходыРасширеннаяПодсказка" id="181"/>
+				</InputField>
+				<InputField name="БТС_МСПАдминистративныеРасходы" id="182">
+					<DataPath>Объект.БТС_МСП.АдминистративныеРасходы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПАдминистративныеРасходыКонтекстноеМеню" id="183"/>
+					<ExtendedTooltip name="БТС_МСПАдминистративныеРасходыРасширеннаяПодсказка" id="184"/>
+				</InputField>
+				<InputField name="БТС_МСПОСМС" id="185">
+					<DataPath>Объект.БТС_МСП.ОСМС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОСМСКонтекстноеМеню" id="186"/>
+					<ExtendedTooltip name="БТС_МСПОСМСРасширеннаяПодсказка" id="187"/>
+				</InputField>
+				<InputField name="БТС_МСПОППВ" id="188">
+					<DataPath>Объект.БТС_МСП.ОППВ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОППВКонтекстноеМеню" id="189"/>
+					<ExtendedTooltip name="БТС_МСПОППВРасширеннаяПодсказка" id="190"/>
+				</InputField>
+				<InputField name="БТС_МСПОбязательноеСтрахованиеРаботниковОтНесчастныхСлучаев" id="191">
+					<DataPath>Объект.БТС_МСП.ОбязательноеСтрахованиеРаботниковОтНесчастныхСлучаев</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПОбязательноеСтрахованиеРаботниковОтНесчастныхСлучаевКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="БТС_МСПОбязательноеСтрахованиеРаботниковОтНесчастныхСлучаевРасширеннаяПодсказка" id="193"/>
+				</InputField>
+				<InputField name="БТС_МСПМаржа" id="194">
+					<DataPath>Объект.БТС_МСП.Маржа</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПМаржаКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="БТС_МСПМаржаРасширеннаяПодсказка" id="196"/>
+				</InputField>
+				<InputField name="БТС_МСПСтоимостьБезНДС" id="197">
+					<DataPath>Объект.БТС_МСП.СтоимостьБезНДС</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="БТС_МСПСтоимостьБезНДСКонтекстноеМеню" id="198"/>
+					<ExtendedTooltip name="БТС_МСПСтоимостьБезНДСРасширеннаяПодсказка" id="199"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.БТС_МСП</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

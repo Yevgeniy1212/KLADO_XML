@@ -1,0 +1,1207 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Предприятие" id="7">
+			<DataPath>Объект.Предприятие</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПредприятиеКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПредприятиеРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<UsualGroup name="ГруппаПодразделение" id="223">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа подразделение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПодразделениеРасширеннаяПодсказка" id="224"/>
+			<ChildItems>
+				<InputField name="Подразделение" id="10">
+					<DataPath>Объект.Подразделение</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
+				</InputField>
+				<Button name="ЗаполнитьПоПодразделению" id="225">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ЗаполнитьПоПодразделению</CommandName>
+					<ExtendedTooltip name="ЗаполнитьПоПодразделениюРасширеннаяПодсказка" id="226"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Месяц" id="13">
+			<DataPath>Объект.Месяц</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<SpinButton>true</SpinButton>
+			<EditFormat>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДФ=MM.yyyy</v8:content>
+				</v8:item>
+			</EditFormat>
+			<ContextMenu name="МесяцКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="МесяцРасширеннаяПодсказка" id="15"/>
+			<Events>
+				<Event name="OnChange">МесяцПриИзменении</Event>
+				<Event name="Tuning">МесяцРегулирование</Event>
+			</Events>
+		</InputField>
+		<Table name="Табель" id="16">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Табель</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТабельКонтекстноеМеню" id="17"/>
+			<AutoCommandBar name="ТабельКоманднаяПанель" id="18">
+				<ChildItems>
+					<Button name="ТабельОбновитьТаблицу" id="189">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОбновитьТаблицу</CommandName>
+						<ExtendedTooltip name="ТабельОбновитьТаблицуРасширеннаяПодсказка" id="190"/>
+					</Button>
+					<Popup name="ГруппаКнопокЗаполнить" id="389">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа кнопок заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаКнопокЗаполнитьРасширеннаяПодсказка" id="390"/>
+						<ChildItems>
+							<Button name="ТабельЗаполнитьВыходные" id="221">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВыходные</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выходные</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТабельЗаполнитьВыходныеРасширеннаяПодсказка" id="222"/>
+							</Button>
+							<Button name="ТабельЗаполнитьПоИспользованиямРесурсов" id="227">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьПоИспользованиямРесурсов</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По использованиям ресурсов</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТабельЗаполнитьПоИспользованиямРесурсовРасширеннаяПодсказка" id="228"/>
+							</Button>
+							<Button name="ТабельЗаполнитьПоИспользованиямРесурсовПерсонал" id="391">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьПоИспользованиямРесурсовПерсонал</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>По использованиям ресурсов (персонал)</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ТабельЗаполнитьПоИспользованиямРесурсовПерсоналРасширеннаяПодсказка" id="392"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Button name="ТабельОтсортироватьПоПредприятию" id="229">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтсортироватьПоПредприятию</CommandName>
+						<ExtendedTooltip name="ТабельОтсортироватьПоПредприятиюРасширеннаяПодсказка" id="230"/>
+					</Button>
+					<Button name="ТабельРедактироватьСтрокуТабеля" id="393">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РедактироватьСтрокуТабеля</CommandName>
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Редактировать</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ТабельРедактироватьСтрокуТабеляРасширеннаяПодсказка" id="394"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТабельРасширеннаяПодсказка" id="19"/>
+			<SearchStringAddition name="ТабельСтрокаПоиска" id="20">
+				<AdditionSource>
+					<Item>Табель</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабельСтрокаПоискаКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТабельСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТабельСостояниеПросмотра" id="23">
+				<AdditionSource>
+					<Item>Табель</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабельСостояниеПросмотраКонтекстноеМеню" id="24"/>
+				<ExtendedTooltip name="ТабельСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТабельУправлениеПоиском" id="26">
+				<AdditionSource>
+					<Item>Табель</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТабельУправлениеПоискомКонтекстноеМеню" id="27"/>
+				<ExtendedTooltip name="ТабельУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+			</SearchControlAddition>
+			<Events>
+				<Event name="OnChange">ТабельПриИзменении</Event>
+			</Events>
+			<ChildItems>
+				<InputField name="ТабельПерсонал" id="32">
+					<DataPath>Объект.Табель.Персонал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПерсоналКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТабельПерсоналРасширеннаяПодсказка" id="34"/>
+					<Events>
+						<Event name="OnChange">ТабельПерсоналПриИзменении</Event>
+					</Events>
+				</InputField>
+				<LabelField name="ТабельПерсоналФИО" id="179">
+					<DataPath>Объект.Табель.Персонал.ФИО</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПерсоналФИОКонтекстноеМеню" id="180"/>
+					<ExtendedTooltip name="ТабельПерсоналФИОРасширеннаяПодсказка" id="181"/>
+				</LabelField>
+				<LabelField name="ТабельПерсоналДолжность" id="176">
+					<DataPath>Объект.Табель.Персонал.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПерсоналДолжностьКонтекстноеМеню" id="177"/>
+					<ExtendedTooltip name="ТабельПерсоналДолжностьРасширеннаяПодсказка" id="178"/>
+				</LabelField>
+				<InputField name="ТабельПредприятие" id="231">
+					<DataPath>Объект.Табель.Предприятие</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПредприятиеКонтекстноеМеню" id="232"/>
+					<ExtendedTooltip name="ТабельПредприятиеРасширеннаяПодсказка" id="233"/>
+				</InputField>
+				<LabelField name="ТабельПерсоналДолжностьРазряд" id="182">
+					<DataPath>Объект.Табель.Персонал.Должность.Разряд</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПерсоналДолжностьРазрядКонтекстноеМеню" id="183"/>
+					<ExtendedTooltip name="ТабельПерсоналДолжностьРазрядРасширеннаяПодсказка" id="184"/>
+				</LabelField>
+				<ColumnGroup name="ГруппаОтработаноЧасовПоЧислам" id="170">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отработано часов по числам</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа отработано часов по числам</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ГруппаОтработаноЧасовПоЧисламРасширеннаяПодсказка" id="171"/>
+					<ChildItems>
+						<ColumnGroup name="ГруппаОтработаноЧасовПоЧисламВерх" id="172">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отработано часов по числам верх</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отработано часов по числам верх</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаОтработаноЧасовПоЧисламВерхРасширеннаяПодсказка" id="173"/>
+							<ChildItems>
+								<ColumnGroup name="ТабельГруппа1" id="234">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа1РасширеннаяПодсказка" id="235"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло1" id="35">
+											<DataPath>Объект.Табель.Число1</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло1КонтекстноеМеню" id="36"/>
+											<ExtendedTooltip name="ТабельЧисло1РасширеннаяПодсказка" id="37"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия1" id="264">
+											<DataPath>Объект.Табель.ПричинаОтсутствия1</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия1КонтекстноеМеню" id="265"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия1РасширеннаяПодсказка" id="266"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа2" id="236">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа2РасширеннаяПодсказка" id="237"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло2" id="38">
+											<DataPath>Объект.Табель.Число2</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло2КонтекстноеМеню" id="39"/>
+											<ExtendedTooltip name="ТабельЧисло2РасширеннаяПодсказка" id="40"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия2" id="267">
+											<DataPath>Объект.Табель.ПричинаОтсутствия2</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия2КонтекстноеМеню" id="268"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия2РасширеннаяПодсказка" id="269"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа3" id="238">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа3РасширеннаяПодсказка" id="239"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло3" id="41">
+											<DataPath>Объект.Табель.Число3</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло3КонтекстноеМеню" id="42"/>
+											<ExtendedTooltip name="ТабельЧисло3РасширеннаяПодсказка" id="43"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия3" id="270">
+											<DataPath>Объект.Табель.ПричинаОтсутствия3</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия3КонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия3РасширеннаяПодсказка" id="272"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа4" id="240">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа4РасширеннаяПодсказка" id="241"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло4" id="44">
+											<DataPath>Объект.Табель.Число4</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло4КонтекстноеМеню" id="45"/>
+											<ExtendedTooltip name="ТабельЧисло4РасширеннаяПодсказка" id="46"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия4" id="273">
+											<DataPath>Объект.Табель.ПричинаОтсутствия4</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия4КонтекстноеМеню" id="274"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия4РасширеннаяПодсказка" id="275"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа5" id="242">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа5РасширеннаяПодсказка" id="243"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло5" id="47">
+											<DataPath>Объект.Табель.Число5</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло5КонтекстноеМеню" id="48"/>
+											<ExtendedTooltip name="ТабельЧисло5РасширеннаяПодсказка" id="49"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия5" id="276">
+											<DataPath>Объект.Табель.ПричинаОтсутствия5</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия5КонтекстноеМеню" id="277"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия5РасширеннаяПодсказка" id="278"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа6" id="244">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа6РасширеннаяПодсказка" id="245"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло6" id="50">
+											<DataPath>Объект.Табель.Число6</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло6КонтекстноеМеню" id="51"/>
+											<ExtendedTooltip name="ТабельЧисло6РасширеннаяПодсказка" id="52"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия6" id="279">
+											<DataPath>Объект.Табель.ПричинаОтсутствия6</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия6КонтекстноеМеню" id="280"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия6РасширеннаяПодсказка" id="281"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа7" id="246">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа7РасширеннаяПодсказка" id="247"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло7" id="53">
+											<DataPath>Объект.Табель.Число7</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло7КонтекстноеМеню" id="54"/>
+											<ExtendedTooltip name="ТабельЧисло7РасширеннаяПодсказка" id="55"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия7" id="282">
+											<DataPath>Объект.Табель.ПричинаОтсутствия7</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия7КонтекстноеМеню" id="283"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия7РасширеннаяПодсказка" id="284"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа8" id="248">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа8РасширеннаяПодсказка" id="249"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло8" id="56">
+											<DataPath>Объект.Табель.Число8</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло8КонтекстноеМеню" id="57"/>
+											<ExtendedTooltip name="ТабельЧисло8РасширеннаяПодсказка" id="58"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия8" id="285">
+											<DataPath>Объект.Табель.ПричинаОтсутствия8</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия8КонтекстноеМеню" id="286"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия8РасширеннаяПодсказка" id="287"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа9" id="250">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа9РасширеннаяПодсказка" id="251"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло9" id="59">
+											<DataPath>Объект.Табель.Число9</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло9КонтекстноеМеню" id="60"/>
+											<ExtendedTooltip name="ТабельЧисло9РасширеннаяПодсказка" id="61"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия9" id="288">
+											<DataPath>Объект.Табель.ПричинаОтсутствия9</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия9КонтекстноеМеню" id="289"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия9РасширеннаяПодсказка" id="290"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа10" id="252">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа10РасширеннаяПодсказка" id="253"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло10" id="62">
+											<DataPath>Объект.Табель.Число10</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло10КонтекстноеМеню" id="63"/>
+											<ExtendedTooltip name="ТабельЧисло10РасширеннаяПодсказка" id="64"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия10" id="291">
+											<DataPath>Объект.Табель.ПричинаОтсутствия10</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия10КонтекстноеМеню" id="292"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия10РасширеннаяПодсказка" id="293"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа11" id="254">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа11РасширеннаяПодсказка" id="255"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло11" id="65">
+											<DataPath>Объект.Табель.Число11</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло11КонтекстноеМеню" id="66"/>
+											<ExtendedTooltip name="ТабельЧисло11РасширеннаяПодсказка" id="67"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия11" id="294">
+											<DataPath>Объект.Табель.ПричинаОтсутствия11</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия11КонтекстноеМеню" id="295"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия11РасширеннаяПодсказка" id="296"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа12" id="256">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа12РасширеннаяПодсказка" id="257"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло12" id="68">
+											<DataPath>Объект.Табель.Число12</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло12КонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ТабельЧисло12РасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия12" id="297">
+											<DataPath>Объект.Табель.ПричинаОтсутствия12</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия12КонтекстноеМеню" id="298"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия12РасширеннаяПодсказка" id="299"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа13" id="258">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа13РасширеннаяПодсказка" id="259"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло13" id="71">
+											<DataPath>Объект.Табель.Число13</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло13КонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ТабельЧисло13РасширеннаяПодсказка" id="73"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия13" id="300">
+											<DataPath>Объект.Табель.ПричинаОтсутствия13</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия13КонтекстноеМеню" id="301"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия13РасширеннаяПодсказка" id="302"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа14" id="260">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа14РасширеннаяПодсказка" id="261"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло14" id="74">
+											<DataPath>Объект.Табель.Число14</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло14КонтекстноеМеню" id="75"/>
+											<ExtendedTooltip name="ТабельЧисло14РасширеннаяПодсказка" id="76"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия14" id="303">
+											<DataPath>Объект.Табель.ПричинаОтсутствия14</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия14КонтекстноеМеню" id="304"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия14РасширеннаяПодсказка" id="305"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа15" id="262">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа15РасширеннаяПодсказка" id="263"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло15" id="77">
+											<DataPath>Объект.Табель.Число15</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло15КонтекстноеМеню" id="78"/>
+											<ExtendedTooltip name="ТабельЧисло15РасширеннаяПодсказка" id="79"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия15" id="306">
+											<DataPath>Объект.Табель.ПричинаОтсутствия15</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия15КонтекстноеМеню" id="307"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия15РасширеннаяПодсказка" id="308"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+						<ColumnGroup name="ГруппаОтработаноЧасовПоЧисламНиз" id="174">
+							<ReadOnly>true</ReadOnly>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отработано часов по числам верх</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа отработано часов по числам верх</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="ГруппаОтработаноЧасовПоЧисламНизРасширеннаяПодсказка" id="175"/>
+							<ChildItems>
+								<ColumnGroup name="ТабельГруппа16" id="309">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа16РасширеннаяПодсказка" id="310"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло16" id="80">
+											<DataPath>Объект.Табель.Число16</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло16КонтекстноеМеню" id="81"/>
+											<ExtendedTooltip name="ТабельЧисло16РасширеннаяПодсказка" id="82"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия16" id="341">
+											<DataPath>Объект.Табель.ПричинаОтсутствия16</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия16КонтекстноеМеню" id="342"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия16РасширеннаяПодсказка" id="343"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа17" id="311">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа17РасширеннаяПодсказка" id="312"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло17" id="83">
+											<DataPath>Объект.Табель.Число17</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло17КонтекстноеМеню" id="84"/>
+											<ExtendedTooltip name="ТабельЧисло17РасширеннаяПодсказка" id="85"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия17" id="344">
+											<DataPath>Объект.Табель.ПричинаОтсутствия17</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия17КонтекстноеМеню" id="345"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия17РасширеннаяПодсказка" id="346"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа18" id="313">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа18РасширеннаяПодсказка" id="314"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло18" id="86">
+											<DataPath>Объект.Табель.Число18</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло18КонтекстноеМеню" id="87"/>
+											<ExtendedTooltip name="ТабельЧисло18РасширеннаяПодсказка" id="88"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия18" id="347">
+											<DataPath>Объект.Табель.ПричинаОтсутствия18</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия18КонтекстноеМеню" id="348"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия18РасширеннаяПодсказка" id="349"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа19" id="315">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа19РасширеннаяПодсказка" id="316"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло19" id="89">
+											<DataPath>Объект.Табель.Число19</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло19КонтекстноеМеню" id="90"/>
+											<ExtendedTooltip name="ТабельЧисло19РасширеннаяПодсказка" id="91"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия19" id="350">
+											<DataPath>Объект.Табель.ПричинаОтсутствия19</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия19КонтекстноеМеню" id="351"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия19РасширеннаяПодсказка" id="352"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа20" id="317">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа20РасширеннаяПодсказка" id="318"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло20" id="92">
+											<DataPath>Объект.Табель.Число20</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло20КонтекстноеМеню" id="93"/>
+											<ExtendedTooltip name="ТабельЧисло20РасширеннаяПодсказка" id="94"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия20" id="353">
+											<DataPath>Объект.Табель.ПричинаОтсутствия20</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия20КонтекстноеМеню" id="354"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия20РасширеннаяПодсказка" id="355"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа21" id="319">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа21РасширеннаяПодсказка" id="320"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло21" id="95">
+											<DataPath>Объект.Табель.Число21</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло21КонтекстноеМеню" id="96"/>
+											<ExtendedTooltip name="ТабельЧисло21РасширеннаяПодсказка" id="97"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия21" id="356">
+											<DataPath>Объект.Табель.ПричинаОтсутствия21</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия21КонтекстноеМеню" id="357"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия21РасширеннаяПодсказка" id="358"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа22" id="321">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа22РасширеннаяПодсказка" id="322"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло22" id="98">
+											<DataPath>Объект.Табель.Число22</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло22КонтекстноеМеню" id="99"/>
+											<ExtendedTooltip name="ТабельЧисло22РасширеннаяПодсказка" id="100"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия22" id="359">
+											<DataPath>Объект.Табель.ПричинаОтсутствия22</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия22КонтекстноеМеню" id="360"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия22РасширеннаяПодсказка" id="361"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа23" id="323">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа23РасширеннаяПодсказка" id="324"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло23" id="101">
+											<DataPath>Объект.Табель.Число23</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло23КонтекстноеМеню" id="102"/>
+											<ExtendedTooltip name="ТабельЧисло23РасширеннаяПодсказка" id="103"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия23" id="362">
+											<DataPath>Объект.Табель.ПричинаОтсутствия23</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия23КонтекстноеМеню" id="363"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия23РасширеннаяПодсказка" id="364"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа24" id="325">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа24РасширеннаяПодсказка" id="326"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло24" id="104">
+											<DataPath>Объект.Табель.Число24</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло24КонтекстноеМеню" id="105"/>
+											<ExtendedTooltip name="ТабельЧисло24РасширеннаяПодсказка" id="106"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия24" id="365">
+											<DataPath>Объект.Табель.ПричинаОтсутствия24</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия24КонтекстноеМеню" id="366"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия24РасширеннаяПодсказка" id="367"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа25" id="327">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа25РасширеннаяПодсказка" id="328"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло25" id="107">
+											<DataPath>Объект.Табель.Число25</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло25КонтекстноеМеню" id="108"/>
+											<ExtendedTooltip name="ТабельЧисло25РасширеннаяПодсказка" id="109"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия25" id="368">
+											<DataPath>Объект.Табель.ПричинаОтсутствия25</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия25КонтекстноеМеню" id="369"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия25РасширеннаяПодсказка" id="370"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа26" id="329">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа26РасширеннаяПодсказка" id="330"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло26" id="110">
+											<DataPath>Объект.Табель.Число26</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло26КонтекстноеМеню" id="111"/>
+											<ExtendedTooltip name="ТабельЧисло26РасширеннаяПодсказка" id="112"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия26" id="371">
+											<DataPath>Объект.Табель.ПричинаОтсутствия26</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия26КонтекстноеМеню" id="372"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия26РасширеннаяПодсказка" id="373"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа27" id="331">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа27РасширеннаяПодсказка" id="332"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло27" id="113">
+											<DataPath>Объект.Табель.Число27</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло27КонтекстноеМеню" id="114"/>
+											<ExtendedTooltip name="ТабельЧисло27РасширеннаяПодсказка" id="115"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия27" id="374">
+											<DataPath>Объект.Табель.ПричинаОтсутствия27</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия27КонтекстноеМеню" id="375"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия27РасширеннаяПодсказка" id="376"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа28" id="333">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа28РасширеннаяПодсказка" id="334"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло28" id="116">
+											<DataPath>Объект.Табель.Число28</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло28КонтекстноеМеню" id="117"/>
+											<ExtendedTooltip name="ТабельЧисло28РасширеннаяПодсказка" id="118"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия28" id="377">
+											<DataPath>Объект.Табель.ПричинаОтсутствия28</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия28КонтекстноеМеню" id="378"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия28РасширеннаяПодсказка" id="379"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа29" id="335">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа29РасширеннаяПодсказка" id="336"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло29" id="119">
+											<DataPath>Объект.Табель.Число29</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло29КонтекстноеМеню" id="120"/>
+											<ExtendedTooltip name="ТабельЧисло29РасширеннаяПодсказка" id="121"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия29" id="380">
+											<DataPath>Объект.Табель.ПричинаОтсутствия29</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия29КонтекстноеМеню" id="381"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия29РасширеннаяПодсказка" id="382"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа30" id="337">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа30РасширеннаяПодсказка" id="338"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло30" id="122">
+											<DataPath>Объект.Табель.Число30</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло30КонтекстноеМеню" id="123"/>
+											<ExtendedTooltip name="ТабельЧисло30РасширеннаяПодсказка" id="124"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия30" id="383">
+											<DataPath>Объект.Табель.ПричинаОтсутствия30</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия30КонтекстноеМеню" id="384"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия30РасширеннаяПодсказка" id="385"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+								<ColumnGroup name="ТабельГруппа31" id="339">
+									<Group>InCell</Group>
+									<ExtendedTooltip name="ТабельГруппа31РасширеннаяПодсказка" id="340"/>
+									<ChildItems>
+										<InputField name="ТабельЧисло31" id="125">
+											<DataPath>Объект.Табель.Число31</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельЧисло31КонтекстноеМеню" id="126"/>
+											<ExtendedTooltip name="ТабельЧисло31РасширеннаяПодсказка" id="127"/>
+										</InputField>
+										<InputField name="ТабельПричинаОтсутствия31" id="386">
+											<DataPath>Объект.Табель.ПричинаОтсутствия31</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<HorizontalAlign>Left</HorizontalAlign>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТабельПричинаОтсутствия31КонтекстноеМеню" id="387"/>
+											<ExtendedTooltip name="ТабельПричинаОтсутствия31РасширеннаяПодсказка" id="388"/>
+										</InputField>
+									</ChildItems>
+								</ColumnGroup>
+							</ChildItems>
+						</ColumnGroup>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТабельГруппаДниЯвок" id="185">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни явок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни явок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ТабельГруппаДниЯвокРасширеннаяПодсказка" id="186"/>
+					<ChildItems>
+						<InputField name="ТабельДниФактическойРаботы" id="128">
+							<DataPath>Объект.Табель.ДниФактическойРаботы</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельДниФактическойРаботыКонтекстноеМеню" id="129"/>
+							<ExtendedTooltip name="ТабельДниФактическойРаботыРасширеннаяПодсказка" id="130"/>
+						</InputField>
+						<InputField name="ТабельКоммандировки" id="131">
+							<DataPath>Объект.Табель.Коммандировки</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельКоммандировкиКонтекстноеМеню" id="132"/>
+							<ExtendedTooltip name="ТабельКоммандировкиРасширеннаяПодсказка" id="133"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<ColumnGroup name="ТабельГруппаДниНеявок" id="187">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни неявок</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дни неявок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ShowInHeader>true</ShowInHeader>
+					<ExtendedTooltip name="ТабельГруппаДниНеявокРасширеннаяПодсказка" id="188"/>
+					<ChildItems>
+						<InputField name="ТабельОтпускВСвязиСРождениемРебенка" id="137">
+							<DataPath>Объект.Табель.ОтпускВСвязиСРождениемРебенка</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельОтпускВСвязиСРождениемРебенкаКонтекстноеМеню" id="138"/>
+							<ExtendedTooltip name="ТабельОтпускВСвязиСРождениемРебенкаРасширеннаяПодсказка" id="139"/>
+						</InputField>
+						<InputField name="ТабельБолезнь" id="140">
+							<DataPath>Объект.Табель.Болезнь</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельБолезньКонтекстноеМеню" id="141"/>
+							<ExtendedTooltip name="ТабельБолезньРасширеннаяПодсказка" id="142"/>
+						</InputField>
+						<InputField name="ТабельУчебныйОтпуск" id="143">
+							<DataPath>Объект.Табель.УчебныйОтпуск</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельУчебныйОтпускКонтекстноеМеню" id="144"/>
+							<ExtendedTooltip name="ТабельУчебныйОтпускРасширеннаяПодсказка" id="145"/>
+						</InputField>
+						<InputField name="ТабельПрочиеНеявкиРазрешенныеЗаконом" id="146">
+							<DataPath>Объект.Табель.ПрочиеНеявкиРазрешенныеЗаконом</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельПрочиеНеявкиРазрешенныеЗакономКонтекстноеМеню" id="147"/>
+							<ExtendedTooltip name="ТабельПрочиеНеявкиРазрешенныеЗакономРасширеннаяПодсказка" id="148"/>
+						</InputField>
+						<InputField name="ТабельПрогул" id="149">
+							<DataPath>Объект.Табель.Прогул</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельПрогулКонтекстноеМеню" id="150"/>
+							<ExtendedTooltip name="ТабельПрогулРасширеннаяПодсказка" id="151"/>
+						</InputField>
+						<InputField name="ТабельСРазрешенияАдминистрации" id="152">
+							<DataPath>Объект.Табель.СРазрешенияАдминистрации</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельСРазрешенияАдминистрацииКонтекстноеМеню" id="153"/>
+							<ExtendedTooltip name="ТабельСРазрешенияАдминистрацииРасширеннаяПодсказка" id="154"/>
+						</InputField>
+						<InputField name="ТабельНаРаботуДоПриемаИПослеУвольнения" id="155">
+							<DataPath>Объект.Табель.НаРаботуДоПриемаИПослеУвольнения</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельНаРаботуДоПриемаИПослеУвольненияКонтекстноеМеню" id="156"/>
+							<ExtendedTooltip name="ТабельНаРаботуДоПриемаИПослеУвольненияРасширеннаяПодсказка" id="157"/>
+						</InputField>
+						<InputField name="ТабельОпозданияИПреждевременныйУход" id="158">
+							<DataPath>Объект.Табель.ОпозданияИПреждевременныйУход</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельОпозданияИПреждевременныйУходКонтекстноеМеню" id="159"/>
+							<ExtendedTooltip name="ТабельОпозданияИПреждевременныйУходРасширеннаяПодсказка" id="160"/>
+						</InputField>
+						<InputField name="ТабельНаРаботуДоПереводаИПослеВозвращенияНаСвоеРабочееМесто" id="161">
+							<DataPath>Объект.Табель.НаРаботуДоПереводаИПослеВозвращенияНаСвоеРабочееМесто</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельНаРаботуДоПереводаИПослеВозвращенияНаСвоеРабочееМестоКонтекстноеМеню" id="162"/>
+							<ExtendedTooltip name="ТабельНаРаботуДоПереводаИПослеВозвращенияНаСвоеРабочееМестоРасширеннаяПодсказка" id="163"/>
+						</InputField>
+						<InputField name="ТабельОтпускССохранениемЗППоКолДоговору" id="164">
+							<DataPath>Объект.Табель.ОтпускССохранениемЗППоКолДоговору</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельОтпускССохранениемЗППоКолДоговоруКонтекстноеМеню" id="165"/>
+							<ExtendedTooltip name="ТабельОтпускССохранениемЗППоКолДоговоруРасширеннаяПодсказка" id="166"/>
+						</InputField>
+						<InputField name="ТабельВыходныеИПраздничныеДни" id="167">
+							<DataPath>Объект.Табель.ВыходныеИПраздничныеДни</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельВыходныеИПраздничныеДниКонтекстноеМеню" id="168"/>
+							<ExtendedTooltip name="ТабельВыходныеИПраздничныеДниРасширеннаяПодсказка" id="169"/>
+						</InputField>
+						<InputField name="ТабельЕжегодныйТрудовойОтпуск" id="134">
+							<DataPath>Объект.Табель.ЕжегодныйТрудовойОтпуск</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ТабельЕжегодныйТрудовойОтпускКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="ТабельЕжегодныйТрудовойОтпускРасширеннаяПодсказка" id="136"/>
+						</InputField>
+					</ChildItems>
+				</ColumnGroup>
+				<InputField name="ТабельВсегоДнейВМесяце" id="191">
+					<DataPath>Объект.Табель.ВсегоДнейВМесяце</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельВсегоДнейВМесяцеКонтекстноеМеню" id="192"/>
+					<ExtendedTooltip name="ТабельВсегоДнейВМесяцеРасширеннаяПодсказка" id="193"/>
+				</InputField>
+				<InputField name="ТабельВсегоОтработанноеКоличествоЧасов" id="194">
+					<DataPath>Объект.Табель.ВсегоОтработанноеКоличествоЧасов</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельВсегоОтработанноеКоличествоЧасовКонтекстноеМеню" id="195"/>
+					<ExtendedTooltip name="ТабельВсегоОтработанноеКоличествоЧасовРасширеннаяПодсказка" id="196"/>
+				</InputField>
+				<InputField name="ТабельПраздничных" id="197">
+					<DataPath>Объект.Табель.Праздничных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПраздничныхКонтекстноеМеню" id="198"/>
+					<ExtendedTooltip name="ТабельПраздничныхРасширеннаяПодсказка" id="199"/>
+				</InputField>
+				<InputField name="ТабельВыходных" id="200">
+					<DataPath>Объект.Табель.Выходных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельВыходныхКонтекстноеМеню" id="201"/>
+					<ExtendedTooltip name="ТабельВыходныхРасширеннаяПодсказка" id="202"/>
+				</InputField>
+				<InputField name="ТабельНочных" id="203">
+					<DataPath>Объект.Табель.Ночных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельНочныхКонтекстноеМеню" id="204"/>
+					<ExtendedTooltip name="ТабельНочныхРасширеннаяПодсказка" id="205"/>
+				</InputField>
+				<InputField name="ТабельСверхурочных" id="206">
+					<DataPath>Объект.Табель.Сверхурочных</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельСверхурочныхКонтекстноеМеню" id="207"/>
+					<ExtendedTooltip name="ТабельСверхурочныхРасширеннаяПодсказка" id="208"/>
+				</InputField>
+				<InputField name="ТабельПростой" id="209">
+					<DataPath>Объект.Табель.Простой</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПростойКонтекстноеМеню" id="210"/>
+					<ExtendedTooltip name="ТабельПростойРасширеннаяПодсказка" id="211"/>
+				</InputField>
+				<InputField name="ТабельЛьготныеЧасыПодростковДо18Лет" id="212">
+					<DataPath>Объект.Табель.ЛьготныеЧасыПодростковДо18Лет</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельЛьготныеЧасыПодростковДо18ЛетКонтекстноеМеню" id="213"/>
+					<ExtendedTooltip name="ТабельЛьготныеЧасыПодростковДо18ЛетРасширеннаяПодсказка" id="214"/>
+				</InputField>
+				<InputField name="ТабельПерерывДляКормленияРебенка" id="215">
+					<DataPath>Объект.Табель.ПерерывДляКормленияРебенка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельПерерывДляКормленияРебенкаКонтекстноеМеню" id="216"/>
+					<ExtendedTooltip name="ТабельПерерывДляКормленияРебенкаРасширеннаяПодсказка" id="217"/>
+				</InputField>
+				<InputField name="ТабельРемонт" id="218">
+					<DataPath>Объект.Табель.Ремонт</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабельРемонтКонтекстноеМеню" id="219"/>
+					<ExtendedTooltip name="ТабельРемонтРасширеннаяПодсказка" id="220"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ТабельУчетаИспользованияРабочегоВремени</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьТаблицу</Action>
+		</Command>
+		<Command name="ЗаполнитьВыходные" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выходные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выходные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыходные</Action>
+		</Command>
+		<Command name="ЗаполнитьПоПодразделению" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по подразделению</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по подразделению</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПодразделению</Action>
+		</Command>
+		<Command name="ЗаполнитьПоИспользованиямРесурсов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по использованиям ресурсов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по использованиям ресурсов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоИспользованиямРесурсов</Action>
+		</Command>
+		<Command name="ОтсортироватьПоПредприятию" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсортировать по предприятию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отсортировать по предприятию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтсортироватьПоПредприятию</Action>
+		</Command>
+		<Command name="ЗаполнитьПоИспользованиямРесурсовПерсонал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по использованиям ресурсов персонал</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по использованиям ресурсов персонал</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоИспользованиямРесурсовПерсонал</Action>
+		</Command>
+		<Command name="РедактироватьСтрокуТабеля" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать строку табеля</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Редактировать строку табеля</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>РедактироватьСтрокуТабеля</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>

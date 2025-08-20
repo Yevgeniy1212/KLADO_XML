@@ -1,0 +1,122 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаУдалитьСсылки" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьСсылки</CommandName>
+				<BackColor>style:ActivityColor</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<ExtendedTooltip name="ФормаУдалитьСсылкиРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<Table name="СписокДоговоры" id="1">
+			<Representation>List</Representation>
+			<Header>false</Header>
+			<HorizontalLines>false</HorizontalLines>
+			<VerticalLines>false</VerticalLines>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<DataPath>СписокДоговоры</DataPath>
+			<RowPictureDataPath>СписокДоговоры.Picture</RowPictureDataPath>
+			<ContextMenu name="СписокДоговорыКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="СписокДоговорыКоманднаяПанель" id="3">
+				<ChildItems>
+					<Button name="ЗаполнитьПомеченными" id="17">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗаполнитьПомеченными</CommandName>
+						<ExtendedTooltip name="ЗаполнитьПомеченнымиРасширеннаяПодсказка" id="18"/>
+					</Button>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="СписокДоговорыРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="СписокДоговорыСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>СписокДоговоры</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоговорыСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="СписокДоговорыСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="СписокДоговорыСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>СписокДоговоры</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоговорыСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="СписокДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="СписокДоговорыУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>СписокДоговоры</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="СписокДоговорыУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="СписокДоговорыУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="СписокДоговорыЗначение" id="14">
+					<DataPath>СписокДоговоры.Value</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="СписокДоговорыЗначениеКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="СписокДоговорыЗначениеРасширеннаяПодсказка" id="16"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПометитьНаУдалениеПодчиненныеОбъектыДоговора</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="СписокДоговоры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список договоры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription">
+				<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПомеченными" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить помеченными</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить помеченными</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПомеченными</Action>
+		</Command>
+		<Command name="УдалитьСсылки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ссылки на выбранные договоры</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить ссылки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьСсылки</Action>
+		</Command>
+	</Commands>
+</Form>

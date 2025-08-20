@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<Enum uuid="d9aeee54-f5a4-4066-b2eb-16ceae81f3d6">
+		<InternalInfo>
+			<xr:GeneratedType name="EnumRef.УдалитьПричиныОтсутствия" category="Ref">
+				<xr:TypeId>c185a158-bb59-467a-9e09-e0abc5182b4d</xr:TypeId>
+				<xr:ValueId>e9d5ada1-c4a8-4635-bae8-8cb7bf9021a7</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumManager.УдалитьПричиныОтсутствия" category="Manager">
+				<xr:TypeId>e28e0510-53c3-4cd2-bed5-7451b63adf7f</xr:TypeId>
+				<xr:ValueId>bd36888c-62e8-4040-9e15-333570720791</xr:ValueId>
+			</xr:GeneratedType>
+			<xr:GeneratedType name="EnumList.УдалитьПричиныОтсутствия" category="List">
+				<xr:TypeId>75a883d1-8aa0-44df-92ba-0f29d8c004fd</xr:TypeId>
+				<xr:ValueId>28fad6c7-2a99-4917-a47e-f714a6c0cb87</xr:ValueId>
+			</xr:GeneratedType>
+		</InternalInfo>
+		<Properties>
+			<Name>УдалитьПричиныОтсутствия</Name>
+			<Synonym>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить причины отсутствия</v8:content>
+				</v8:item>
+			</Synonym>
+			<Comment/>
+			<UseStandardCommands>false</UseStandardCommands>
+			<Characteristics/>
+			<QuickChoice>true</QuickChoice>
+			<ChoiceMode>BothWays</ChoiceMode>
+			<DefaultListForm/>
+			<DefaultChoiceForm/>
+			<AuxiliaryListForm/>
+			<AuxiliaryChoiceForm/>
+			<ListPresentation/>
+			<ExtendedListPresentation/>
+			<Explanation/>
+			<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+		</Properties>
+		<ChildObjects>
+			<EnumValue uuid="310364ec-a441-4f96-be2c-c5e35b4be323">
+				<Properties>
+					<Name>ВыходныеИПраздничныеДни</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>В (Выходные и праздничные дни)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="d0075aff-9741-42ce-abf3-a482d5a777e8">
+				<Properties>
+					<Name>НеявкиРазрешенныеЗаконом</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Г (Неявки, разрешенные законом (выполнение государственных обязанностей и др.))</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="79b23eb5-9252-44a1-b9ee-1f067c23eda2">
+				<Properties>
+					<Name>СлужебныеКоммандировки</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>К (Служебные коммандировки)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fd574d3e-f40b-4788-b0cd-c5091c1bf276">
+				<Properties>
+					<Name>ЕжегодныйТрудовойОтпуск</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>О (Ежегодный трудовой отпуск)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="8040dd95-fd70-41e1-8c9f-96ce3ad52c92">
+				<Properties>
+					<Name>ОтпускССохранениемЗаработнойПлаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>С (Отпуск с сохранением заработной платы, по условиям коллективного договора)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b4201301-244d-4d95-9c64-bb3d91e20d7a">
+				<Properties>
+					<Name>ОтпускБезСохраненияЗаработнойПлаты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>А (Отпуск без сохранения заработной платы (неявки с разрешения администрации))</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="9ea44869-15a7-49a0-8dcc-b1faabb7bdcf">
+				<Properties>
+					<Name>УчебныйОтпуск</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>У (Учебный отпуск)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="03c57f0e-dc7c-4131-a772-5760e2ee93c2">
+				<Properties>
+					<Name>ОтпускВСвязиСРождениемРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Р (Отпуск в связи с рождением ребенка (детей), усыновлением (удочерением) новорожденного ребенка (детей))</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b24040ee-5462-4da1-8837-3290bb411170">
+				<Properties>
+					<Name>Нетрудоспособность</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Б (Нетрудоспособность (болезнь, карантин и т.п.) )</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="16f27a1c-9f9e-4d5a-a971-2335f3d094b1">
+				<Properties>
+					<Name>ЛьготныеЧасыПодростков</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Л (Льготные часы подростков до 18 лет)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="00306770-c733-4336-a966-d4bae6db6ed3">
+				<Properties>
+					<Name>ПерерывыДляКормленияРебенка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>М (Перерывы для кормления ребенка (детей), работающим женщинам, имеющим детей в возрасте до полутора лет)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="a3dd90a4-b555-4e77-a0a3-7397e79a2085">
+				<Properties>
+					<Name>Прогул</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>П (Прогул)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="fffbfc4d-bdcb-4250-987f-9a9952a6bce9">
+				<Properties>
+					<Name>Неявка</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Н (Неявки, опоздания и преждевременный уход)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="b374db71-ca5f-41f1-8ca1-32557e5a3e00">
+				<Properties>
+					<Name>НевыходНаРаботуДоПриемаИПослеУвольнения</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Д (Невыход на работу до приема и после увольнения)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="68cc8bfd-c585-440f-a405-cb6d050c3d75">
+				<Properties>
+					<Name>ВыполнениеСлужебныхПорученийВнеТерритории</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Т (Выполнение служебных поручений вне территории, обслуживаемой данным табелем)</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="4e23dade-7ffb-4eb0-9835-0c600bfe09d5">
+				<Properties>
+					<Name>Простой</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ч (Простой (внутрисменный, целосменный))</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+			<EnumValue uuid="2017dc36-ed87-482e-935e-0241ccdfa7ee">
+				<Properties>
+					<Name>ПереводВДругоеПодразделение</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Х (Перевод (перемещение) работников в другое подразделение до перевода и после возвращения в свое подразделение (на свое рабочее место))</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+				</Properties>
+			</EnumValue>
+		</ChildObjects>
+	</Enum>
+</MetaDataObject>

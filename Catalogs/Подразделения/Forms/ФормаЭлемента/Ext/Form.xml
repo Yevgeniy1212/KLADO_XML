@@ -1,0 +1,733 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWriteAtServer">ПослеЗаписиНаСервере</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Владелец" id="7">
+			<DataPath>Объект.Owner</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВладелецКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ВладелецРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Родитель" id="10">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="Руководитель" id="81">
+			<DataPath>Объект.Руководитель</DataPath>
+			<ContextMenu name="РуководительКонтекстноеМеню" id="82"/>
+			<ExtendedTooltip name="РуководительРасширеннаяПодсказка" id="83"/>
+		</InputField>
+		<InputField name="ТиповоеПодразделение" id="13">
+			<DataPath>Объект.ТиповоеПодразделение</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТиповоеПодразделениеКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ТиповоеПодразделениеРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Pages name="Страницы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="17"/>
+			<ChildItems>
+				<Page name="ГруппаДоговорыПодразделения" id="146">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры подразделения</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа договоры подразделения</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДоговорыПодразделенияРасширеннаяПодсказка" id="147"/>
+					<ChildItems>
+						<Table name="ДоговорыПодразделения" id="148">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>ДоговорыПодразделения</DataPath>
+							<RowPictureDataPath>ДоговорыПодразделения.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ДоговорыПодразделенияКонтекстноеМеню" id="149"/>
+							<AutoCommandBar name="ДоговорыПодразделенияКоманднаяПанель" id="150"/>
+							<ExtendedTooltip name="ДоговорыПодразделенияРасширеннаяПодсказка" id="151"/>
+							<SearchStringAddition name="ДоговорыПодразделенияСтрокаПоиска" id="152">
+								<AdditionSource>
+									<Item>ДоговорыПодразделения</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыПодразделенияСтрокаПоискаКонтекстноеМеню" id="153"/>
+								<ExtendedTooltip name="ДоговорыПодразделенияСтрокаПоискаРасширеннаяПодсказка" id="154"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыПодразделенияСостояниеПросмотра" id="155">
+								<AdditionSource>
+									<Item>ДоговорыПодразделения</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыПодразделенияСостояниеПросмотраКонтекстноеМеню" id="156"/>
+								<ExtendedTooltip name="ДоговорыПодразделенияСостояниеПросмотраРасширеннаяПодсказка" id="157"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыПодразделенияУправлениеПоиском" id="158">
+								<AdditionSource>
+									<Item>ДоговорыПодразделения</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыПодразделенияУправлениеПоискомКонтекстноеМеню" id="159"/>
+								<ExtendedTooltip name="ДоговорыПодразделенияУправлениеПоискомРасширеннаяПодсказка" id="160"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДоговорыПодразделенияСсылка" id="164">
+									<DataPath>ДоговорыПодразделения.Ссылка</DataPath>
+									<ContextMenu name="ДоговорыПодразделенияСсылкаКонтекстноеМеню" id="165"/>
+									<ExtendedTooltip name="ДоговорыПодразделенияСсылкаРасширеннаяПодсказка" id="166"/>
+								</LabelField>
+								<LabelField name="ДоговорыПодразделенияАдминистратор" id="161">
+									<DataPath>ДоговорыПодразделения.Администратор</DataPath>
+									<ContextMenu name="ДоговорыПодразделенияАдминистраторКонтекстноеМеню" id="162"/>
+									<ExtendedTooltip name="ДоговорыПодразделенияАдминистраторРасширеннаяПодсказка" id="163"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДоговора" id="39">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДоговораРасширеннаяПодсказка" id="40"/>
+					<ChildItems>
+						<Table name="Договоры" id="84">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Договоры</DataPath>
+							<RowPictureDataPath>Договоры.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ДоговорыКонтекстноеМеню" id="85"/>
+							<AutoCommandBar name="ДоговорыКоманднаяПанель" id="86"/>
+							<ExtendedTooltip name="ДоговорыРасширеннаяПодсказка" id="87"/>
+							<SearchStringAddition name="ДоговорыСтрокаПоиска" id="88">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСтрокаПоискаКонтекстноеМеню" id="89"/>
+								<ExtendedTooltip name="ДоговорыСтрокаПоискаРасширеннаяПодсказка" id="90"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыСостояниеПросмотра" id="91">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСостояниеПросмотраКонтекстноеМеню" id="92"/>
+								<ExtendedTooltip name="ДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="93"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыУправлениеПоиском" id="94">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыУправлениеПоискомКонтекстноеМеню" id="95"/>
+								<ExtendedTooltip name="ДоговорыУправлениеПоискомРасширеннаяПодсказка" id="96"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДоговорыСсылка" id="97">
+									<DataPath>Договоры.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Договор</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДоговорыСсылкаКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="ДоговорыСсылкаРасширеннаяПодсказка" id="99"/>
+								</LabelField>
+								<LabelField name="ДоговорыАдминистратор" id="100">
+									<DataPath>Договоры.Администратор</DataPath>
+									<ContextMenu name="ДоговорыАдминистраторКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="ДоговорыАдминистраторРасширеннаяПодсказка" id="102"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПроекты" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПроектыРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="Проекты" id="103">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Проекты</DataPath>
+							<RowPictureDataPath>Проекты.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПроектыКонтекстноеМеню" id="104"/>
+							<AutoCommandBar name="ПроектыКоманднаяПанель" id="105"/>
+							<ExtendedTooltip name="ПроектыРасширеннаяПодсказка" id="106"/>
+							<SearchStringAddition name="ПроектыСтрокаПоиска" id="107">
+								<AdditionSource>
+									<Item>Проекты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроектыСтрокаПоискаКонтекстноеМеню" id="108"/>
+								<ExtendedTooltip name="ПроектыСтрокаПоискаРасширеннаяПодсказка" id="109"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПроектыСостояниеПросмотра" id="110">
+								<AdditionSource>
+									<Item>Проекты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроектыСостояниеПросмотраКонтекстноеМеню" id="111"/>
+								<ExtendedTooltip name="ПроектыСостояниеПросмотраРасширеннаяПодсказка" id="112"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПроектыУправлениеПоиском" id="113">
+								<AdditionSource>
+									<Item>Проекты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПроектыУправлениеПоискомКонтекстноеМеню" id="114"/>
+								<ExtendedTooltip name="ПроектыУправлениеПоискомРасширеннаяПодсказка" id="115"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПроектыСсылка" id="116">
+									<DataPath>Проекты.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Проект</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ПроектыСсылкаКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ПроектыСсылкаРасширеннаяПодсказка" id="118"/>
+								</LabelField>
+								<LabelField name="ПроектыАдминистратор" id="119">
+									<DataPath>Проекты.Администратор</DataPath>
+									<ContextMenu name="ПроектыАдминистраторКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ПроектыАдминистраторРасширеннаяПодсказка" id="121"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаСтрудники" id="122">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сотрудники</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа струдники</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаСтрудникиРасширеннаяПодсказка" id="123"/>
+					<ChildItems>
+						<Table name="Сотрудники" id="124">
+							<Representation>Tree</Representation>
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<InitialTreeView>ExpandAllLevels</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Сотрудники</DataPath>
+							<RowPictureDataPath>Сотрудники.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>false</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="СотрудникиКонтекстноеМеню" id="125"/>
+							<AutoCommandBar name="СотрудникиКоманднаяПанель" id="126"/>
+							<ExtendedTooltip name="СотрудникиРасширеннаяПодсказка" id="127"/>
+							<SearchStringAddition name="СотрудникиСтрокаПоиска" id="128">
+								<AdditionSource>
+									<Item>Сотрудники</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СотрудникиСтрокаПоискаКонтекстноеМеню" id="129"/>
+								<ExtendedTooltip name="СотрудникиСтрокаПоискаРасширеннаяПодсказка" id="130"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СотрудникиСостояниеПросмотра" id="131">
+								<AdditionSource>
+									<Item>Сотрудники</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СотрудникиСостояниеПросмотраКонтекстноеМеню" id="132"/>
+								<ExtendedTooltip name="СотрудникиСостояниеПросмотраРасширеннаяПодсказка" id="133"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СотрудникиУправлениеПоиском" id="134">
+								<AdditionSource>
+									<Item>Сотрудники</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СотрудникиУправлениеПоискомКонтекстноеМеню" id="135"/>
+								<ExtendedTooltip name="СотрудникиУправлениеПоискомРасширеннаяПодсказка" id="136"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="СотрудникиСсылка" id="137">
+									<DataPath>Сотрудники.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сотрудник</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="СотрудникиСсылкаКонтекстноеМеню" id="138"/>
+									<ExtendedTooltip name="СотрудникиСсылкаРасширеннаяПодсказка" id="139"/>
+								</LabelField>
+								<LabelField name="СотрудникиДолжность" id="140">
+									<DataPath>Сотрудники.Должность</DataPath>
+									<ContextMenu name="СотрудникиДолжностьКонтекстноеМеню" id="141"/>
+									<ExtendedTooltip name="СотрудникиДолжностьРасширеннаяПодсказка" id="142"/>
+								</LabelField>
+								<CheckBoxField name="СотрудникиОсновная" id="143">
+									<DataPath>Сотрудники.Основная</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="СотрудникиОсновнаяКонтекстноеМеню" id="144"/>
+									<ExtendedTooltip name="СотрудникиОсновнаяРасширеннаяПодсказка" id="145"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаПерсонал" id="167">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персонал</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персонал</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаПерсоналРасширеннаяПодсказка" id="168"/>
+					<ChildItems>
+						<Table name="Персонал" id="169">
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Персонал</DataPath>
+							<RowPictureDataPath>Персонал.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ПерсоналКонтекстноеМеню" id="170"/>
+							<AutoCommandBar name="ПерсоналКоманднаяПанель" id="171"/>
+							<ExtendedTooltip name="ПерсоналРасширеннаяПодсказка" id="172"/>
+							<SearchStringAddition name="ПерсоналСтрокаПоиска" id="173">
+								<AdditionSource>
+									<Item>Персонал</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналСтрокаПоискаКонтекстноеМеню" id="174"/>
+								<ExtendedTooltip name="ПерсоналСтрокаПоискаРасширеннаяПодсказка" id="175"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПерсоналСостояниеПросмотра" id="176">
+								<AdditionSource>
+									<Item>Персонал</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналСостояниеПросмотраКонтекстноеМеню" id="177"/>
+								<ExtendedTooltip name="ПерсоналСостояниеПросмотраРасширеннаяПодсказка" id="178"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПерсоналУправлениеПоиском" id="179">
+								<AdditionSource>
+									<Item>Персонал</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналУправлениеПоискомКонтекстноеМеню" id="180"/>
+								<ExtendedTooltip name="ПерсоналУправлениеПоискомРасширеннаяПодсказка" id="181"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ПерсоналСсылка" id="182">
+									<DataPath>Персонал.Ссылка</DataPath>
+									<ContextMenu name="ПерсоналСсылкаКонтекстноеМеню" id="183"/>
+									<ExtendedTooltip name="ПерсоналСсылкаРасширеннаяПодсказка" id="184"/>
+								</LabelField>
+								<LabelField name="ПерсоналФИО" id="185">
+									<DataPath>Персонал.ФИО</DataPath>
+									<ContextMenu name="ПерсоналФИОКонтекстноеМеню" id="186"/>
+									<ExtendedTooltip name="ПерсоналФИОРасширеннаяПодсказка" id="187"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Подразделения</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Договоры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>Договоры.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникДоговоры.Ссылка КАК Ссылка,
+	СправочникДоговоры.Администратор КАК Администратор,
+	СправочникДоговоры.ТипДоговора КАК ТипДоговора
+ИЗ
+	Справочник.Договоры КАК СправочникДоговоры
+ГДЕ
+	СправочникДоговоры.Подразделение = &amp;Подразделение</QueryText>
+				<MainTable>Catalog.Договоры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Проекты" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проекты</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Проекты.Ссылка КАК Ссылка,
+	Проекты.Администратор КАК Администратор
+ИЗ
+	Справочник.Проекты КАК Проекты
+ГДЕ
+	Проекты.Ссылка В
+			(ВЫБРАТЬ
+				ВЫРАЗИТЬ(Задачи.Владелец КАК Справочник.Договоры).Проект КАК Проект
+			ИЗ
+				Справочник.Задачи КАК Задачи
+			ГДЕ
+				Задачи.Подразделение = &amp;Подразделение)
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	СтратегическиеЦели.Ссылка,
+	СтратегическиеЦели.Администратор
+ИЗ
+	Справочник.СтратегическиеЦели КАК СтратегическиеЦели
+ГДЕ
+	СтратегическиеЦели.Ссылка В
+			(ВЫБРАТЬ
+				ВЫРАЗИТЬ(Задачи.Владелец КАК Справочник.Договоры).Проект КАК Проект
+			ИЗ
+				Справочник.Задачи КАК Задачи
+			ГДЕ
+				Задачи.Подразделение = &amp;Подразделение)</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Сотрудники" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сотрудники</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникСотрудники.Ссылка КАК Ссылка,
+	СправочникСотрудники.Родитель КАК Родитель,
+	СправочникСотрудники.Подразделение КАК Подразделение,
+	СправочникСотрудники.Должность КАК Должность,
+	СотрудникиДолжности.Основная КАК Основная
+ИЗ
+	Справочник.Сотрудники.Должности КАК СотрудникиДолжности
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Сотрудники КАК СправочникСотрудники
+		ПО СотрудникиДолжности.Ссылка = СправочникСотрудники.Ссылка
+ГДЕ
+	СотрудникиДолжности.Подразделение = &amp;Подразделение</QueryText>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="ДоговорыПодразделения" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры подразделения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ДоговорыПодразделения.Ссылка</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникДоговоры.Ссылка КАК Ссылка,
+	СправочникДоговоры.Администратор КАК Администратор,
+	СправочникДоговоры.ТипДоговора КАК ТипДоговора
+ИЗ
+	Справочник.Договоры КАК СправочникДоговоры
+ГДЕ
+	СправочникДоговоры.Ссылка В
+			(ВЫБРАТЬ
+				Задачи.Владелец КАК Ссылка
+			ИЗ
+				Справочник.Задачи КАК Задачи
+			ГДЕ
+				Задачи.Подразделение = &amp;Подразделение)</QueryText>
+				<MainTable>Catalog.Договоры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="Персонал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персонал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Персонал.Ссылка КАК Ссылка,
+	Персонал.ФИО КАК ФИО
+ИЗ
+	Справочник.Персонал КАК Персонал
+ГДЕ
+	Персонал.ТиповоеПодразделение = &amp;ТиповоеПодразделение
+	И НЕ Персонал.ПометкаУдаления</QueryText>
+				<MainTable>Catalog.Персонал</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>Catalog.ЦелиВидыДеятельностиНаправления.StandardCommand.OpenByValue</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+				<Visible>
+					<xr:Common>false</xr:Common>
+				</Visible>
+			</Item>
+			<Item>
+				<Command>Catalog.Сотрудники.Command.Сотрудники</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>1</Index>
+			</Item>
+			<Item>
+				<Command>Catalog.СтратегическиеЦели.Command.РегулярнаяДеятельность</Command>
+				<Type>Auto</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<Index>2</Index>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаЗаписатьИзменения" id="34">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗаписатьИзменения</CommandName>
+				<ExtendedTooltip name="ФормаЗаписатьИзмененияРасширеннаяПодсказка" id="35"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="32">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="33"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Объект" id="29">
+			<DataPath>Объект</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ОбъектКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ОбъектРасширеннаяПодсказка" id="31"/>
+		</InputField>
+		<InputField name="Пользователь" id="26">
+			<DataPath>Пользователь</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="ПользовательКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ПользовательРасширеннаяПодсказка" id="28"/>
+		</InputField>
+		<Table name="ИзмененияРеквизитов" id="1">
+			<Representation>List</Representation>
+			<ChangeRowSet>false</ChangeRowSet>
+			<ChangeRowOrder>false</ChangeRowOrder>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ИзмененияРеквизитов</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ИзмененияРеквизитовКонтекстноеМеню" id="2"/>
+			<AutoCommandBar name="ИзмененияРеквизитовКоманднаяПанель" id="3"/>
+			<ExtendedTooltip name="ИзмененияРеквизитовРасширеннаяПодсказка" id="4"/>
+			<SearchStringAddition name="ИзмененияРеквизитовСтрокаПоиска" id="5">
+				<AdditionSource>
+					<Item>ИзмененияРеквизитов</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияРеквизитовСтрокаПоискаКонтекстноеМеню" id="6"/>
+				<ExtendedTooltip name="ИзмененияРеквизитовСтрокаПоискаРасширеннаяПодсказка" id="7"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ИзмененияРеквизитовСостояниеПросмотра" id="8">
+				<AdditionSource>
+					<Item>ИзмененияРеквизитов</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияРеквизитовСостояниеПросмотраКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ИзмененияРеквизитовСостояниеПросмотраРасширеннаяПодсказка" id="10"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ИзмененияРеквизитовУправлениеПоиском" id="11">
+				<AdditionSource>
+					<Item>ИзмененияРеквизитов</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ИзмененияРеквизитовУправлениеПоискомКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ИзмененияРеквизитовУправлениеПоискомРасширеннаяПодсказка" id="13"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ИзмененияРеквизитовНазваниеРеквизита" id="14">
+					<DataPath>ИзмененияРеквизитов.НазваниеРеквизита</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИзмененияРеквизитовНазваниеРеквизитаКонтекстноеМеню" id="15"/>
+					<ExtendedTooltip name="ИзмененияРеквизитовНазваниеРеквизитаРасширеннаяПодсказка" id="16"/>
+				</InputField>
+				<InputField name="ИзмененияРеквизитовЗначение" id="17">
+					<DataPath>ИзмененияРеквизитов.Значение</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИзмененияРеквизитовЗначениеКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ИзмененияРеквизитовЗначениеРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ИзмененияРеквизитовПричина" id="20">
+					<DataPath>ИзмененияРеквизитов.Причина</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<AutoMarkIncomplete>true</AutoMarkIncomplete>
+					<ContextMenu name="ИзмененияРеквизитовПричинаКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ИзмененияРеквизитовПричинаРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ИзмененияРеквизитовВидПричины" id="23">
+					<DataPath>ИзмененияРеквизитов.ВидПричины</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ИзмененияРеквизитовВидПричиныКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ИзмененияРеквизитовВидПричиныРасширеннаяПодсказка" id="25"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="ИзмененияРеквизитов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменения реквизитов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="НазваниеРеквизита" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Название реквизита</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>50</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:TypeSet>cfg:AnyRef</v8:TypeSet>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Причина" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Причина</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидПричины" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид причины</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.ВидыПричинПереносаСроков</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="Пользователь" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Пользователи</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Объект" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Объект</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+				<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+				<v8:Type>cfg:CatalogRef.СтратегическиеЦели</v8:Type>
+				<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаписатьИзменения" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Записать изменения</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаписатьИзменения</Action>
+		</Command>
+	</Commands>
+</Form>

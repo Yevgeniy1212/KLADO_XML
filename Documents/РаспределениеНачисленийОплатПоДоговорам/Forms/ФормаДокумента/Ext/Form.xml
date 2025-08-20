@@ -1,0 +1,133 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаДатаНомер" id="35">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа дата номер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаДатаНомерРасширеннаяПодсказка" id="36"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<InputField name="Организация" id="37">
+			<DataPath>Объект.Организация</DataPath>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="39"/>
+		</InputField>
+		<Table name="НачисленияОплаты" id="7">
+			<Representation>List</Representation>
+			<Footer>true</Footer>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.НачисленияОплаты</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="НачисленияОплатыКонтекстноеМеню" id="8"/>
+			<AutoCommandBar name="НачисленияОплатыКоманднаяПанель" id="9"/>
+			<ExtendedTooltip name="НачисленияОплатыРасширеннаяПодсказка" id="10"/>
+			<SearchStringAddition name="НачисленияОплатыСтрокаПоиска" id="11">
+				<AdditionSource>
+					<Item>НачисленияОплаты</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияОплатыСтрокаПоискаКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="НачисленияОплатыСтрокаПоискаРасширеннаяПодсказка" id="13"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="НачисленияОплатыСостояниеПросмотра" id="14">
+				<AdditionSource>
+					<Item>НачисленияОплаты</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияОплатыСостояниеПросмотраКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="НачисленияОплатыСостояниеПросмотраРасширеннаяПодсказка" id="16"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="НачисленияОплатыУправлениеПоиском" id="17">
+				<AdditionSource>
+					<Item>НачисленияОплаты</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="НачисленияОплатыУправлениеПоискомКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="НачисленияОплатыУправлениеПоискомРасширеннаяПодсказка" id="19"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="НачисленияОплатыНомерСтроки" id="20">
+					<DataPath>Объект.НачисленияОплаты.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияОплатыНомерСтрокиКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="НачисленияОплатыНомерСтрокиРасширеннаяПодсказка" id="22"/>
+				</LabelField>
+				<InputField name="НачисленияОплатыПодразделение" id="23">
+					<DataPath>Объект.НачисленияОплаты.Контрагент</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияОплатыПодразделениеКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="НачисленияОплатыПодразделениеРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="НачисленияОплатыДоговор" id="26">
+					<DataPath>Объект.НачисленияОплаты.Договор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НачисленияОплатыДоговорКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="НачисленияОплатыДоговорРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="НачисленияОплатыСуммаНачисления" id="29">
+					<DataPath>Объект.НачисленияОплаты.СуммаНачисления</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.НачисленияОплаты.TotalСуммаНачисления</FooterDataPath>
+					<ContextMenu name="НачисленияОплатыСуммаНачисленияКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="НачисленияОплатыСуммаНачисленияРасширеннаяПодсказка" id="31"/>
+				</InputField>
+				<InputField name="НачисленияОплатыСуммаОплаты" id="32">
+					<DataPath>Объект.НачисленияОплаты.СуммаОплаты</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<FooterDataPath>Объект.НачисленияОплаты.TotalСуммаОплаты</FooterDataPath>
+					<ContextMenu name="НачисленияОплатыСуммаОплатыКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="НачисленияОплатыСуммаОплатыРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.РаспределениеНачисленийОплатПоДоговорам</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+</Form>

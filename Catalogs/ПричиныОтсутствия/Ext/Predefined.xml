@@ -1,0 +1,105 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<PredefinedData xmlns="http://v8.1c.ru/8.3/xcf/predef" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:type="CatalogPredefinedItems" version="2.18">
+	<Item id="ecdd1f9a-ac69-4c8e-aa21-9f90e89bf6d4">
+		<Name>ОтпускБезСохраненияЗаработнойПлаты</Name>
+		<Code>06</Code>
+		<Description>А</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8d2eeb2e-97d2-44b5-8f10-6274c4458443">
+		<Name>Нетрудоспособность</Name>
+		<Code>09</Code>
+		<Description>Б</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5ea51006-b446-464a-977e-962284511a2e">
+		<Name>ВыходныеИПраздничныеДни</Name>
+		<Code>01</Code>
+		<Description>В</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="078eca7b-dc8e-468b-9446-c2e7e380add3">
+		<Name>НеявкиРазрешенныеЗаконом</Name>
+		<Code>02</Code>
+		<Description>Г</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="8ba70e06-30d6-4560-86c4-4c7e3a6515e6">
+		<Name>НевыходНаРаботуДоПриемаИПослеУвольнения</Name>
+		<Code>14</Code>
+		<Description>Д</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="5175d590-7039-47ee-b5ad-565a5e9e791b">
+		<Name>СлужебныеКоммандировки</Name>
+		<Code>03</Code>
+		<Description>К</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="9fefd4d0-d5c6-4eac-a0c0-74a0a4a663b9">
+		<Name>ЛьготныеЧасыПодростков</Name>
+		<Code>10</Code>
+		<Description>Л</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2be56952-0e13-4e0c-b80b-c83c7e39f97c">
+		<Name>ПерерывыДляКормленияРебенка</Name>
+		<Code>11</Code>
+		<Description>М</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="641eed13-fe0f-43c7-ac0d-844aa565a9ab">
+		<Name>Неявка</Name>
+		<Code>13</Code>
+		<Description>Н</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="89689436-91e0-401f-abab-44d7c64c1ca7">
+		<Name>ЕжегодныйТрудовойОтпуск</Name>
+		<Code>04</Code>
+		<Description>О</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="2df656f2-ef0d-4f94-947e-eb0e78586032">
+		<Name>Прогул</Name>
+		<Code>12</Code>
+		<Description>П</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="46aa37cc-db17-4168-8d3e-7d82ca907a63">
+		<Name>ОтпускВСвязиСРождениемРебенка</Name>
+		<Code>08</Code>
+		<Description>Р</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="3367016b-8f26-43fe-8241-4bc17689fe46">
+		<Name>ОтпускССохранениемЗаработнойПлаты</Name>
+		<Code>05</Code>
+		<Description>С</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="d886b9d9-5119-419d-a879-b8bbef758181">
+		<Name>ВыполнениеСлужебныхПорученийВнеТерритории</Name>
+		<Code>15</Code>
+		<Description>Т</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="594a796d-edb2-4858-9a71-ed1c0fb4e62b">
+		<Name>УчебныйОтпуск</Name>
+		<Code>07</Code>
+		<Description>У</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="c03db94f-49f1-4ec3-9338-410a91e0df5b">
+		<Name>ПереводВДругоеПодразделение</Name>
+		<Code>17</Code>
+		<Description>Х</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+	<Item id="31bb91da-7bfc-42c2-94e2-b668b352471a">
+		<Name>Простой</Name>
+		<Code>16</Code>
+		<Description>Ч</Description>
+		<IsFolder>false</IsFolder>
+	</Item>
+</PredefinedData>

@@ -1,0 +1,367 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="BeforeWriteAtServer">ПередЗаписьюНаСервере</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="ПериодЗаполнения" id="7">
+			<DataPath>ПериодЗаполнения</DataPath>
+			<ContextMenu name="ПериодЗаполненияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ПериодЗаполненияРасширеннаяПодсказка" id="9"/>
+			<Events>
+				<Event name="OnChange">ПериодЗаполненияПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Table name="ТаблицаВремяНаФорме" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаВремяНаФорме</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаВремяНаФормеКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ТаблицаВремяНаФормеКоманднаяПанель" id="12">
+				<ChildItems>
+					<Button name="ТаблицаВремяНаФормеПодбор" id="40">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.Подбор</CommandName>
+						<ExtendedTooltip name="ТаблицаВремяНаФормеПодборРасширеннаяПодсказка" id="41"/>
+					</Button>
+					<Popup name="ТаблицаВремяНаФормеГруппаЗаполнить" id="26">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить часы</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ТаблицаВремяНаФормеГруппаЗаполнитьРасширеннаяПодсказка" id="27"/>
+						<ChildItems>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВсе" id="28">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВсе</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВсеРасширеннаяПодсказка" id="29"/>
+							</Button>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтроки" id="30">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВыделенныеСтроки</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтрокиРасширеннаяПодсказка" id="31"/>
+							</Button>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейки" id="32">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВыделенныеЯчейки</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейкиРасширеннаяПодсказка" id="33"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+					<Popup name="ТаблицаВремяНаФормеГруппаЗаполнитьИзГрафикаРаботы" id="42">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить часы из графика работы</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Заполнить</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ТаблицаВремяНаФормеГруппаЗаполнитьИзГрафикаРаботыРасширеннаяПодсказка" id="43"/>
+						<ChildItems>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВсеИзГрафикаРаботы" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВсеИзГрафикаРаботы</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВсеИзГрафикаРаботыРасширеннаяПодсказка" id="45"/>
+							</Button>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтрокиИзГрафикаРаботы" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВыделенныеСтрокиИзГрафикаРаботы</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеСтрокиИзГрафикаРаботыРасширеннаяПодсказка" id="47"/>
+							</Button>
+							<Button name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейкиИзГрафикаРаботы" id="48">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗаполнитьВыделенныеЯчейкиИзГрафикаРаботы</CommandName>
+								<ExtendedTooltip name="ТаблицаВремяНаФормеЗаполнитьВыделенныеЯчейкиИзГрафикаРаботыРасширеннаяПодсказка" id="49"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаВремяНаФормеРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ТаблицаВремяНаФормеСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>ТаблицаВремяНаФорме</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВремяНаФормеСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТаблицаВремяНаФормеСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаВремяНаФормеСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>ТаблицаВремяНаФорме</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВремяНаФормеСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТаблицаВремяНаФормеСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаВремяНаФормеУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>ТаблицаВремяНаФорме</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаВремяНаФормеУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТаблицаВремяНаФормеУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаВремяНаФормеДолжность" id="23">
+					<DataPath>ТаблицаВремяНаФорме.Должность</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВремяНаФормеДолжностьКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТаблицаВремяНаФормеДолжностьРасширеннаяПодсказка" id="25"/>
+				</InputField>
+				<InputField name="ТаблицаВремяНаФормеДолжностьМестоОказанияУслуг" id="34">
+					<DataPath>ТаблицаВремяНаФорме.Должность.МестоОказанияУслуг</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВремяНаФормеДолжностьМестоОказанияУслугКонтекстноеМеню" id="35"/>
+					<ExtendedTooltip name="ТаблицаВремяНаФормеДолжностьМестоОказанияУслугРасширеннаяПодсказка" id="36"/>
+				</InputField>
+				<InputField name="ТаблицаВремяНаФормеДолжностьГрафикРаботы" id="37">
+					<DataPath>ТаблицаВремяНаФорме.Должность.ГрафикРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаВремяНаФормеДолжностьГрафикРаботыКонтекстноеМеню" id="38"/>
+					<ExtendedTooltip name="ТаблицаВремяНаФормеДолжностьГрафикРаботыРасширеннаяПодсказка" id="39"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.НачислениеВремениПерсонала</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПериодЗаполнения" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период заполнения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаВремяНаФорме" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица время на форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Должность" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должность</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Персонал</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СоответствиеПериодовНазванийКолонок" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Соответствие периодов названий колонок</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяКолонки" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя колонки</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Месяц" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяц</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьВсе" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всё</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить всё</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВсе</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеСтроки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеСтроки</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеЯчейки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные ячейки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные ячейки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеЯчейки</Action>
+		</Command>
+		<Command name="Подбор" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Подбор</Action>
+		</Command>
+		<Command name="ЗаполнитьВсеИзГрафикаРаботы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Всё</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить всё</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВсеИзГрафикаРаботы</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеСтрокиИзГрафикаРаботы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеСтрокиИзГрафикаРаботы</Action>
+		</Command>
+		<Command name="ЗаполнитьВыделенныеЯчейкиИзГрафикаРаботы" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выделенные ячейки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить выделенные ячейки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьВыделенныеЯчейкиИзГрафикаРаботы</Action>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>AccumulationRegister.УчетВремениПерсонала.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

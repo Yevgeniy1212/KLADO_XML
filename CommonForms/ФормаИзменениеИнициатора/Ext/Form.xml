@@ -1,0 +1,543 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаИзменитьРеквизиты" id="84">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ИзменитьРеквизиты</CommandName>
+				<BackColor>style:ActivityColor</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<ExtendedTooltip name="ФормаИзменитьРеквизитыРасширеннаяПодсказка" id="85"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="НовыйАдминистратор" id="23">
+			<DataPath>НовыйАдминистратор</DataPath>
+			<ContextMenu name="НовыйАдминистраторКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="НовыйАдминистраторРасширеннаяПодсказка" id="25"/>
+		</InputField>
+		<InputField name="НовыйИнициатор" id="1">
+			<DataPath>НовыйИнициатор</DataPath>
+			<ContextMenu name="НовыйИнициаторКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НовыйИнициаторРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Page name="Проекты" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проекты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПроектыРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Table name="СписокПроектов" id="4">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокПроектов</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокПроектовКонтекстноеМеню" id="5"/>
+							<AutoCommandBar name="СписокПроектовКоманднаяПанель" id="6"/>
+							<ExtendedTooltip name="СписокПроектовРасширеннаяПодсказка" id="7"/>
+							<SearchStringAddition name="СписокПроектовСтрокаПоиска" id="8">
+								<AdditionSource>
+									<Item>СписокПроектов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектовСтрокаПоискаКонтекстноеМеню" id="9"/>
+								<ExtendedTooltip name="СписокПроектовСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокПроектовСостояниеПросмотра" id="11">
+								<AdditionSource>
+									<Item>СписокПроектов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектовСостояниеПросмотраКонтекстноеМеню" id="12"/>
+								<ExtendedTooltip name="СписокПроектовСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокПроектовУправлениеПоиском" id="14">
+								<AdditionSource>
+									<Item>СписокПроектов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокПроектовУправлениеПоискомКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="СписокПроектовУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокОбъектовОбъект" id="17">
+									<DataPath>СписокПроектов.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОбъектовОбъектКонтекстноеМеню" id="18"/>
+									<ExtendedTooltip name="СписокОбъектовОбъектРасширеннаяПодсказка" id="19"/>
+									<Events>
+										<Event name="OnChange">СписокОбъектовОбъектПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СписокПроектовАдминистратор" id="97">
+									<DataPath>СписокПроектов.Администратор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокПроектовАдминистраторКонтекстноеМеню" id="98"/>
+									<ExtendedTooltip name="СписокПроектовАдминистраторРасширеннаяПодсказка" id="99"/>
+								</InputField>
+								<InputField name="СписокПроектовИнициатор" id="100">
+									<DataPath>СписокПроектов.Инициатор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокПроектовИнициаторКонтекстноеМеню" id="101"/>
+									<ExtendedTooltip name="СписокПроектовИнициаторРасширеннаяПодсказка" id="102"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Договоры" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДоговорыРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<Table name="СписокДоговоров" id="56">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокДоговоров</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокДоговоровКонтекстноеМеню" id="57"/>
+							<AutoCommandBar name="СписокДоговоровКоманднаяПанель" id="58">
+								<ChildItems>
+									<Popup name="СписокДоговороыЗаполнить" id="93">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список задач заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="СписокДоговороыЗаполнитьРасширеннаяПодсказка" id="94"/>
+										<ChildItems>
+											<Button name="СписокДоговоровЗаполнитьДоговорыПоПроектам" id="95">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьДоговорыПоПроектам</CommandName>
+												<ExtendedTooltip name="СписокДоговоровЗаполнитьДоговорыПоПроектамРасширеннаяПодсказка" id="96"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокДоговоровРасширеннаяПодсказка" id="59"/>
+							<SearchStringAddition name="СписокДоговоровСтрокаПоиска" id="60">
+								<AdditionSource>
+									<Item>СписокДоговоров</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровСтрокаПоискаКонтекстноеМеню" id="61"/>
+								<ExtendedTooltip name="СписокДоговоровСтрокаПоискаРасширеннаяПодсказка" id="62"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокДоговоровСостояниеПросмотра" id="63">
+								<AdditionSource>
+									<Item>СписокДоговоров</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровСостояниеПросмотраКонтекстноеМеню" id="64"/>
+								<ExtendedTooltip name="СписокДоговоровСостояниеПросмотраРасширеннаяПодсказка" id="65"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокДоговоровУправлениеПоиском" id="66">
+								<AdditionSource>
+									<Item>СписокДоговоров</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокДоговоровУправлениеПоискомКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="СписокДоговоровУправлениеПоискомРасширеннаяПодсказка" id="68"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="СписокДоговоровОбъект" id="69">
+									<DataPath>СписокДоговоров.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДоговоровОбъектКонтекстноеМеню" id="70"/>
+									<ExtendedTooltip name="СписокДоговоровОбъектРасширеннаяПодсказка" id="71"/>
+									<Events>
+										<Event name="OnChange">СписокДоговоровОбъектПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="СписокДоговоровАдминистратор" id="109">
+									<DataPath>СписокДоговоров.Администратор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДоговоровАдминистраторКонтекстноеМеню" id="110"/>
+									<ExtendedTooltip name="СписокДоговоровАдминистраторРасширеннаяПодсказка" id="111"/>
+								</InputField>
+								<InputField name="СписокДоговоровИнициатор" id="112">
+									<DataPath>СписокДоговоров.Инициатор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокДоговоровИнициаторКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="СписокДоговоровИнициаторРасширеннаяПодсказка" id="114"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="Задачи" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="СписокЗадач" id="40">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокЗадач</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокЗадачКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="СписокЗадачКоманднаяПанель" id="42">
+								<ChildItems>
+									<Popup name="СписокЗадачЗаполнить" id="88">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список задач заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="СписокЗадачЗаполнитьРасширеннаяПодсказка" id="89"/>
+										<ChildItems>
+											<Button name="СписокЗадачЗаполнитьЗадачиПоДоговорам" id="86">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьЗадачиПоДоговорам</CommandName>
+												<ExtendedTooltip name="СписокЗадачЗаполнитьЗадачиПоДоговорамРасширеннаяПодсказка" id="87"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="СписокЗадачРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="СписокЗадачСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="СписокЗадачСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокЗадачСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="СписокЗадачСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокЗадачУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>СписокЗадач</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокЗадачУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="СписокЗадачУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnChange">СписокЗадачПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокЗадачОбъект" id="53">
+									<DataPath>СписокЗадач.Объект</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокЗадачОбъектКонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="СписокЗадачОбъектРасширеннаяПодсказка" id="55"/>
+								</InputField>
+								<InputField name="СписокЗадачОбъектВладелец" id="90">
+									<DataPath>СписокЗадач.Объект.Owner</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокЗадачОбъектВладелецКонтекстноеМеню" id="91"/>
+									<ExtendedTooltip name="СписокЗадачОбъектВладелецРасширеннаяПодсказка" id="92"/>
+								</InputField>
+								<InputField name="СписокЗадачАдминистратор" id="103">
+									<DataPath>СписокЗадач.Администратор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокЗадачАдминистраторКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="СписокЗадачАдминистраторРасширеннаяПодсказка" id="105"/>
+								</InputField>
+								<InputField name="СписокЗадачИнициатор" id="106">
+									<DataPath>СписокЗадач.Инициатор</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокЗадачИнициаторКонтекстноеМеню" id="107"/>
+									<ExtendedTooltip name="СписокЗадачИнициаторРасширеннаяПодсказка" id="108"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="СписокПроектов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Администратор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Администратор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Инициатор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="НовыйИнициатор" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый инициатор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НовыйАдминистратор" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый администратор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокДоговоров" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список проектов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Администратор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Администратор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Инициатор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокЗадач" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список задач</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Объект" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Администратор" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Администратор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Инициатор" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инициатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Сотрудники</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИзменитьРеквизиты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить реквизиты</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Изменить реквизиты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>мИзменитьРеквизиты</Action>
+		</Command>
+		<Command name="ЗаполнитьЗадачиПоДоговорам" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить задачи по договорам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить задачи по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьЗадачиПоДоговорам</Action>
+		</Command>
+		<Command name="ЗаполнитьДоговорыПоПроектам" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить договоры по проектам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить договоры по проектам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьДоговорыПоПроектам</Action>
+		</Command>
+	</Commands>
+</Form>

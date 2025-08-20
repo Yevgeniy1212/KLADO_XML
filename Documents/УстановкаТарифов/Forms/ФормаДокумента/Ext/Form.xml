@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Месторождение" id="38">
+			<DataPath>Объект.Месторождение</DataPath>
+			<ContextMenu name="МесторождениеКонтекстноеМеню" id="39"/>
+			<ExtendedTooltip name="МесторождениеРасширеннаяПодсказка" id="40"/>
+		</InputField>
+		<InputField name="Цех" id="41">
+			<DataPath>Объект.Цех</DataPath>
+			<ContextMenu name="ЦехКонтекстноеМеню" id="42"/>
+			<ExtendedTooltip name="ЦехРасширеннаяПодсказка" id="43"/>
+		</InputField>
+		<Table name="Тарифы" id="10">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.Тарифы</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТарифыКонтекстноеМеню" id="11"/>
+			<AutoCommandBar name="ТарифыКоманднаяПанель" id="12"/>
+			<ExtendedTooltip name="ТарифыРасширеннаяПодсказка" id="13"/>
+			<SearchStringAddition name="ТарифыСтрокаПоиска" id="14">
+				<AdditionSource>
+					<Item>Тарифы</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТарифыСтрокаПоискаКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ТарифыСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТарифыСостояниеПросмотра" id="17">
+				<AdditionSource>
+					<Item>Тарифы</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТарифыСостояниеПросмотраКонтекстноеМеню" id="18"/>
+				<ExtendedTooltip name="ТарифыСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТарифыУправлениеПоиском" id="20">
+				<AdditionSource>
+					<Item>Тарифы</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТарифыУправлениеПоискомКонтекстноеМеню" id="21"/>
+				<ExtendedTooltip name="ТарифыУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТарифыНомерСтроки" id="23">
+					<DataPath>Объект.Тарифы.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТарифыНомерСтрокиКонтекстноеМеню" id="24"/>
+					<ExtendedTooltip name="ТарифыНомерСтрокиРасширеннаяПодсказка" id="25"/>
+				</LabelField>
+				<InputField name="ТарифыНаименованиеРаботы" id="26">
+					<DataPath>Объект.Тарифы.НаименованиеРаботы</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТарифыНаименованиеРаботыКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТарифыНаименованиеРаботыРасширеннаяПодсказка" id="28"/>
+				</InputField>
+				<InputField name="ТарифыЦена" id="35">
+					<DataPath>Объект.Тарифы.Цена</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТарифыЦенаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТарифыЦенаРасширеннаяПодсказка" id="37"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<InputField name="Комментарий" id="7">
+			<DataPath>Объект.Комментарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="9"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УстановкаТарифов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+	</Attributes>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.Тарифы.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

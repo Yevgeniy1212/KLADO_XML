@@ -1,0 +1,430 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/css/jsplumbtoolkit-defaults.min.css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="parent" id='parent' style='position: relative;' >
+    </div>
+  </div>
+
+  <script>
+
+let StartData= &Данные&
+
+let data = StartData.Data;
+let regions=StartData.Regions;
+
+let count_curv=0;
+let curv=[80,-60];
+let svg=[];
+let svgScroll=[];
+
+
+
+    // Преоброзование базы в массив объектов 
+
+let temp_name='';
+let temp_id='';
+
+let el_info={};
+let el_parent=[];
+let el=[];
+
+    // Преоброзование базы в массив объектов 
+
+    function getConvertValue(obj) {
+
+      getProp(obj);
+
+      function getProp(o) {
+        for (var prop in o) {
+            temp_name=o[prop]['Name'];
+            temp_id=o[prop]['ID'];
+      
+            el_info.id=o[prop]['ID'];
+            el_info.name=o[prop]['Name'];
+            el_info.region=o[prop]['Region'];
+
+            if(el_parent.length>0){
+              el_info.parent_id='';
+              for(let i=0;i<el_parent.length;i++) el_info.parent_id+=el_parent[i]+',';
+              el_info.parent_id+=o[prop]['ID']; 
+            }
+
+            el.push(el_info);
+            el_info={};
+
+          if (o[prop]['Child'] !== null) {
+            el_parent.push(o[prop]['ID']);
+            getProp(o[prop]['Child']);
+          }
+
+        if(temp_name=='' && temp_id=='') el_parent.splice(el_parent.length-1,1); 
+        
+          temp_name='';
+          temp_id='';
+        }
+      }
+    }
+    getConvertValue(data);
+
+
+    for(let i=0;i<el.length;i++){
+      if(!el[i].hasOwnProperty('parent_id')) el[i].parent_id=el[i].id;
+    }
+
+    
+    for(let i=0;i<el.length;i++){
+      let line_split=el[i].parent_id.split(',');
+      el[i].data_line=line_split.length;
+    }
+
+    
+         // отрисовка регионов
+
+    let wrapper = document.querySelector('.wrapper');
+    let parent = document.querySelector('.parent');
+
+    let regions_div=[];
+    let text_region=[];
+    
+
+   parent.style.overflowX='scroll';
+   parent.style.whiteSpace='nowrap';
+   parent.style.position='relative';
+
+    for(let i=0;i<regions.length;i++){
+      
+      regions_div[i]=document.createElement('div');
+      regions_div[i].setAttribute('data-id',regions[i].ID);
+      regions_div[i].style.width='500px'; regions_div[i].style.margin='10px';
+
+      text_region[i]=document.createElement('h4');
+      text_region[i].innerHTML=regions[i].Name;
+
+      regions_div[i].appendChild(text_region[i]);
+      regions_div[i].style.border='1px solid black';
+
+      regions_div[i].style.display='inline-flex'; regions_div[i].style.flexDirection='column';
+      regions_div[i].style.alignItems='center';
+
+      parent.appendChild(regions_div[i]);
+
+    
+    }
+
+    // добавляем родителей
+
+    let blocks = [];
+
+    for (let i = 0; i < el.length; i++) {
+      if (el[i].data_line == 1) {
+        blocks[i] = document.createElement('div');
+        blocks[i].innerHTML = el[i].name;
+        blocks[i].setAttribute('data-id', el[i].id);
+        blocks[i].setAttribute('data-line', el[i].data_line);
+        blocks[i].setAttribute('data-parent', el[i].parent_id);
+        blocks[i].setAttribute('data-region', el[i].region);
+        blocks[i].style.width = '280px'; blocks[i].style.height = '180px'; blocks[i].style.border = '1px solid black';
+        blocks[i].style.margin = '10px'; blocks[i].style.display='flex'; blocks[i].style.fontSize='18px';
+        blocks[i].style.alignItems='center'; blocks[i].style.justifyContent='center'; blocks[i].style.cursor='pointer';
+        blocks[i].style.borderRadius='20px'; blocks[i].style.zIndex=5;
+
+        for(let j=0;j<regions_div.length;j++){
+          if(regions_div[j].getAttribute('data-id')== blocks[i].attributes[3].nodeValue){
+            regions_div[j].appendChild(blocks[i]);
+          }
+
+        }   
+      }
+    }
+
+
+
+    wrapper.appendChild(parent);
+
+    let check_line = [];
+    let check_line_info = {};
+
+    // оброботка блока
+    wrapper.onclick = function (e) {
+      if (e.target.tagName = 'DIV') {
+        if (e.target.getAttribute('data-id') !== null && e.target.getAttribute('data-line') !== null) {
+
+          let el_line = e.target.getAttribute('data-line');
+          let el_id = e.target.getAttribute('data-id');
+          let x = false;
+          let elem_divs = document.querySelectorAll('div');
+          for (let i = 0; i < elem_divs.length; i++) {
+            if (elem_divs[i].getAttribute('data-line') == el_line) {
+              if (elem_divs[i].classList.contains('active')) elem_divs[i].classList.remove('active');     
+
+              for(let j=0;j<elem_divs[i].children.length;j++){
+                 if(elem_divs[i].children[j].nodeName=='SPAN') elem_divs[i].removeChild(elem_divs[i].children[j]);
+                }
+            }
+          }
+          e.target.classList.add('active');
+
+         if(e.target.childElementCount==0){
+           let span=document.createElement('span');
+           e.target.style.position='relative'; span.style.position='absolute';
+           span.style.top='5px'; span.style.left='5px'; span.style.color='blue';
+           e.target.appendChild(span);
+           span.innerHTML=e.target.getAttribute('data-line');
+         }
+
+          // определяем линий элементов и удаляем ненужные ветки
+
+          
+          check_line_info.line = el_line;
+          check_line_info.id = el_id;
+          if (check_line.length == 0) check_line.push(check_line_info);
+
+          if (check_line.length > 0) {
+            for (let i = 0; i < check_line.length; i++) {
+              if (check_line[i].line == el_line) {
+                if (check_line[i].id != el_id) {
+                  for (let j = 0; j < elem_divs.length; j++) {
+                    if (parseInt(elem_divs[j].getAttribute('data-line')) > parseInt(el_line)) elem_divs[j].remove();
+                  }
+
+                  for (let j = 0; j < elem_divs.length; j++) {
+                    if (elem_divs[j].getAttribute('data-id') == check_line[i].id) elem_divs[j].removeAttribute('data-draw');
+                  }
+
+                  if(svg.length>0){
+                          for(let k=0;k<svg.length;k++) {
+                            if (parseInt(el_line)-1 <= parseInt(svg[k].getAttribute('data-line'))){ svg[k].remove(); svgScroll.splice(k,1); }
+                          }
+                      }
+                      if(svgScroll.length>0){
+                        for(let j=0;j<svgScroll.length;j++){
+                          if(parseInt(el_line)-1<=svgScroll[j]) svgScroll.splice(j,1);
+                        }
+                        for(let j=0;j<svgScroll.length;j++){
+                          if(parseInt(el_line)<svgScroll[j]+1) svgScroll.splice(j,1);
+                        }
+                      }
+                  check_line = []; check_line.push(check_line_info);
+                }
+              }
+            }
+
+            for (let j = 0; j < check_line.length; j++) {
+              if (check_line[j].line == el_line) { x = true; break; }
+            }
+            if (!x) check_line.push(check_line_info);
+          }
+
+          check_line_info = {};
+
+
+
+          // узнаем потомков блока
+
+          let temp_el_id = '';
+          let el_info = {};
+          let el_result = [];
+          el_line = parseInt(el_line);
+          for (let i = 0; i < el.length; i++) {
+            if (el_line + 1 == el[i].data_line) {
+              let sp_id = el[i].parent_id.split(',');
+              for (let j = 0; j < sp_id.length; j++) {
+                if (el_id == sp_id[j]) {
+                  temp_el_id = sp_id[j + 1];
+                  if (temp_el_id != '') {
+                    for (let k = 0; k < el.length; k++) {
+                      if (el[k].id == temp_el_id) {
+                        el_info = {
+                          name: el[k].name,
+                          id: el[k].id,
+                          parent_id: el[k].parent_id,
+                          data_line: el[k].data_line,
+                          region: el[k].region
+                        };
+                        el_result.push(el_info);
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+
+          // рисуем потомков
+
+          if (!e.target.getAttribute('data-draw')) {
+            let div = []
+            for (let i = 0; i < el_result.length; i++) {
+              div[i] = document.createElement('div');
+              div[i].innerHTML = el_result[i].name;
+              div[i].setAttribute('data-id', el_result[i].id);
+              div[i].setAttribute('data-line', el_result[i].data_line);
+              div[i].setAttribute('data-parent', el_result[i].parent_id);
+              div[i].setAttribute('data-region',el_result[i].region);
+              div[i].style.width = '180px'; div[i].style.height = '160px'; div[i].style.border = '1px solid black';
+              div[i].style.margin = '10px'; div[i].style.display = 'flex'; div[i].style.justifyContent = 'center';
+              div[i].style.alignItems = 'center';  div[i].style.cursor = 'pointer'; div[i].style.whiteSpace='normal';
+              div[i].style.textAlign='center';div[i].style.zIndex=5;
+              for(let j=0;j<regions_div.length;j++){
+               if(regions_div[j].getAttribute('data-id')==div[i].attributes[3].nodeValue){
+                 regions_div[j].appendChild(div[i]);
+               }
+              }
+
+            }
+            e.target.setAttribute('data-draw', true);
+          }
+
+          let divs = document.querySelectorAll('div');
+
+          // стиль для элементов
+
+          for (let i = 0; i < divs.length; i++) {
+            if (divs[i].getAttribute('data-line') == el_line) divs[i].classList.toggle('fade');
+          }
+
+    
+
+          for (let i = 0; i < divs.length; i++) {
+            if (divs[i].getAttribute('data-line') == el_line) {
+              if (divs[i].classList.contains('fade')) {
+                if(divs[i].classList.contains('active')) e.target.setAttribute('data-filter',1);
+                if (!divs[i].classList.contains('active')){ divs[i].style.display = 'none'; }
+              }
+              if (!divs[i].classList.contains('fade')){ divs[i].style.display = 'flex'; e.target.setAttribute('data-filter',2); }
+            }
+          }
+
+          let check_filter=true;
+
+          for (let i = 0; i < divs.length; i++) {
+            if (divs[i].classList.contains('active')) {
+              if(divs[i].getAttribute('data-filter')==1){ divs[i].style.borderBottom = '1px solid green'; divs[i].style.boxShadow = '0 0 5px 5px green'; }
+              if(divs[i].getAttribute('data-filter')==2){ divs[i].style.borderBottom = '1px solid green'; divs[i].style.boxShadow = '0 0 5px 5px blue'; check_filter=false; }
+            }
+            if (!divs[i].classList.contains('active')) divs[i].style.boxShadow = 'none';
+          }
+
+      
+      
+
+          // добавляем блоков для отрисовки линий
+
+             let count=0;
+             let line_divs=[];
+             let line_divs_sort=[];
+             let count_line_divs=[];
+
+          for(let i=0;i<divs.length;i++){
+             if(divs[i].classList.contains('active')){
+                count++; line_divs.push(divs[i]); 
+             }
+          }
+
+          for(let i=1;i<=line_divs.length;i++) count_line_divs.push(i);
+          
+          for(let i=0;i<count_line_divs.length;i++){
+            for(let j=0;j<line_divs.length;j++){
+              if(count_line_divs[i]==line_divs[j].getAttribute('data-line')) line_divs_sort.push(line_divs[j]);
+            }
+          }
+        
+          // рисуем линию
+
+          if(count>=2){
+            let k=count-2;
+                   
+            for(let i=k;i<line_divs_sort.length;i++){
+
+            let Instance = jsPlumb.getInstance();
+             Instance.connect({
+             source:line_divs_sort[i], 
+             target:line_divs_sort[i+1],
+             endpoint:'Blank',
+             anchor:"Continuous",
+             connector:['StateMachine', { curviness:curv[count_curv] }],
+             overlays: [["PlainArrow", { location: 1, width: 15, length: 12 }]]
+             
+           });
+           
+              // добавляем скроллы для линий
+
+             svg=document.querySelectorAll('svg');
+
+             svg[i].setAttribute('data-line',line_divs_sort[i].getAttribute('data-line'));
+
+             for(let j=0;j<svg.length;j++) { 
+
+                let flag=true;
+
+                if(svgScroll.length>0){
+               for(let k=0;k<svgScroll.length;k++){
+                  if(svgScroll[k]==j) { flag=false; break; }
+                }
+              }
+                if(flag){
+                let leftScroll = (window.pageXOffset || parent.scrollLeft) - (parent.clientLeft || 0); 
+                let svg_left=parseInt(svg[j].style.left.substring(0,svg[j].style.left.length-2));
+                svg[j].style.left=(svg_left+leftScroll)+'px';
+                svgScroll.push(j);
+                }
+              } 
+               count_curv++;
+               if(count_curv==2) count_curv=0;
+               break;
+             } 
+          } 
+
+          // проверка на синий цвет блока
+
+          if(check_filter) { for(let i=0;i<svg.length;i++) svg[i].style.display='block'; } 
+          else { for(let i=0;i<svg.length;i++) svg[i].style.display='none';  }
+
+        
+          for(let i=0;i<svg.length;i++){
+            if(!svg[i].getAttribute('data-line')) svg[i].setAttribute('data-line',svg[i-1].getAttribute('data-line'));
+          }
+
+
+          // удаление одинаковых линий
+
+          let svg_index;
+          let svg_count=0;
+
+          if(svg.length>0){
+            for(let i=0;i<svg.length;i++){
+            for(let j=0;j<svg.length;j++){
+              if(svg[i].getAttribute('data-line')==svg[j].getAttribute('data-line')){
+                 svg_count++;
+                 if(svg_count==2) { svg_index=j; break;  }
+              }
+            }
+            svg_count=0;
+          }
+          if(typeof(svg_index)=='number') { svg[svg_index-1].remove(); svgScroll.splice(svg_index,1); }
+          } 
+        }
+
+
+      }
+    }
+
+
+  </script>
+
+</body>
+
+</html>

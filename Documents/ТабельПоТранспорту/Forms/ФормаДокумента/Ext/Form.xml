@@ -1,0 +1,624 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаШапка" id="137">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа шапка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаШапкаРасширеннаяПодсказка" id="138"/>
+			<ChildItems>
+				<UsualGroup name="ШапкаПерваяГруппа" id="157">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка первая группа</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шапка первая группа</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ШапкаПерваяГруппаРасширеннаяПодсказка" id="158"/>
+					<ChildItems>
+						<InputField name="ОтображениеМесяца" id="125">
+							<DataPath>ОтображениеМесяца</DataPath>
+							<SkipOnInput>true</SkipOnInput>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MaxWidth>23</MaxWidth>
+							<Wrap>false</Wrap>
+							<ChoiceButton>true</ChoiceButton>
+							<ClearButton>false</ClearButton>
+							<SpinButton>true</SpinButton>
+							<TextEdit>false</TextEdit>
+							<ChoiceButtonPicture>
+								<xr:Ref>StdPicture.Calendar</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</ChoiceButtonPicture>
+							<BackColor>style:ФонУправляющегоПоля</BackColor>
+							<ContextMenu name="ОтображениеМесяцаКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="ОтображениеМесяцаРасширеннаяПодсказка" id="127"/>
+							<Events>
+								<Event name="StartChoice">ОтображениеМесяцаНачалоВыбора</Event>
+								<Event name="Tuning">ОтображениеМесяцаРегулирование</Event>
+							</Events>
+						</InputField>
+						<InputField name="Номер" id="1">
+							<DataPath>Объект.Number</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<InputHint>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>&lt;Авто&gt;</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+							<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="Подразделение" id="154">
+					<DataPath>Объект.Подразделение</DataPath>
+					<ContextMenu name="ПодразделениеКонтекстноеМеню" id="155"/>
+					<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="156"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="СтраницыОсновная" id="128">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы основная</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы основная</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыОсновнаяРасширеннаяПодсказка" id="129"/>
+			<ChildItems>
+				<Page name="СтраницаТабель" id="130">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Табель</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница табель</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаТабельРасширеннаяПодсказка" id="131"/>
+					<ChildItems>
+						<Table name="Табель" id="10">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Табель</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТабельКонтекстноеМеню" id="11"/>
+							<AutoCommandBar name="ТабельКоманднаяПанель" id="12">
+								<ChildItems>
+									<Button name="Заполнить" id="149">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.Заполнить</CommandName>
+										<ExtendedTooltip name="ЗаполнитьРасширеннаяПодсказка" id="150"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТабельРасширеннаяПодсказка" id="13"/>
+							<SearchStringAddition name="ТабельСтрокаПоиска" id="14">
+								<AdditionSource>
+									<Item>Табель</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТабельСтрокаПоискаКонтекстноеМеню" id="15"/>
+								<ExtendedTooltip name="ТабельСтрокаПоискаРасширеннаяПодсказка" id="16"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТабельСостояниеПросмотра" id="17">
+								<AdditionSource>
+									<Item>Табель</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТабельСостояниеПросмотраКонтекстноеМеню" id="18"/>
+								<ExtendedTooltip name="ТабельСостояниеПросмотраРасширеннаяПодсказка" id="19"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТабельУправлениеПоиском" id="20">
+								<AdditionSource>
+									<Item>Табель</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТабельУправлениеПоискомКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ТабельУправлениеПоискомРасширеннаяПодсказка" id="22"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ТабельНомерСтроки" id="23">
+									<DataPath>Объект.Табель.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельНомерСтрокиКонтекстноеМеню" id="24"/>
+									<ExtendedTooltip name="ТабельНомерСтрокиРасширеннаяПодсказка" id="25"/>
+								</LabelField>
+								<InputField name="ТабельТранспорт" id="29">
+									<DataPath>Объект.Табель.Транспорт</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельТранспортКонтекстноеМеню" id="30"/>
+									<ExtendedTooltip name="ТабельТранспортРасширеннаяПодсказка" id="31"/>
+									<Events>
+										<Event name="OnChange">ТабельТранспортПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельПодрядчик" id="26">
+									<DataPath>Объект.Табель.Подрядчик</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельПодрядчикКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ТабельПодрядчикРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<InputField name="ТабельЧасы1" id="32">
+									<DataPath>Объект.Табель.Часы1</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы1КонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ТабельЧасы1РасширеннаяПодсказка" id="34"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы2" id="35">
+									<DataPath>Объект.Табель.Часы2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы2КонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ТабельЧасы2РасширеннаяПодсказка" id="37"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы3" id="38">
+									<DataPath>Объект.Табель.Часы3</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы3КонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ТабельЧасы3РасширеннаяПодсказка" id="40"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы4" id="41">
+									<DataPath>Объект.Табель.Часы4</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы4КонтекстноеМеню" id="42"/>
+									<ExtendedTooltip name="ТабельЧасы4РасширеннаяПодсказка" id="43"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы5" id="44">
+									<DataPath>Объект.Табель.Часы5</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы5КонтекстноеМеню" id="45"/>
+									<ExtendedTooltip name="ТабельЧасы5РасширеннаяПодсказка" id="46"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы6" id="47">
+									<DataPath>Объект.Табель.Часы6</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы6КонтекстноеМеню" id="48"/>
+									<ExtendedTooltip name="ТабельЧасы6РасширеннаяПодсказка" id="49"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы7" id="50">
+									<DataPath>Объект.Табель.Часы7</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы7КонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ТабельЧасы7РасширеннаяПодсказка" id="52"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы8" id="53">
+									<DataPath>Объект.Табель.Часы8</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы8КонтекстноеМеню" id="54"/>
+									<ExtendedTooltip name="ТабельЧасы8РасширеннаяПодсказка" id="55"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы9" id="56">
+									<DataPath>Объект.Табель.Часы9</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы9КонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ТабельЧасы9РасширеннаяПодсказка" id="58"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы10" id="59">
+									<DataPath>Объект.Табель.Часы10</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы10КонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ТабельЧасы10РасширеннаяПодсказка" id="61"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы11" id="62">
+									<DataPath>Объект.Табель.Часы11</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы11КонтекстноеМеню" id="63"/>
+									<ExtendedTooltip name="ТабельЧасы11РасширеннаяПодсказка" id="64"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы12" id="65">
+									<DataPath>Объект.Табель.Часы12</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы12КонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ТабельЧасы12РасширеннаяПодсказка" id="67"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы13" id="68">
+									<DataPath>Объект.Табель.Часы13</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы13КонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ТабельЧасы13РасширеннаяПодсказка" id="70"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы14" id="71">
+									<DataPath>Объект.Табель.Часы14</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы14КонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ТабельЧасы14РасширеннаяПодсказка" id="73"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы15" id="74">
+									<DataPath>Объект.Табель.Часы15</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы15КонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ТабельЧасы15РасширеннаяПодсказка" id="76"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы16" id="77">
+									<DataPath>Объект.Табель.Часы16</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы16КонтекстноеМеню" id="78"/>
+									<ExtendedTooltip name="ТабельЧасы16РасширеннаяПодсказка" id="79"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы17" id="80">
+									<DataPath>Объект.Табель.Часы17</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы17КонтекстноеМеню" id="81"/>
+									<ExtendedTooltip name="ТабельЧасы17РасширеннаяПодсказка" id="82"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы18" id="83">
+									<DataPath>Объект.Табель.Часы18</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы18КонтекстноеМеню" id="84"/>
+									<ExtendedTooltip name="ТабельЧасы18РасширеннаяПодсказка" id="85"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы19" id="86">
+									<DataPath>Объект.Табель.Часы19</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы19КонтекстноеМеню" id="87"/>
+									<ExtendedTooltip name="ТабельЧасы19РасширеннаяПодсказка" id="88"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы20" id="89">
+									<DataPath>Объект.Табель.Часы20</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы20КонтекстноеМеню" id="90"/>
+									<ExtendedTooltip name="ТабельЧасы20РасширеннаяПодсказка" id="91"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы21" id="92">
+									<DataPath>Объект.Табель.Часы21</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы21КонтекстноеМеню" id="93"/>
+									<ExtendedTooltip name="ТабельЧасы21РасширеннаяПодсказка" id="94"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы22" id="95">
+									<DataPath>Объект.Табель.Часы22</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы22КонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ТабельЧасы22РасширеннаяПодсказка" id="97"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы23" id="98">
+									<DataPath>Объект.Табель.Часы23</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы23КонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ТабельЧасы23РасширеннаяПодсказка" id="100"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы24" id="101">
+									<DataPath>Объект.Табель.Часы24</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы24КонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ТабельЧасы24РасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы25" id="104">
+									<DataPath>Объект.Табель.Часы25</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы25КонтекстноеМеню" id="105"/>
+									<ExtendedTooltip name="ТабельЧасы25РасширеннаяПодсказка" id="106"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы26" id="107">
+									<DataPath>Объект.Табель.Часы26</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы26КонтекстноеМеню" id="108"/>
+									<ExtendedTooltip name="ТабельЧасы26РасширеннаяПодсказка" id="109"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы27" id="110">
+									<DataPath>Объект.Табель.Часы27</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы27КонтекстноеМеню" id="111"/>
+									<ExtendedTooltip name="ТабельЧасы27РасширеннаяПодсказка" id="112"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы28" id="113">
+									<DataPath>Объект.Табель.Часы28</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы28КонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ТабельЧасы28РасширеннаяПодсказка" id="115"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы29" id="116">
+									<DataPath>Объект.Табель.Часы29</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы29КонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ТабельЧасы29РасширеннаяПодсказка" id="118"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы30" id="119">
+									<DataPath>Объект.Табель.Часы30</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы30КонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ТабельЧасы30РасширеннаяПодсказка" id="121"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельЧасы31" id="122">
+									<DataPath>Объект.Табель.Часы31</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельЧасы31КонтекстноеМеню" id="123"/>
+									<ExtendedTooltip name="ТабельЧасы31РасширеннаяПодсказка" id="124"/>
+									<Events>
+										<Event name="OnChange">ТабельЧасыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТабельИтогЧасы" id="151">
+									<DataPath>Объект.Табель.ИтогЧасы</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельИтогЧасыКонтекстноеМеню" id="152"/>
+									<ExtendedTooltip name="ТабельИтогЧасыРасширеннаяПодсказка" id="153"/>
+								</InputField>
+								<InputField name="ТабельИтогРабочиеДни" id="159">
+									<DataPath>Объект.Табель.ИтогРабочиеДни</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабельИтогРабочиеДниКонтекстноеМеню" id="160"/>
+									<ExtendedTooltip name="ТабельИтогРабочиеДниРасширеннаяПодсказка" id="161"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаДополнительно" id="132">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дополнительно</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница дополнительно</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаДополнительноРасширеннаяПодсказка" id="133"/>
+					<ChildItems>
+						<InputField name="Дата" id="4">
+							<DataPath>Объект.Date</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дата создания документа</v8:content>
+								</v8:item>
+							</Title>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+							<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+						</InputField>
+						<LabelField name="Автор" id="134">
+							<DataPath>Объект.Автор</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="АвторКонтекстноеМеню" id="135"/>
+							<ExtendedTooltip name="АвторРасширеннаяПодсказка" id="136"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="139">
+			<DataPath>Объект.Комментарий</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<EditMode>EnterOnInput</EditMode>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MaxWidth>53</MaxWidth>
+			<Height>1</Height>
+			<MultiLine>true</MultiLine>
+			<ChoiceButton>true</ChoiceButton>
+			<InputHint>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Комментарий</v8:content>
+				</v8:item>
+			</InputHint>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="140"/>
+			<ExtendedTooltip name="КомментарийExtendedTooltip" id="141"/>
+			<Events>
+				<Event name="StartChoice">КомментарийНачалоВыбора</Event>
+			</Events>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.ТабельПоТранспорту</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+			<Columns>
+				<AdditionalColumns table="Объект.Табель">
+					<Column name="ИтогЧасы" id="1">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итого часов</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>2</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+					<Column name="ИтогРабочиеДни" id="2">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Итог рабочих дней</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>2</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Any</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
+				</AdditionalColumns>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтображениеМесяца" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Месяц</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>50</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Заполнить" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТабель</Action>
+		</Command>
+	</Commands>
+</Form>

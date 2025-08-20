@@ -1,0 +1,1534 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="OnReadAtServer">ПриЧтенииНаСервере</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНомерДата" id="89">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа номер дата</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНомерДатаРасширеннаяПодсказка" id="90"/>
+			<ChildItems>
+				<InputField name="Номер" id="1">
+					<DataPath>Объект.Number</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Дата" id="4">
+					<DataPath>Объект.Date</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаВерх" id="266">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа верх</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа верх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаВерхРасширеннаяПодсказка" id="267"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="268">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="269"/>
+					<ChildItems>
+						<InputField name="Организация" id="7">
+							<DataPath>Объект.Организация</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОрганизацияКонтекстноеМеню" id="8"/>
+							<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="9"/>
+						</InputField>
+						<InputField name="Ответсвенный" id="16">
+							<DataPath>Объект.Ответсвенный</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ОтветсвенныйКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ОтветсвенныйРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<UsualGroup name="ГруппаПериод" id="87">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа период</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПериодРасширеннаяПодсказка" id="88"/>
+							<ChildItems>
+								<InputField name="ДатаНачала" id="19">
+									<DataPath>Объект.ДатаНачала</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Период с</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаНачалаКонтекстноеМеню" id="20"/>
+									<ExtendedTooltip name="ДатаНачалаРасширеннаяПодсказка" id="21"/>
+								</InputField>
+								<InputField name="ДатаОкончания" id="22">
+									<DataPath>Объект.ДатаОкончания</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>по</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДатаОкончанияКонтекстноеМеню" id="23"/>
+									<ExtendedTooltip name="ДатаОкончанияРасширеннаяПодсказка" id="24"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраво" id="270">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="271"/>
+					<ChildItems>
+						<InputField name="Подразделение" id="10">
+							<DataPath>Объект.Подразделение</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+							<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
+						</InputField>
+						<InputField name="Сценарий" id="13">
+							<DataPath>Объект.Сценарий</DataPath>
+							<EditMode>EnterOnInput</EditMode>
+							<ContextMenu name="СценарийКонтекстноеМеню" id="14"/>
+							<ExtendedTooltip name="СценарийРасширеннаяПодсказка" id="15"/>
+						</InputField>
+						<InputField name="Статус" id="272">
+							<DataPath>Объект.Статус</DataPath>
+							<ContextMenu name="СтатусКонтекстноеМеню" id="273"/>
+							<ExtendedTooltip name="СтатусРасширеннаяПодсказка" id="274"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="Страницы" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="26"/>
+			<ChildItems>
+				<Page name="ГруппаДоходы" id="27">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План по продуктам</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаДоходыРасширеннаяПодсказка" id="28"/>
+					<ChildItems>
+						<Table name="ДеревоДоходов" id="107">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоДоходов</DataPath>
+							<ContextMenu name="ДеревоДоходовКонтекстноеМеню" id="108"/>
+							<AutoCommandBar name="ДеревоДоходовКоманднаяПанель" id="109">
+								<ChildItems>
+									<Popup name="ДеревоДоходовГруппаЗаполнитьПоПродуктам" id="258">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить договора</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево доходов группа заполнить по продуктам</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоДоходовГруппаЗаполнитьПоПродуктамРасширеннаяПодсказка" id="259"/>
+										<ChildItems>
+											<Button name="ДеревоДоходовЗаполнитьПоПродуктам" id="163">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоПродуктам</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовЗаполнитьПоПродуктамРасширеннаяПодсказка" id="164"/>
+											</Button>
+											<Button name="ДеревоДоходовЗаполнитьПоПродуктамПлан" id="260">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоПродуктамПлан</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовЗаполнитьПоПродуктамПланРасширеннаяПодсказка" id="261"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ДеревоДоходовПерезаполнитьСуммыДоговоровДоходы" id="236">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПерезаполнитьСуммыДоговоровДоходы</CommandName>
+										<ExtendedTooltip name="ДеревоДоходовПерезаполнитьСуммыДоговоровДоходыРасширеннаяПодсказка" id="237"/>
+									</Button>
+									<Popup name="ДеревоДоходовГруппаЗаполнить" id="240">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить колонки</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ДеревоДоходовГруппаЗаполнитьРасширеннаяПодсказка" id="241"/>
+										<ChildItems>
+											<Button name="ДеревоДоходовДоходыЗаполнитьПланПродаж" id="242">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьПланПродаж</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьПланПродажРасширеннаяПодсказка" id="243"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьПланДоходыПоДоговорам" id="244">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьПланДоходыПоДоговорам</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьПланДоходыПоДоговорамРасширеннаяПодсказка" id="245"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьСуммыПоДоговорамДоходы" id="246">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьСуммыПоДоговорамДоходы</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Суммы доходов (по договорам)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьСуммыПоДоговорамДоходыРасширеннаяПодсказка" id="247"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьФактДоходы" id="248">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьФактДоходы</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьФактДоходыРасширеннаяПодсказка" id="249"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьПланРасходы" id="250">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьПланРасходы</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьПланРасходыРасширеннаяПодсказка" id="251"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьПланРасходыПоДоговорам" id="252">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьПланРасходыПоДоговорам</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Планы расходов (по договорам)</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьПланРасходыПоДоговорамРасширеннаяПодсказка" id="253"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьСуммыПоДоговорамРасходы" id="254">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьСуммыПоДоговорамРасходы</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьСуммыПоДоговорамРасходыРасширеннаяПодсказка" id="255"/>
+											</Button>
+											<Button name="ДеревоДоходовДоходыЗаполнитьФактРасходы" id="256">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДоходыЗаполнитьФактРасходы</CommandName>
+												<ExtendedTooltip name="ДеревоДоходовДоходыЗаполнитьФактРасходыРасширеннаяПодсказка" id="257"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоДоходовРасширеннаяПодсказка" id="110"/>
+							<SearchStringAddition name="ДеревоДоходовСтрокаПоиска" id="111">
+								<AdditionSource>
+									<Item>ДеревоДоходов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДоходовСтрокаПоискаКонтекстноеМеню" id="112"/>
+								<ExtendedTooltip name="ДеревоДоходовСтрокаПоискаРасширеннаяПодсказка" id="113"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоДоходовСостояниеПросмотра" id="114">
+								<AdditionSource>
+									<Item>ДеревоДоходов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДоходовСостояниеПросмотраКонтекстноеМеню" id="115"/>
+								<ExtendedTooltip name="ДеревоДоходовСостояниеПросмотраРасширеннаяПодсказка" id="116"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоДоходовУправлениеПоиском" id="117">
+								<AdditionSource>
+									<Item>ДеревоДоходов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоДоходовУправлениеПоискомКонтекстноеМеню" id="118"/>
+								<ExtendedTooltip name="ДеревоДоходовУправлениеПоискомРасширеннаяПодсказка" id="119"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ДеревоДоходовПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоДоходовПередУдалением</Event>
+								<Event name="BeforeRowChange">ДеревоДоходовПередНачаломИзменения</Event>
+								<Event name="OnStartEdit">ДеревоДоходовПриНачалеРедактирования</Event>
+								<Event name="AfterDeleteRow">ДеревоДоходовПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДеревоДоходовПродуктПроектДоговор" id="120">
+									<DataPath>ДеревоДоходов.ПродуктПроектДоговор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<DropListButton>true</DropListButton>
+									<ChoiceHistoryOnInput>DontUse</ChoiceHistoryOnInput>
+									<ContextMenu name="ДеревоДоходовПродуктПроектДоговорКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="ДеревоДоходовПродуктПроектДоговорРасширеннаяПодсказка" id="122"/>
+									<Events>
+										<Event name="StartChoice">ДеревоДоходовПродуктПроектДоговорНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ДеревоДоходовПродуктПроектДоговорОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовПериод" id="123">
+									<DataPath>ДеревоДоходов.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовПериодКонтекстноеМеню" id="124"/>
+									<ExtendedTooltip name="ДеревоДоходовПериодРасширеннаяПодсказка" id="125"/>
+								</InputField>
+								<InputField name="ДеревоДоходовКонтрагент" id="126">
+									<DataPath>ДеревоДоходов.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовКонтрагентКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="ДеревоДоходовКонтрагентРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="ДеревоДоходовДоходы" id="129">
+									<DataPath>ДеревоДоходов.ПланПродаж</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовДоходыКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="ДеревоДоходовДоходыРасширеннаяПодсказка" id="131"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовДоходыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовПланДоходов" id="165">
+									<DataPath>ДеревоДоходов.ПланДоходов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>План доходы (по договорам)</v8:content>
+										</v8:item>
+									</Title>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовПланДоходовКонтекстноеМеню" id="166"/>
+									<ExtendedTooltip name="ДеревоДоходовПланДоходовРасширеннаяПодсказка" id="167"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовПланДоходовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовСуммаПоДоговорамДоходы" id="183">
+									<DataPath>ДеревоДоходов.СуммаПоДоговорамДоходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовСуммаПоДоговорамДоходыКонтекстноеМеню" id="184"/>
+									<ExtendedTooltip name="ДеревоДоходовСуммаПоДоговорамДоходыРасширеннаяПодсказка" id="185"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовСуммаПоДоговорамДоходыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовФактДоходы" id="168">
+									<DataPath>ДеревоДоходов.ФактДоходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовФактДоходыКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ДеревоДоходовФактДоходыРасширеннаяПодсказка" id="170"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовФактДоходыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовПланРасходов" id="171">
+									<DataPath>ДеревоДоходов.ПланРасходов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовПланРасходовКонтекстноеМеню" id="172"/>
+									<ExtendedTooltip name="ДеревоДоходовПланРасходовРасширеннаяПодсказка" id="173"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовПланРасходовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовПланРасходыПоДоговорам" id="174">
+									<DataPath>ДеревоДоходов.ПланРасходыПоДоговорам</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовПланРасходыПоДоговорамКонтекстноеМеню" id="175"/>
+									<ExtendedTooltip name="ДеревоДоходовПланРасходыПоДоговорамРасширеннаяПодсказка" id="176"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовПланРасходыПоДоговорамПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовСуммаПоДоговорамРасходы" id="186">
+									<DataPath>ДеревоДоходов.СуммаПоДоговорамРасходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовСуммаПоДоговорамРасходыКонтекстноеМеню" id="187"/>
+									<ExtendedTooltip name="ДеревоДоходовСуммаПоДоговорамРасходыРасширеннаяПодсказка" id="188"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовСуммаПоДоговорамРасходыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоДоходовФактРасходы" id="177">
+									<DataPath>ДеревоДоходов.ФактРасходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоДоходовФактРасходыКонтекстноеМеню" id="178"/>
+									<ExtendedTooltip name="ДеревоДоходовФактРасходыРасширеннаяПодсказка" id="179"/>
+									<Events>
+										<Event name="OnChange">ДеревоДоходовФактРасходыПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаАдминистративныеРасходы" id="60">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Расходы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаАдминистративныеРасходыРасширеннаяПодсказка" id="61"/>
+					<ChildItems>
+						<Table name="ДеревоРасходов" id="189">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ДеревоРасходов</DataPath>
+							<ContextMenu name="ДеревоРасходовКонтекстноеМеню" id="190"/>
+							<AutoCommandBar name="ДеревоРасходовКоманднаяПанель" id="191">
+								<ChildItems>
+									<Popup name="ДеревоРасходовГруппаЗаполнитьПоСтатьям" id="262">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Заполнить</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ДеревоРасходовГруппаЗаполнитьПоСтатьямРасширеннаяПодсказка" id="263"/>
+										<ChildItems>
+											<Button name="ДеревоРасходовЗаполнитьПоСтатьям" id="229">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоСтатьям</CommandName>
+												<ExtendedTooltip name="ДеревоРасходовЗаполнитьПоСтатьямРасширеннаяПодсказка" id="230"/>
+											</Button>
+											<Button name="ДеревоРасходовЗаполнитьПоСтатьямПлан" id="264">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗаполнитьПоСтатьямПлан</CommandName>
+												<ExtendedTooltip name="ДеревоРасходовЗаполнитьПоСтатьямПланРасширеннаяПодсказка" id="265"/>
+											</Button>
+										</ChildItems>
+									</Popup>
+									<Button name="ДеревоРасходовУдалитьДоговораСПодчиненнымиДоговорами" id="234">
+										<Type>CommandBarButton</Type>
+										<Visible>false</Visible>
+										<CommandName>Form.Command.УдалитьДоговораСПодчиненнымиДоговорами</CommandName>
+										<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+										<ExtendedTooltip name="ДеревоРасходовУдалитьДоговораСПодчиненнымиДоговорамиРасширеннаяПодсказка" id="235"/>
+									</Button>
+									<Button name="ДеревоРасходовПерезаполнитьСуммыДоговоровРасходы" id="238">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПерезаполнитьСуммыДоговоровРасходы</CommandName>
+										<ExtendedTooltip name="ДеревоРасходовПерезаполнитьСуммыДоговоровРасходыРасширеннаяПодсказка" id="239"/>
+									</Button>
+									<Button name="ДеревоРасходовПодборСтатейЗатратРасходы" id="275">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборСтатейЗатратРасходы</CommandName>
+										<ExtendedTooltip name="ДеревоРасходовПодборСтатейЗатратРасходыРасширеннаяПодсказка" id="276"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДеревоРасходовРасширеннаяПодсказка" id="192"/>
+							<SearchStringAddition name="ДеревоРасходовСтрокаПоиска" id="193">
+								<AdditionSource>
+									<Item>ДеревоРасходов</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРасходовСтрокаПоискаКонтекстноеМеню" id="194"/>
+								<ExtendedTooltip name="ДеревоРасходовСтрокаПоискаРасширеннаяПодсказка" id="195"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДеревоРасходовСостояниеПросмотра" id="196">
+								<AdditionSource>
+									<Item>ДеревоРасходов</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРасходовСостояниеПросмотраКонтекстноеМеню" id="197"/>
+								<ExtendedTooltip name="ДеревоРасходовСостояниеПросмотраРасширеннаяПодсказка" id="198"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДеревоРасходовУправлениеПоиском" id="199">
+								<AdditionSource>
+									<Item>ДеревоРасходов</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДеревоРасходовУправлениеПоискомКонтекстноеМеню" id="200"/>
+								<ExtendedTooltip name="ДеревоРасходовУправлениеПоискомРасширеннаяПодсказка" id="201"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ДеревоРасходовПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ДеревоРасходовПередУдалением</Event>
+								<Event name="BeforeRowChange">ДеревоРасходовПередНачаломИзменения</Event>
+								<Event name="AfterDeleteRow">ДеревоРасходовПослеУдаления</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ДеревоРасходовВидСтатьяДоговор" id="202">
+									<DataPath>ДеревоРасходов.ВидСтатьяДоговор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовВидСтатьяДоговорКонтекстноеМеню" id="203"/>
+									<ExtendedTooltip name="ДеревоРасходовВидСтатьяДоговорРасширеннаяПодсказка" id="204"/>
+									<Events>
+										<Event name="StartChoice">ДеревоРасходовВидСтатьяДоговорНачалоВыбора</Event>
+										<Event name="ChoiceProcessing">ДеревоРасходовВидСтатьяДоговорОбработкаВыбора</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоРасходовПериод" id="205">
+									<DataPath>ДеревоРасходов.Период</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовПериодКонтекстноеМеню" id="206"/>
+									<ExtendedTooltip name="ДеревоРасходовПериодРасширеннаяПодсказка" id="207"/>
+								</InputField>
+								<InputField name="ДеревоРасходовКонтрагент" id="208">
+									<DataPath>ДеревоРасходов.Контрагент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовКонтрагентКонтекстноеМеню" id="209"/>
+									<ExtendedTooltip name="ДеревоРасходовКонтрагентРасширеннаяПодсказка" id="210"/>
+								</InputField>
+								<InputField name="ДеревоРасходовПланРасходов" id="214">
+									<DataPath>ДеревоРасходов.ПланРасходов</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовПланРасходовКонтекстноеМеню" id="215"/>
+									<ExtendedTooltip name="ДеревоРасходовПланРасходовРасширеннаяПодсказка" id="216"/>
+									<Events>
+										<Event name="OnChange">ДеревоРасходовПланРасходовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоРасходовПланРасходыПоДоговорам" id="217">
+									<DataPath>ДеревоРасходов.ПланРасходыПоДоговорам</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовПланРасходыПоДоговорамКонтекстноеМеню" id="218"/>
+									<ExtendedTooltip name="ДеревоРасходовПланРасходыПоДоговорамРасширеннаяПодсказка" id="219"/>
+									<Events>
+										<Event name="OnChange">ДеревоРасходовПланРасходыПоДоговорамПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоРасходовСуммаПоДоговорамРасходы" id="223">
+									<DataPath>ДеревоРасходов.СуммаПоДоговорамРасходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовСуммаПоДоговорамРасходыКонтекстноеМеню" id="224"/>
+									<ExtendedTooltip name="ДеревоРасходовСуммаПоДоговорамРасходыРасширеннаяПодсказка" id="225"/>
+									<Events>
+										<Event name="OnChange">ДеревоРасходовСуммаПоДоговорамРасходыПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДеревоРасходовФактРасходы" id="220">
+									<DataPath>ДеревоРасходов.ФактРасходы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДеревоРасходовФактРасходыКонтекстноеМеню" id="221"/>
+									<ExtendedTooltip name="ДеревоРасходовФактРасходыРасширеннаяПодсказка" id="222"/>
+									<Events>
+										<Event name="OnChange">ДеревоРасходовФактРасходыПриИзменении</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="231">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<HorizontalStretch>true</HorizontalStretch>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="232"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="233"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.Бюджет</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ДеревоДоходов" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево доходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ПродуктПроектДоговор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Продукт/проект/договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.Продукты</v8:Type>
+						<v8:Type>cfg:CatalogRef.Проекты</v8:Type>
+						<v8:Type>cfg:CatalogRef.СтратегическиеЦели</v8:Type>
+						<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Период" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ПланПродаж" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План продаж</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Уровень" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПланДоходов" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План доходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФактДоходы" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт доходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПланРасходов" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПланРасходыПоДоговорам" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План расходы (по договорам)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФактРасходы" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПоДоговорамДоходы" id="11">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма по договорам доходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПоДоговорамРасходы" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма по договорам расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ДеревоРасходов" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево расходов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ВидСтатьяДоговор" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид/статья/договор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыСтатейРасходов</v8:Type>
+						<v8:Type>cfg:DocumentRef.ЗаявкаНаРесурсы</v8:Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:Type>cfg:CatalogRef.СтатьиЗатрат</v8:Type>
+						<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Период" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Дата</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>Date</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Контрагент" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Контрагент</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Контрагенты</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Уровень" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПланРасходов" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПланРасходыПоДоговорам" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>План расходы (по договорам)</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ФактРасходы" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Факт расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="СуммаПоДоговорамРасходы" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сумма по договорам расходы</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>15</v8:Digits>
+							<v8:FractionDigits>2</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ВидСтатьи" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид статьи</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:EnumRef.ВидыСтатейРасходов</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПродуктПроектДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПериод</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовДоходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПланДоходов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовФактДоходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПланРасходов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПланРасходыПоДоговорам</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовФактРасходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовСуммаПоДоговорамРасходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовСуммаПоДоговорамДоходы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДоходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовКонтрагент</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДоходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовДоходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПланРасходов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДоходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовДоходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоДоходовПланРасходов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоДоходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовСтатьяПроектДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовВидСтатьи</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПериод</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПланРасходов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПланРасходыПоДоговорам</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовФактРасходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовСуммаПоДоговорамРасходы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРасходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">0</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовКонтрагент</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРасходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">2</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПланРасходов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРасходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">3</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовСтатьяПроектДоговор</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПериод</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПланРасходов</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовПланРасходыПоДоговорам</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовФактРасходы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоРасходовСуммаПоДоговорамРасходы</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ДеревоРасходов.Уровень</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:decimal">1</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:WhiteSmoke</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ТолькоПросмотр</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">true</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьПоПродуктам" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по продуктам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по продуктам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПродуктам</Action>
+		</Command>
+		<Command name="ЗаполнитьПоСтатьям" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по статьям</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по статьям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоСтатьям</Action>
+		</Command>
+		<Command name="УдалитьДоговораСПодчиненнымиДоговорами" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить договора с подчиненными договорами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить договора с подчиненными договорами</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьДоговораСПодчиненнымиДоговорами</Action>
+		</Command>
+		<Command name="ПерезаполнитьСуммыДоговоровДоходы" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить суммы договоров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить суммы договоров доходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерезаполнитьСуммыДоговоровДоходы</Action>
+		</Command>
+		<Command name="ПерезаполнитьСуммыДоговоровРасходы" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить суммы договоров</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перезаполнить суммы договоров доходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерезаполнитьСуммыДоговоровРасходы</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьПланПродаж" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планы продаж</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить план продаж</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьПланПродаж</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьПланДоходыПоДоговорам" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планы доходов (по договорам)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить план доходы по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьПланДоходыПоДоговорам</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьСуммыПоДоговорамДоходы" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить суммы по договорам доходы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить суммы по договорам доходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьСуммыПоДоговорамДоходы</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьФактДоходы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факты доходов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить факт доходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьФактДоходы</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьПланРасходы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Планы расходов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить план расходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьПланРасходы</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьПланРасходыПоДоговорам" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить план расходы по договорам</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить план расходы по договорам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьПланРасходыПоДоговорам</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьСуммыПоДоговорамРасходы" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Суммы расходов (по договорам)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить суммы по договорам расходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьСуммыПоДоговорамРасходы</Action>
+		</Command>
+		<Command name="ДоходыЗаполнитьФактРасходы" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Факты расходов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Доходы заполнить факт расходы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДоходыЗаполнитьФактРасходы</Action>
+		</Command>
+		<Command name="ЗаполнитьПоПродуктамПлан" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по продуктам (план)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по продуктам</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоПродуктамПлан</Action>
+		</Command>
+		<Command name="ЗаполнитьПоСтатьямПлан" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по статьям (план)</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить по статьям</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьПоСтатьямПлан</Action>
+		</Command>
+		<Command name="ПодборСтатейЗатратРасходы" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор статей затрат</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор статей затрат</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборСтатейЗатратРасходы</Action>
+		</Command>
+	</Commands>
+</Form>

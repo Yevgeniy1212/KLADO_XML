@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="AfterWrite">ПослеЗаписи</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Организация" id="16">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОрганизацияКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ОрганизацияРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="Подразделение" id="10">
+			<DataPath>Объект.Подразделение</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ПодразделениеПриИзменении</Event>
+			</Events>
+		</InputField>
+		<InputField name="Должность" id="13">
+			<DataPath>Объект.Должность</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Должность (основная)</v8:content>
+				</v8:item>
+			</Title>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДолжностьКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ДолжностьРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="47"/>
+			<ChildItems>
+				<Page name="ГруппаДолжности" id="48">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Должности</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа должности</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДолжностиРасширеннаяПодсказка" id="49"/>
+					<ChildItems>
+						<Table name="Должности" id="19">
+							<Representation>List</Representation>
+							<Height>5</Height>
+							<AutoMaxHeight>false</AutoMaxHeight>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Должности</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДолжностиКонтекстноеМеню" id="20"/>
+							<AutoCommandBar name="ДолжностиКоманднаяПанель" id="21">
+								<ChildItems>
+									<Button name="ДолжностиУстановитьОсновной" id="41">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УстановитьОсновной</CommandName>
+										<ExtendedTooltip name="ДолжностиУстановитьОсновнойРасширеннаяПодсказка" id="42"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ДолжностиРасширеннаяПодсказка" id="22"/>
+							<SearchStringAddition name="ДолжностиСтрокаПоиска" id="23">
+								<AdditionSource>
+									<Item>Должности</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДолжностиСтрокаПоискаКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ДолжностиСтрокаПоискаРасширеннаяПодсказка" id="25"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДолжностиСостояниеПросмотра" id="26">
+								<AdditionSource>
+									<Item>Должности</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДолжностиСостояниеПросмотраКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ДолжностиСостояниеПросмотраРасширеннаяПодсказка" id="28"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДолжностиУправлениеПоиском" id="29">
+								<AdditionSource>
+									<Item>Должности</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДолжностиУправлениеПоискомКонтекстноеМеню" id="30"/>
+								<ExtendedTooltip name="ДолжностиУправлениеПоискомРасширеннаяПодсказка" id="31"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДолжностиНомерСтроки" id="32">
+									<DataPath>Объект.Должности.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДолжностиНомерСтрокиКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ДолжностиНомерСтрокиРасширеннаяПодсказка" id="34"/>
+								</LabelField>
+								<InputField name="ДолжностиДолжность" id="35">
+									<DataPath>Объект.Должности.Должность</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДолжностиДолжностьКонтекстноеМеню" id="36"/>
+									<ExtendedTooltip name="ДолжностиДолжностьРасширеннаяПодсказка" id="37"/>
+								</InputField>
+								<InputField name="ДолжностиПодразделение" id="43">
+									<DataPath>Объект.Должности.Подразделение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДолжностиПодразделениеКонтекстноеМеню" id="44"/>
+									<ExtendedTooltip name="ДолжностиПодразделениеРасширеннаяПодсказка" id="45"/>
+								</InputField>
+								<CheckBoxField name="ДолжностиОсновная" id="38">
+									<DataPath>Объект.Должности.Основная</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДолжностиОсновнаяКонтекстноеМеню" id="39"/>
+									<ExtendedTooltip name="ДолжностиОсновнаяРасширеннаяПодсказка" id="40"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаДоговоры" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Договоры</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа договоры</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаДоговорыРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<Table name="Договоры" id="52">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<DataPath>Договоры</DataPath>
+							<RowPictureDataPath>Договоры.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ДоговорыКонтекстноеМеню" id="53"/>
+							<AutoCommandBar name="ДоговорыКоманднаяПанель" id="54"/>
+							<ExtendedTooltip name="ДоговорыРасширеннаяПодсказка" id="55"/>
+							<SearchStringAddition name="ДоговорыСтрокаПоиска" id="56">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСтрокаПоискаКонтекстноеМеню" id="57"/>
+								<ExtendedTooltip name="ДоговорыСтрокаПоискаРасширеннаяПодсказка" id="58"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговорыСостояниеПросмотра" id="59">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыСостояниеПросмотраКонтекстноеМеню" id="60"/>
+								<ExtendedTooltip name="ДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="61"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговорыУправлениеПоиском" id="62">
+								<AdditionSource>
+									<Item>Договоры</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговорыУправлениеПоискомКонтекстноеМеню" id="63"/>
+								<ExtendedTooltip name="ДоговорыУправлениеПоискомРасширеннаяПодсказка" id="64"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="ДоговорыПроект" id="74">
+									<DataPath>Договоры.Проект</DataPath>
+									<ContextMenu name="ДоговорыПроектКонтекстноеМеню" id="75"/>
+									<ExtendedTooltip name="ДоговорыПроектРасширеннаяПодсказка" id="76"/>
+								</LabelField>
+								<LabelField name="ДоговорыДоговор" id="71">
+									<DataPath>Договоры.Договор</DataPath>
+									<ContextMenu name="ДоговорыДоговорКонтекстноеМеню" id="72"/>
+									<ExtendedTooltip name="ДоговорыДоговорРасширеннаяПодсказка" id="73"/>
+								</LabelField>
+								<CheckBoxField name="ДоговорыАдминистраторДоговора" id="65">
+									<DataPath>Договоры.АдминистраторДоговора</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДоговорыАдминистраторДоговораКонтекстноеМеню" id="66"/>
+									<ExtendedTooltip name="ДоговорыАдминистраторДоговораРасширеннаяПодсказка" id="67"/>
+								</CheckBoxField>
+								<CheckBoxField name="ДоговорыАдминистраторРезультата" id="68">
+									<DataPath>Договоры.АдминистраторРезультата</DataPath>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДоговорыАдминистраторРезультатаКонтекстноеМеню" id="69"/>
+									<ExtendedTooltip name="ДоговорыАдминистраторРезультатаРасширеннаяПодсказка" id="70"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаТекущиеЗадачи" id="84">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текущие задачи</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа текущие задачи</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаТекущиеЗадачиРасширеннаяПодсказка" id="85"/>
+					<ChildItems>
+						<UsualGroup name="Группа2" id="114">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="115"/>
+							<ChildItems>
+								<InputField name="НаПериод" id="116">
+									<DataPath>НаПериод</DataPath>
+									<ContextMenu name="НаПериодКонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="НаПериодРасширеннаяПодсказка" id="118"/>
+									<Events>
+										<Event name="OnChange">НаПериодПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CommandBar name="КоманднаяПанельЗадачи" id="119">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель договоры</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Командная панель договоры</v8:content>
+										</v8:item>
+									</ToolTip>
+									<CommandSource>Item.Задачи</CommandSource>
+									<ExtendedTooltip name="КоманднаяПанельЗадачиРасширеннаяПодсказка" id="120"/>
+								</CommandBar>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="Задачи" id="86">
+							<ChangeRowSet>false</ChangeRowSet>
+							<ChangeRowOrder>false</ChangeRowOrder>
+							<UseAlternationRowColor>true</UseAlternationRowColor>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Задачи</DataPath>
+							<RowPictureDataPath>Задачи.DefaultPicture</RowPictureDataPath>
+							<AutoRefresh>false</AutoRefresh>
+							<AutoRefreshPeriod>60</AutoRefreshPeriod>
+							<Period>
+								<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+								<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+								<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+							</Period>
+							<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+							<RestoreCurrentRow>false</RestoreCurrentRow>
+							<TopLevelParent xsi:nil="true"/>
+							<ShowRoot>true</ShowRoot>
+							<AllowRootChoice>false</AllowRootChoice>
+							<UpdateOnDataChange>Auto</UpdateOnDataChange>
+							<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+							<ContextMenu name="ЗадачиКонтекстноеМеню" id="87"/>
+							<AutoCommandBar name="ЗадачиКоманднаяПанель" id="88">
+								<Autofill>false</Autofill>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ЗадачиРасширеннаяПодсказка" id="89"/>
+							<SearchStringAddition name="ЗадачиСтрокаПоиска" id="90">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСтрокаПоискаКонтекстноеМеню" id="91"/>
+								<ExtendedTooltip name="ЗадачиСтрокаПоискаРасширеннаяПодсказка" id="92"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗадачиСостояниеПросмотра" id="93">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиСостояниеПросмотраКонтекстноеМеню" id="94"/>
+								<ExtendedTooltip name="ЗадачиСостояниеПросмотраРасширеннаяПодсказка" id="95"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗадачиУправлениеПоиском" id="96">
+								<AdditionSource>
+									<Item>Задачи</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗадачиУправлениеПоискомКонтекстноеМеню" id="97"/>
+								<ExtendedTooltip name="ЗадачиУправлениеПоискомРасширеннаяПодсказка" id="98"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Selection">ЗадачиВыбор</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ЗадачиВладелец" id="99">
+									<DataPath>Задачи.Владелец</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ЗадачиВладелецКонтекстноеМеню" id="100"/>
+									<ExtendedTooltip name="ЗадачиВладелецРасширеннаяПодсказка" id="101"/>
+								</LabelField>
+								<LabelField name="ЗадачиСсылка" id="102">
+									<DataPath>Задачи.Ссылка</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Задача</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ЗадачиСсылкаКонтекстноеМеню" id="103"/>
+									<ExtendedTooltip name="ЗадачиСсылкаРасширеннаяПодсказка" id="104"/>
+								</LabelField>
+								<LabelField name="ЗадачиДатаНачала" id="105">
+									<DataPath>Задачи.ДатаНачала</DataPath>
+									<ContextMenu name="ЗадачиДатаНачалаКонтекстноеМеню" id="106"/>
+									<ExtendedTooltip name="ЗадачиДатаНачалаРасширеннаяПодсказка" id="107"/>
+								</LabelField>
+								<LabelField name="ЗадачиДатаОкончания" id="108">
+									<DataPath>Задачи.ДатаОкончания</DataPath>
+									<ContextMenu name="ЗадачиДатаОкончанияКонтекстноеМеню" id="109"/>
+									<ExtendedTooltip name="ЗадачиДатаОкончанияРасширеннаяПодсказка" id="110"/>
+								</LabelField>
+								<LabelField name="ЗадачиСтатусЗадачи" id="111">
+									<DataPath>Задачи.СтатусЗадачи</DataPath>
+									<ContextMenu name="ЗадачиСтатусЗадачиКонтекстноеМеню" id="112"/>
+									<ExtendedTooltip name="ЗадачиСтатусЗадачиРасширеннаяПодсказка" id="113"/>
+								</LabelField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Сотрудники</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="Договоры" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Договоры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	Договоры.Проект КАК Проект,
+	Договоры.Ссылка КАК Договор,
+	МАКСИМУМ(Договоры.Администратор = &amp;ТекущийСотрудник) КАК АдминистраторДоговора,
+	МАКСИМУМ(Задачи.Администратор = &amp;ТекущийСотрудник) КАК АдминистраторРезультата
+ИЗ
+	Справочник.Задачи КАК Задачи
+		ВНУТРЕННЕЕ СОЕДИНЕНИЕ Справочник.Договоры КАК Договоры
+		ПО Задачи.Владелец = Договоры.Ссылка
+ГДЕ
+	(Задачи.Администратор = &amp;ТекущийСотрудник 
+			ИЛИ Договоры.Администратор = &amp;ТекущийСотрудник )
+
+СГРУППИРОВАТЬ ПО
+	Договоры.Проект,
+	Договоры.Ссылка</QueryText>
+				<MainTable>Catalog.Договоры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="НаПериод" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>На период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Задачи" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Задачи</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>true</ManualQuery>
+				<DynamicDataRead>false</DynamicDataRead>
+				<QueryText>ВЫБРАТЬ
+	СправочникЗадачи.Ссылка КАК Ссылка,
+	СправочникЗадачи.Владелец КАК Владелец,
+	СправочникЗадачи.Подразделение КАК Подразделение,
+	СправочникЗадачи.Администратор КАК Администратор,
+	СправочникЗадачи.ДатаНачала КАК ДатаНачала,
+	СправочникЗадачи.ДатаОкончания КАК ДатаОкончания,
+	СправочникЗадачи.СтатусЗадачи КАК СтатусЗадачи
+ИЗ
+	Справочник.Задачи КАК СправочникЗадачи
+ГДЕ НЕ СправочникЗадачи.СтатусЗадачи В (Значение(Перечисление.СтатусыЗадач.Отмененная), Значение(Перечисление.СтатусыЗадач.Выполненная))
+
+ОБЪЕДИНИТЬ ВСЕ
+
+ВЫБРАТЬ
+	"Администратор договора",
+	Договоры.Ссылка,
+	Договоры.Подразделение,
+	Договоры.Администратор,
+	Договоры.ДатаНачала,
+	Договоры.ДатаОкончания,
+	Договоры.СостояниеИсполнения
+ИЗ
+	Справочник.Договоры КАК Договоры
+	
+ГДЕ НЕ Договоры.СостояниеИсполнения В (Значение(Перечисление.СтатусыДоговоровПроектов.Отмененный), Значение(Перечисление.СтатусыДоговоровПроектов.Выполненный))
+	</QueryText>
+				<KeyField>Ссылка</KeyField>
+				<KeyField>Владелец</KeyField>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:item xsi:type="dcsset:StructureItemGroup">
+						<dcsset:groupItems>
+							<dcsset:item xsi:type="dcsset:GroupItemField">
+								<dcsset:field>Владелец</dcsset:field>
+								<dcsset:groupType>Items</dcsset:groupType>
+								<dcsset:periodAdditionType>None</dcsset:periodAdditionType>
+								<dcsset:periodAdditionBegin xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionBegin>
+								<dcsset:periodAdditionEnd xsi:type="xs:dateTime">0001-01-01T00:00:00</dcsset:periodAdditionEnd>
+							</dcsset:item>
+						</dcsset:groupItems>
+					</dcsset:item>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДолжностиНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДолжностиДолжность</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.Должности.Основная</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="УстановитьОсновной" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить основной</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить основной</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьОсновной</Action>
+		</Command>
+	</Commands>
+</Form>

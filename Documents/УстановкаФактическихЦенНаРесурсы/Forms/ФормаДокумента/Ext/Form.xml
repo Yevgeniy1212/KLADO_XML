@@ -1,0 +1,512 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<AutoTime>CurrentOrLast</AutoTime>
+	<UsePostingMode>Auto</UsePostingMode>
+	<RepostOnWrite>true</RepostOnWrite>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="ChoiceProcessing">ОбработкаВыбора</Event>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnWriteAtServer">ПриЗаписиНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Номер" id="1">
+			<DataPath>Объект.Number</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НомерКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="НомерРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Дата" id="4">
+			<DataPath>Объект.Date</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ДатаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ДатаРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Оргагнизация" id="7">
+			<DataPath>Объект.Организация</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ОргагнизацияКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="ОргагнизацияРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="Сценарий" id="10">
+			<DataPath>Объект.Сценарий</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="СценарийКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="СценарийРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<Pages name="Страницы" id="32">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="33"/>
+			<ChildItems>
+				<Page name="ГруппаПерсонал" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Персонал</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаПерсоналРасширеннаяПодсказка" id="35"/>
+					<ChildItems>
+						<Table name="ПерсоналДинамическая" id="125">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ПерсоналДинамическая</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ПерсоналДинамическаяКонтекстноеМеню" id="126"/>
+							<AutoCommandBar name="ПерсоналДинамическаяКоманднаяПанель" id="127">
+								<ChildItems>
+									<Button name="ПерсоналДинамическаяПерсоналПоДолжности" id="145">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПерсоналПоДолжности</CommandName>
+										<ExtendedTooltip name="ПерсоналДинамическаяПерсоналПоДолжностиРасширеннаяПодсказка" id="146"/>
+									</Button>
+									<Button name="ПерсоналДинамическаяДобавитьКолонкуПерсонал" id="141">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьКолонкуПерсонал</CommandName>
+										<ExtendedTooltip name="ПерсоналДинамическаяДобавитьКолонкуПерсоналРасширеннаяПодсказка" id="142"/>
+									</Button>
+									<Button name="ПерсоналДинамическаяУдалитьКолонкуПерсонал" id="143">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.УдалитьКолонкуПерсонал</CommandName>
+										<ExtendedTooltip name="ПерсоналДинамическаяУдалитьКолонкуПерсоналРасширеннаяПодсказка" id="144"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ПерсоналДинамическаяРасширеннаяПодсказка" id="128"/>
+							<SearchStringAddition name="ПерсоналДинамическаяСтрокаПоиска" id="129">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяСтрокаПоискаКонтекстноеМеню" id="130"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяСтрокаПоискаРасширеннаяПодсказка" id="131"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ПерсоналДинамическаяСостояниеПросмотра" id="132">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяСостояниеПросмотраКонтекстноеМеню" id="133"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяСостояниеПросмотраРасширеннаяПодсказка" id="134"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ПерсоналДинамическаяУправлениеПоиском" id="135">
+								<AdditionSource>
+									<Item>ПерсоналДинамическая</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ПерсоналДинамическаяУправлениеПоискомКонтекстноеМеню" id="136"/>
+								<ExtendedTooltip name="ПерсоналДинамическаяУправлениеПоискомРасширеннаяПодсказка" id="137"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ПерсоналДинамическаяРесурс" id="138">
+									<DataPath>ПерсоналДинамическая.Ресурс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ПерсоналДинамическаяРесурсКонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="ПерсоналДинамическаяРесурсРасширеннаяПодсказка" id="140"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИнструменты" id="36">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Инструменты</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаИнструментыРасширеннаяПодсказка" id="37"/>
+					<ChildItems>
+						<Table name="Инструменты" id="40">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Инструменты</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ИнструментыКонтекстноеМеню" id="41"/>
+							<AutoCommandBar name="ИнструментыКоманднаяПанель" id="42">
+								<ChildItems>
+									<Button name="ИнструментыПодборИнструменты" id="90">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПодборИнструменты</CommandName>
+										<ExtendedTooltip name="ИнструментыПодборИнструментыРасширеннаяПодсказка" id="91"/>
+									</Button>
+									<Button name="ИнструментыЗагрузитьИнструменты" id="86">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьИнструменты</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузить из Excel</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ИнструментыЗагрузитьИнструментыРасширеннаяПодсказка" id="87"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ИнструментыРасширеннаяПодсказка" id="43"/>
+							<SearchStringAddition name="ИнструментыСтрокаПоиска" id="44">
+								<AdditionSource>
+									<Item>Инструменты</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыСтрокаПоискаКонтекстноеМеню" id="45"/>
+								<ExtendedTooltip name="ИнструментыСтрокаПоискаРасширеннаяПодсказка" id="46"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ИнструментыСостояниеПросмотра" id="47">
+								<AdditionSource>
+									<Item>Инструменты</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыСостояниеПросмотраКонтекстноеМеню" id="48"/>
+								<ExtendedTooltip name="ИнструментыСостояниеПросмотраРасширеннаяПодсказка" id="49"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ИнструментыУправлениеПоиском" id="50">
+								<AdditionSource>
+									<Item>Инструменты</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ИнструментыУправлениеПоискомКонтекстноеМеню" id="51"/>
+								<ExtendedTooltip name="ИнструментыУправлениеПоискомРасширеннаяПодсказка" id="52"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ИнструментыРесурс" id="56">
+									<DataPath>Объект.Инструменты.Ресурс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыРесурсКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ИнструментыРесурсРасширеннаяПодсказка" id="58"/>
+								</InputField>
+								<LabelField name="ИнструментыРесурсМестоОказанияУслуг" id="95">
+									<DataPath>Объект.Инструменты.Ресурс.МестоОказанияУслуг</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыРесурсМестоОказанияУслугКонтекстноеМеню" id="96"/>
+									<ExtendedTooltip name="ИнструментыРесурсМестоОказанияУслугРасширеннаяПодсказка" id="97"/>
+								</LabelField>
+								<LabelField name="ИнструментыРесурсМаршрут" id="98">
+									<DataPath>Объект.Инструменты.Ресурс.Маршрут</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыРесурсМаршрутКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ИнструментыРесурсМаршрутРасширеннаяПодсказка" id="100"/>
+								</LabelField>
+								<LabelField name="ИнструментыРесурсРежимРаботы" id="101">
+									<DataPath>Объект.Инструменты.Ресурс.РежимРаботы</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыРесурсРежимРаботыКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ИнструментыРесурсРежимРаботыРасширеннаяПодсказка" id="103"/>
+								</LabelField>
+								<InputField name="ИнструментыСтатьяЗатрат" id="153">
+									<DataPath>Объект.Инструменты.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыСтатьяЗатратКонтекстноеМеню" id="154"/>
+									<ExtendedTooltip name="ИнструментыСтатьяЗатратРасширеннаяПодсказка" id="155"/>
+								</InputField>
+								<InputField name="ИнструментыЦена" id="59">
+									<DataPath>Объект.Инструменты.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыЦенаКонтекстноеМеню" id="60"/>
+									<ExtendedTooltip name="ИнструментыЦенаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="ИнструментыЦенаПрошлогоПериода" id="113">
+									<DataPath>1/0:9de951fb-90f8-4218-9038-dfc0a03a6ea4/0:e308ee61-e94c-4441-9026-cc25089cf0ab</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыЦенаПрошлогоПериодаКонтекстноеМеню" id="114"/>
+									<ExtendedTooltip name="ИнструментыЦенаПрошлогоПериодаРасширеннаяПодсказка" id="115"/>
+								</InputField>
+								<InputField name="ИнструментыЦенаПрошлогоПериодаСоСтатьей103" id="116">
+									<DataPath>1/0:9de951fb-90f8-4218-9038-dfc0a03a6ea4/0:31a0734a-61fa-4d7c-865d-44671431f9d2</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыЦенаПрошлогоПериодаСоСтатьей103КонтекстноеМеню" id="117"/>
+									<ExtendedTooltip name="ИнструментыЦенаПрошлогоПериодаСоСтатьей103РасширеннаяПодсказка" id="118"/>
+								</InputField>
+								<InputField name="ИнструментыЦенаПрошлогоПериодаСоцПакет" id="119">
+									<DataPath>1/0:9de951fb-90f8-4218-9038-dfc0a03a6ea4/0:d6beb3a9-f6cd-42c6-84ef-6eb4f45b2ec9</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ИнструментыЦенаПрошлогоПериодаСоцПакетКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="ИнструментыЦенаПрошлогоПериодаСоцПакетРасширеннаяПодсказка" id="121"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаМатериалы" id="38">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Материалы</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="ГруппаМатериалыРасширеннаяПодсказка" id="39"/>
+					<ChildItems>
+						<Table name="Материалы" id="62">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Материалы</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МатериалыКонтекстноеМеню" id="63"/>
+							<AutoCommandBar name="МатериалыКоманднаяПанель" id="64">
+								<ChildItems>
+									<Button name="МатериалыЗагрузитьМатериалы" id="88">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьМатериалы</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузить из Excel</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="МатериалыЗагрузитьМатериалыРасширеннаяПодсказка" id="89"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="МатериалыРасширеннаяПодсказка" id="65"/>
+							<SearchStringAddition name="МатериалыСтрокаПоиска" id="66">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыСтрокаПоискаКонтекстноеМеню" id="67"/>
+								<ExtendedTooltip name="МатериалыСтрокаПоискаРасширеннаяПодсказка" id="68"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МатериалыСостояниеПросмотра" id="69">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыСостояниеПросмотраКонтекстноеМеню" id="70"/>
+								<ExtendedTooltip name="МатериалыСостояниеПросмотраРасширеннаяПодсказка" id="71"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МатериалыУправлениеПоиском" id="72">
+								<AdditionSource>
+									<Item>Материалы</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МатериалыУправлениеПоискомКонтекстноеМеню" id="73"/>
+								<ExtendedTooltip name="МатериалыУправлениеПоискомРасширеннаяПодсказка" id="74"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="МатериалыРесурс" id="78">
+									<DataPath>Объект.Материалы.Ресурс</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыРесурсКонтекстноеМеню" id="79"/>
+									<ExtendedTooltip name="МатериалыРесурсРасширеннаяПодсказка" id="80"/>
+								</InputField>
+								<LabelField name="МатериалыРесурсЕдиницаИзмерения" id="150">
+									<DataPath>Объект.Материалы.Ресурс.ЕдиницаИзмерения</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыРесурсЕдиницаИзмеренияКонтекстноеМеню" id="151"/>
+									<ExtendedTooltip name="МатериалыРесурсЕдиницаИзмеренияРасширеннаяПодсказка" id="152"/>
+								</LabelField>
+								<InputField name="МатериалыЦена" id="81">
+									<DataPath>Объект.Материалы.Цена</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="МатериалыЦенаКонтекстноеМеню" id="82"/>
+									<ExtendedTooltip name="МатериалыЦенаРасширеннаяПодсказка" id="83"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<InputField name="Комментарий" id="122">
+			<DataPath>Объект.Комментарий</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КомментарийКонтекстноеМеню" id="123"/>
+			<ExtendedTooltip name="КомментарийРасширеннаяПодсказка" id="124"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DocumentObject.УстановкаФактическихЦенНаРесурсы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+			<UseAlways>
+				<Field>Объект.RegisterRecords</Field>
+			</UseAlways>
+		</Attribute>
+		<Attribute name="ПерсоналДинамическая" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персонал динамическая</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ресурс" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ресурс</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Персонал</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ЗагрузитьПерсонал" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматExcel</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьПерсонал</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьИнструменты" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматExcel</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьИнструменты</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ЗагрузитьМатериалы" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из Excel</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>CommonPicture.ФорматExcel</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьМатериалы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодборИнструменты" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подбор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодборИнструменты</Action>
+		</Command>
+		<Command name="ПерсоналПоДолжности" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персонал по должности</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Персонал по должности</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПерсоналПоДолжности</Action>
+		</Command>
+		<Command name="ДобавитьКолонкуПерсонал" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить колонку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить колонку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьКолонкуПерсонал</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="УдалитьКолонкуПерсонал" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить колонку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить колонку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьКолонкуПерсонал</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>InformationRegister.ПлановыеЦеныНаРесурсы.StandardCommand.OpenByRecorder</Command>
+				<Type>Auto</Type>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
+</Form>

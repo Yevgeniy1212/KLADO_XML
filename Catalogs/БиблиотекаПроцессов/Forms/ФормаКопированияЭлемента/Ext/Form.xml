@@ -1,0 +1,845 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаПеренестиВДоговор" id="323">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеренестиВДоговор</CommandName>
+				<BackColor>style:ImportantColor</BackColor>
+				<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+				<ExtendedTooltip name="ФормаПеренестиВДоговорРасширеннаяПодсказка" id="324"/>
+			</Button>
+			<Button name="ФормаЗакрыть" id="325">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="326"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="bf0ac0e1-bcbb-4dfe-8fc4-0b1923b461a6">ПередЗаписьюНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Подразделение" id="327">
+			<DataPath>Подразделение</DataPath>
+			<ContextMenu name="ПодразделениеКонтекстноеМеню" id="328"/>
+			<ExtendedTooltip name="ПодразделениеРасширеннаяПодсказка" id="329"/>
+		</InputField>
+		<InputField name="НаименованиеДоговора" id="330">
+			<DataPath>НаименованиеДоговора</DataPath>
+			<AutoMarkIncomplete>true</AutoMarkIncomplete>
+			<ContextMenu name="НаименованиеДоговораКонтекстноеМеню" id="331"/>
+			<ExtendedTooltip name="НаименованиеДоговораРасширеннаяПодсказка" id="332"/>
+		</InputField>
+		<InputField name="ТипДоговора" id="10">
+			<DataPath>ТипДоговора</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ТипДоговораКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТипДоговораРасширеннаяПодсказка" id="12"/>
+			<Events>
+				<Event name="OnChange">ТипДоговораПриИзменении</Event>
+			</Events>
+		</InputField>
+		<Pages name="ГруппаСтраницы" id="89">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="90"/>
+			<ChildItems>
+				<Page name="ГруппаФормирование" id="91">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формирование</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа формирование</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаФормированиеРасширеннаяПодсказка" id="92"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗадачи" id="16">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачиРасширеннаяПодсказка" id="17"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСторона1" id="50">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторона1 (Заказчик)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сторона1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСторона1РасширеннаяПодсказка" id="51"/>
+									<ChildItems>
+										<Table name="ИДеревоЗадачиСторона1" id="231">
+											<Representation>Tree</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ИДеревоЗадачиСторона1</DataPath>
+											<ContextMenu name="ИДеревоЗадачиСторона1КонтекстноеМеню" id="232"/>
+											<AutoCommandBar name="ИДеревоЗадачиСторона1КоманднаяПанель" id="233">
+												<ChildItems>
+													<Button name="ИДеревоЗадачиСторона11ОтметитьВсе" id="250">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИОтметитьВсе1</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона11ОтметитьВсеРасширеннаяПодсказка" id="251"/>
+													</Button>
+													<Button name="ИДеревоЗадачиСторона11СнятьВсе" id="252">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИСнятьВсе1</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона11СнятьВсеРасширеннаяПодсказка" id="253"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИДеревоЗадачиСторона1РасширеннаяПодсказка" id="234"/>
+											<SearchStringAddition name="ИДеревоЗадачиСторона1СтрокаПоиска" id="235">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона1</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона1СтрокаПоискаКонтекстноеМеню" id="236"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона1СтрокаПоискаРасширеннаяПодсказка" id="237"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИДеревоЗадачиСторона1СостояниеПросмотра" id="238">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона1</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона1СостояниеПросмотраКонтекстноеМеню" id="239"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона1СостояниеПросмотраРасширеннаяПодсказка" id="240"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИДеревоЗадачиСторона1УправлениеПоиском" id="241">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона1</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона1УправлениеПоискомКонтекстноеМеню" id="242"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона1УправлениеПоискомРасширеннаяПодсказка" id="243"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИДеревоЗадачиСторона11Задача" id="244">
+													<DataPath>ИДеревоЗадачиСторона1.Задача</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИДеревоЗадачиСторона11ЗадачаКонтекстноеМеню" id="245"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона11ЗадачаРасширеннаяПодсказка" id="246"/>
+												</InputField>
+												<CheckBoxField name="ИДеревоЗадачиСторона11Выбор" id="247">
+													<DataPath>ИДеревоЗадачиСторона1.Отметка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИДеревоЗадачиСторона11ВыборКонтекстноеМеню" id="248"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона11ВыборРасширеннаяПодсказка" id="249"/>
+													<Events>
+														<Event name="OnChange">ИДеревоЗадачиСторона11ВыборПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСторона2" id="52">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторона 2 (Исполнитель)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сторона2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСторона2РасширеннаяПодсказка" id="53"/>
+									<ChildItems>
+										<Table name="ИДеревоЗадачиСторона2" id="254">
+											<Representation>Tree</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ИДеревоЗадачиСторона2</DataPath>
+											<ContextMenu name="ИДеревоЗадачиСторона2КонтекстноеМеню" id="255"/>
+											<AutoCommandBar name="ИДеревоЗадачиСторона2КоманднаяПанель" id="256">
+												<ChildItems>
+													<Button name="ИДеревоЗадачиСторона2ИОтметитьВсе2" id="273">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИОтметитьВсе2</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона2ИОтметитьВсе2РасширеннаяПодсказка" id="274"/>
+													</Button>
+													<Button name="ИДеревоЗадачиСторона2ИСнятьВсе2" id="275">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИСнятьВсе2</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона2ИСнятьВсе2РасширеннаяПодсказка" id="276"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИДеревоЗадачиСторона2РасширеннаяПодсказка" id="257"/>
+											<SearchStringAddition name="ИДеревоЗадачиСторона2СтрокаПоиска" id="258">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона2</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона2СтрокаПоискаКонтекстноеМеню" id="259"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона2СтрокаПоискаРасширеннаяПодсказка" id="260"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИДеревоЗадачиСторона2СостояниеПросмотра" id="261">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона2</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона2СостояниеПросмотраКонтекстноеМеню" id="262"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона2СостояниеПросмотраРасширеннаяПодсказка" id="263"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИДеревоЗадачиСторона2УправлениеПоиском" id="264">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона2</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона2УправлениеПоискомКонтекстноеМеню" id="265"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона2УправлениеПоискомРасширеннаяПодсказка" id="266"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИДеревоЗадачиСторона2Задача" id="267">
+													<DataPath>ИДеревоЗадачиСторона2.Задача</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИДеревоЗадачиСторона2ЗадачаКонтекстноеМеню" id="268"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона2ЗадачаРасширеннаяПодсказка" id="269"/>
+												</InputField>
+												<CheckBoxField name="ИДеревоЗадачиСторона2Отметка" id="270">
+													<DataPath>ИДеревоЗадачиСторона2.Отметка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИДеревоЗадачиСторона2ОтметкаКонтекстноеМеню" id="271"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона2ОтметкаРасширеннаяПодсказка" id="272"/>
+													<Events>
+														<Event name="OnChange">ИДеревоЗадачиСторона2ОтметкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаИсполнение" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исполнение</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа исполнение</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаИсполнениеРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаЗадачи1" id="95">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задачи</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа задачи</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЗадачи1РасширеннаяПодсказка" id="96"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаСторона3" id="97">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторона1 (Заказчик)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сторона1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСторона3РасширеннаяПодсказка" id="98"/>
+									<ChildItems>
+										<Table name="ИДеревоЗадачиСторона3" id="277">
+											<Representation>Tree</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ИДеревоЗадачиСторона3</DataPath>
+											<ContextMenu name="ИДеревоЗадачиСторона3КонтекстноеМеню" id="278"/>
+											<AutoCommandBar name="ИДеревоЗадачиСторона3КоманднаяПанель" id="279">
+												<ChildItems>
+													<Button name="ИДеревоЗадачиСторона3ИОтметитьВсе3" id="315">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИОтметитьВсе3</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона3ИОтметитьВсе3РасширеннаяПодсказка" id="316"/>
+													</Button>
+													<Button name="ИДеревоЗадачиСторона3ИСнятьВсе3" id="317">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИСнятьВсе3</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона3ИСнятьВсе3РасширеннаяПодсказка" id="318"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИДеревоЗадачиСторона3РасширеннаяПодсказка" id="280"/>
+											<SearchStringAddition name="ИДеревоЗадачиСторона3СтрокаПоиска" id="281">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона3</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона3СтрокаПоискаКонтекстноеМеню" id="282"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона3СтрокаПоискаРасширеннаяПодсказка" id="283"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИДеревоЗадачиСторона3СостояниеПросмотра" id="284">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона3</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона3СостояниеПросмотраКонтекстноеМеню" id="285"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона3СостояниеПросмотраРасширеннаяПодсказка" id="286"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИДеревоЗадачиСторона3УправлениеПоиском" id="287">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона3</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона3УправлениеПоискомКонтекстноеМеню" id="288"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона3УправлениеПоискомРасширеннаяПодсказка" id="289"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИДеревоЗадачиСторона3Задача" id="290">
+													<DataPath>ИДеревоЗадачиСторона3.Задача</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИДеревоЗадачиСторона3ЗадачаКонтекстноеМеню" id="291"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона3ЗадачаРасширеннаяПодсказка" id="292"/>
+												</InputField>
+												<CheckBoxField name="ИДеревоЗадачиСторона3Отметка" id="293">
+													<DataPath>ИДеревоЗадачиСторона3.Отметка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИДеревоЗадачиСторона3ОтметкаКонтекстноеМеню" id="294"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона3ОтметкаРасширеннаяПодсказка" id="295"/>
+													<Events>
+														<Event name="OnChange">ИДеревоЗадачиСторона3ОтметкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаСторона4" id="119">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сторона 2 (Исполнитель)</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа сторона2</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ExtendedTooltip name="ГруппаСторона4РасширеннаяПодсказка" id="120"/>
+									<ChildItems>
+										<Table name="ИДеревоЗадачиСторона4" id="296">
+											<Representation>Tree</Representation>
+											<ChangeRowSet>false</ChangeRowSet>
+											<ChangeRowOrder>false</ChangeRowOrder>
+											<AutoInsertNewRow>true</AutoInsertNewRow>
+											<EnableStartDrag>true</EnableStartDrag>
+											<EnableDrag>true</EnableDrag>
+											<DataPath>ИДеревоЗадачиСторона4</DataPath>
+											<ContextMenu name="ИДеревоЗадачиСторона4КонтекстноеМеню" id="297"/>
+											<AutoCommandBar name="ИДеревоЗадачиСторона4КоманднаяПанель" id="298">
+												<ChildItems>
+													<Button name="ИДеревоЗадачиСторона4ИОтметитьВсе4" id="319">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИОтметитьВсе4</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона4ИОтметитьВсе4РасширеннаяПодсказка" id="320"/>
+													</Button>
+													<Button name="ИДеревоЗадачиСторона4ИСнятьВсе4" id="321">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ИСнятьВсе4</CommandName>
+														<ExtendedTooltip name="ИДеревоЗадачиСторона4ИСнятьВсе4РасширеннаяПодсказка" id="322"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="ИДеревоЗадачиСторона4РасширеннаяПодсказка" id="299"/>
+											<SearchStringAddition name="ИДеревоЗадачиСторона4СтрокаПоиска" id="300">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона4</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона4СтрокаПоискаКонтекстноеМеню" id="301"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона4СтрокаПоискаРасширеннаяПодсказка" id="302"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ИДеревоЗадачиСторона4СостояниеПросмотра" id="303">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона4</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона4СостояниеПросмотраКонтекстноеМеню" id="304"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона4СостояниеПросмотраРасширеннаяПодсказка" id="305"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ИДеревоЗадачиСторона4УправлениеПоиском" id="306">
+												<AdditionSource>
+													<Item>ИДеревоЗадачиСторона4</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ИДеревоЗадачиСторона4УправлениеПоискомКонтекстноеМеню" id="307"/>
+												<ExtendedTooltip name="ИДеревоЗадачиСторона4УправлениеПоискомРасширеннаяПодсказка" id="308"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<InputField name="ИДеревоЗадачиСторона4Задача" id="309">
+													<DataPath>ИДеревоЗадачиСторона4.Задача</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ИДеревоЗадачиСторона4ЗадачаКонтекстноеМеню" id="310"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона4ЗадачаРасширеннаяПодсказка" id="311"/>
+												</InputField>
+												<CheckBoxField name="ИДеревоЗадачиСторона4Отметка" id="312">
+													<DataPath>ИДеревоЗадачиСторона4.Отметка</DataPath>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИДеревоЗадачиСторона4ОтметкаКонтекстноеМеню" id="313"/>
+													<ExtendedTooltip name="ИДеревоЗадачиСторона4ОтметкаРасширеннаяПодсказка" id="314"/>
+													<Events>
+														<Event name="OnChange">ИДеревоЗадачиСторона4ОтметкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogRef.БиблиотекаПроцессов</v8:Type>
+				<v8:Type>cfg:CatalogRef.Договоры</v8:Type>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ИДеревоЗадачиСторона1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторона 1 (Заказчик)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Задача" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИДеревоЗадачиСторона2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторона 2 (Заказчик)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Задача" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИДеревоЗадачиСторона3" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторона 1 (Исполнитель)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Задача" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИДеревоЗадачиСторона4" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сторона 2 (Исполнитель)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Задача" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Задача</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>cfg:CatalogRef.Задачи</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Отметка" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отметка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТипДоговора" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип договора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:EnumRef.ТипыДоговоров</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Подразделение" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подразделение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Подразделения</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="НаименованиеДоговора" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Наименование договора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>100</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ИОтметитьВсе1" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИОтметитьВсе1</Action>
+		</Command>
+		<Command name="ИСнятьВсе1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИСнятьВсе1</Action>
+		</Command>
+		<Command name="ИОтметитьВсе2" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИОтметитьВсе2</Action>
+		</Command>
+		<Command name="ИСнятьВсе2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИСнятьВсе2</Action>
+		</Command>
+		<Command name="ИСнятьВсе3" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИСнятьВсе3</Action>
+		</Command>
+		<Command name="ИОтметитьВсе3" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИОтметитьВсе3</Action>
+		</Command>
+		<Command name="ИОтметитьВсе4" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отметить все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИОтметитьВсе4</Action>
+		</Command>
+		<Command name="ИСнятьВсе4" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИСнятьВсе4</Action>
+		</Command>
+		<Command name="ПеренестиВДоговор" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в договор</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перенести в договор</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеренестиВДоговор</Action>
+		</Command>
+	</Commands>
+</Form>

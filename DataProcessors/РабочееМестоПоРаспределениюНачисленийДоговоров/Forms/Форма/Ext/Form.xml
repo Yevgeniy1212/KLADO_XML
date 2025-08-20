@@ -1,0 +1,578 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<ScalingMode>Compact</ScalingMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаОтборы" id="163">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа отборы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаОтборыРасширеннаяПодсказка" id="164"/>
+			<ChildItems>
+				<InputField name="Период" id="93">
+					<DataPath>Период</DataPath>
+					<ContextMenu name="ПериодКонтекстноеМеню" id="94"/>
+					<ExtendedTooltip name="ПериодРасширеннаяПодсказка" id="95"/>
+					<Events>
+						<Event name="OnChange">ПериодПриИзменении</Event>
+					</Events>
+				</InputField>
+				<InputField name="РежимРаспределения" id="184">
+					<DataPath>РежимРаспределения</DataPath>
+					<TitleLocation>None</TitleLocation>
+					<Width>17</Width>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма начисления</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">0</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма план</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">1</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сумма по договору</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:decimal">2</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="РежимРаспределенияКонтекстноеМеню" id="185"/>
+					<ExtendedTooltip name="РежимРаспределенияРасширеннаяПодсказка" id="186"/>
+				</InputField>
+				<InputField name="СуммаРаспределения" id="173">
+					<DataPath>СуммаРаспределения</DataPath>
+					<ContextMenu name="СуммаРаспределенияКонтекстноеМеню" id="174"/>
+					<ExtendedTooltip name="СуммаРаспределенияРасширеннаяПодсказка" id="175"/>
+				</InputField>
+				<Button name="РаспределитьСумму" id="182">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.РаспределитьСумму</CommandName>
+					<BackColor>style:ActivityColor</BackColor>
+					<Font ref="style:TextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+					<ExtendedTooltip name="РаспределитьСуммуРасширеннаяПодсказка" id="183"/>
+				</Button>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="ГруппаТаблицы" id="98">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа таблицы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаТаблицыРасширеннаяПодсказка" id="99"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаЛево" id="100">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа лево</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаЛевоРасширеннаяПодсказка" id="101"/>
+					<ChildItems>
+						<Table name="Договора" id="47">
+							<Representation>List</Representation>
+							<Footer>true</Footer>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.Договора</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ДоговораКонтекстноеМеню" id="48"/>
+							<AutoCommandBar name="ДоговораКоманднаяПанель" id="49"/>
+							<ExtendedTooltip name="ДоговораРасширеннаяПодсказка" id="50"/>
+							<SearchStringAddition name="ДоговораСтрокаПоиска" id="51">
+								<AdditionSource>
+									<Item>Договора</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговораСтрокаПоискаКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="ДоговораСтрокаПоискаРасширеннаяПодсказка" id="53"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ДоговораСостояниеПросмотра" id="54">
+								<AdditionSource>
+									<Item>Договора</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговораСостояниеПросмотраКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="ДоговораСостояниеПросмотраРасширеннаяПодсказка" id="56"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ДоговораУправлениеПоиском" id="57">
+								<AdditionSource>
+									<Item>Договора</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ДоговораУправлениеПоискомКонтекстноеМеню" id="58"/>
+								<ExtendedTooltip name="ДоговораУправлениеПоискомРасширеннаяПодсказка" id="59"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="Drag">ДоговораПеретаскивание</Event>
+								<Event name="OnChange">ДоговораПриИзменении</Event>
+							</Events>
+							<ChildItems>
+								<LabelField name="ДоговораНомерСтроки" id="60">
+									<DataPath>Объект.Договора.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговораНомерСтрокиКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="ДоговораНомерСтрокиРасширеннаяПодсказка" id="62"/>
+								</LabelField>
+								<InputField name="ДоговораДоговор" id="66">
+									<DataPath>Объект.Договора.Договор</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговораДоговорКонтекстноеМеню" id="67"/>
+									<ExtendedTooltip name="ДоговораДоговорРасширеннаяПодсказка" id="68"/>
+									<Events>
+										<Event name="OnChange">ДоговораДоговорПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ДоговораСтатьяЗатрат" id="170">
+									<DataPath>Объект.Договора.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ДоговораСтатьяЗатратКонтекстноеМеню" id="171"/>
+									<ExtendedTooltip name="ДоговораСтатьяЗатратРасширеннаяПодсказка" id="172"/>
+								</InputField>
+								<InputField name="ДоговораКоэффициент" id="72">
+									<DataPath>Объект.Договора.Коэффициент</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<FooterDataPath>Объект.Договора.TotalКоэффициент</FooterDataPath>
+									<ContextMenu name="ДоговораКоэффициентКонтекстноеМеню" id="73"/>
+									<ExtendedTooltip name="ДоговораКоэффициентРасширеннаяПодсказка" id="74"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаПраво" id="102">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа право</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПравоРасширеннаяПодсказка" id="103"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДоговоры" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Договоры</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа договоры</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Collapsible</Behavior>
+							<Representation>None</Representation>
+							<ExtendedTooltip name="ГруппаДоговорыРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЛево1" id="157">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<GroupVerticalAlign>Center</GroupVerticalAlign>
+									<Group>Vertical</Group>
+									<VerticalAlign>Center</VerticalAlign>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЛево1РасширеннаяПодсказка" id="158"/>
+									<ChildItems>
+										<Button name="ПереместитьВлево" id="161">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПереместитьВлево</CommandName>
+											<ExtendedTooltip name="ПереместитьВлевоРасширеннаяПодсказка" id="162"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="ГруппаЛево2" id="159">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево1</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа лево1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>Vertical</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЛево2РасширеннаяПодсказка" id="160"/>
+									<ChildItems>
+										<UsualGroup name="ГруппаПользНастройкиДоговоры" id="168">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа польз настройки договоры</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа польз настройки договоры</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ShowTitle>false</ShowTitle>
+											<AssociatedTableElementId xsi:type="xs:string">ДСДоговоры</AssociatedTableElementId>
+											<ExtendedTooltip name="ГруппаПользНастройкиДоговорыРасширеннаяПодсказка" id="169"/>
+										</UsualGroup>
+										<Table name="ДСДоговоры" id="104">
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<EnableStartDrag>true</EnableStartDrag>
+											<DataPath>ДСДоговоры</DataPath>
+											<RowPictureDataPath>ДСДоговоры.DefaultPicture</RowPictureDataPath>
+											<AutoRefresh>false</AutoRefresh>
+											<AutoRefreshPeriod>60</AutoRefreshPeriod>
+											<Period>
+												<v8:variant xsi:type="v8:StandardPeriodVariant">Custom</v8:variant>
+												<v8:startDate>0001-01-01T00:00:00</v8:startDate>
+												<v8:endDate>0001-01-01T00:00:00</v8:endDate>
+											</Period>
+											<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+											<RestoreCurrentRow>false</RestoreCurrentRow>
+											<TopLevelParent xsi:nil="true"/>
+											<ShowRoot>true</ShowRoot>
+											<AllowRootChoice>false</AllowRootChoice>
+											<UpdateOnDataChange>Auto</UpdateOnDataChange>
+											<UserSettingsGroup>ГруппаПользНастройкиДоговоры</UserSettingsGroup>
+											<AllowGettingCurrentRowURL>true</AllowGettingCurrentRowURL>
+											<ContextMenu name="ДСДоговорыКонтекстноеМеню" id="105"/>
+											<AutoCommandBar name="ДСДоговорыКоманднаяПанель" id="106"/>
+											<ExtendedTooltip name="ДСДоговорыРасширеннаяПодсказка" id="107"/>
+											<SearchStringAddition name="ДСДоговорыСтрокаПоиска" id="108">
+												<AdditionSource>
+													<Item>ДСДоговоры</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДСДоговорыСтрокаПоискаКонтекстноеМеню" id="109"/>
+												<ExtendedTooltip name="ДСДоговорыСтрокаПоискаРасширеннаяПодсказка" id="110"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="ДСДоговорыСостояниеПросмотра" id="111">
+												<AdditionSource>
+													<Item>ДСДоговоры</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="ДСДоговорыСостояниеПросмотраКонтекстноеМеню" id="112"/>
+												<ExtendedTooltip name="ДСДоговорыСостояниеПросмотраРасширеннаяПодсказка" id="113"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="ДСДоговорыУправлениеПоиском" id="114">
+												<AdditionSource>
+													<Item>ДСДоговоры</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="ДСДоговорыУправлениеПоискомКонтекстноеМеню" id="115"/>
+												<ExtendedTooltip name="ДСДоговорыУправлениеПоискомРасширеннаяПодсказка" id="116"/>
+											</SearchControlAddition>
+											<ChildItems>
+												<LabelField name="ДСДоговорыСсылка" id="117">
+													<DataPath>ДСДоговоры.Ref</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Договор</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДСДоговорыСсылкаКонтекстноеМеню" id="118"/>
+													<ExtendedTooltip name="ДСДоговорыСсылкаРасширеннаяПодсказка" id="119"/>
+												</LabelField>
+												<LabelField name="ДСДоговорыПодразделение" id="179">
+													<DataPath>ДСДоговоры.Подразделение</DataPath>
+													<ContextMenu name="ДСДоговорыПодразделениеКонтекстноеМеню" id="180"/>
+													<ExtendedTooltip name="ДСДоговорыПодразделениеРасширеннаяПодсказка" id="181"/>
+												</LabelField>
+												<LabelField name="ДСДоговорыСтатьяЗатрат" id="176">
+													<DataPath>ДСДоговоры.СтатьяЗатрат</DataPath>
+													<ContextMenu name="ДСДоговорыСтатьяЗатратКонтекстноеМеню" id="177"/>
+													<ExtendedTooltip name="ДСДоговорыСтатьяЗатратРасширеннаяПодсказка" id="178"/>
+												</LabelField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.РабочееМестоПоРаспределениюНачисленийДоговоров</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Период" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущаяСтрока" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущая строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>0</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДСДоговоры" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ДСДоговоры</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:DynamicList</v8:Type>
+			</Type>
+			<UseAlways>
+				<Field>ДСДоговоры.Ref</Field>
+				<Field>ДСДоговоры.Подразделение</Field>
+			</UseAlways>
+			<Settings xsi:type="DynamicList">
+				<ManualQuery>false</ManualQuery>
+				<DynamicDataRead>true</DynamicDataRead>
+				<MainTable>Catalog.Договоры</MainTable>
+				<ListSettings>
+					<dcsset:filter>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:use>false</dcsset:use>
+							<dcsset:left xsi:type="dcscor:Field">Подразделение</dcsset:left>
+							<dcsset:comparisonType>Equal</dcsset:comparisonType>
+							<dcsset:userSettingID>e67ad04e-b9d8-447a-8011-1f4e845c3127</dcsset:userSettingID>
+						</dcsset:item>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>dfcece9d-5077-440b-b6b3-45a5cb4538eb</dcsset:userSettingID>
+					</dcsset:filter>
+					<dcsset:order>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>88619765-ccb3-46c6-ac52-38e9c992ebd4</dcsset:userSettingID>
+					</dcsset:order>
+					<dcsset:conditionalAppearance>
+						<dcsset:viewMode>Normal</dcsset:viewMode>
+						<dcsset:userSettingID>b75fecce-942b-4aed-abc9-e6a02e460fb3</dcsset:userSettingID>
+					</dcsset:conditionalAppearance>
+					<dcsset:itemsViewMode>Normal</dcsset:itemsViewMode>
+					<dcsset:itemsUserSettingID>911b6018-f537-43e8-a417-da56b22f9aec</dcsset:itemsUserSettingID>
+				</ListSettings>
+			</Settings>
+		</Attribute>
+		<Attribute name="СуммаРаспределения" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сумма распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>15</v8:Digits>
+					<v8:FractionDigits>2</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимРаспределения" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим распределения</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<ConditionalAppearance>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыНомерСтроки</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыОрганизация</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыПодразделение</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыСтатьяЗатрат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыКонтрагент</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыДоговорИзУчетнойСистемы</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыНоменклатурнаяГруппа</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыСуммаЗатрат</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ЗатратыИзУчетнойСистемыПравилоРаспределения</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ЗатратыИзУчетнойСистемы.ПравилоРаспределения</dcsset:left>
+						<dcsset:comparisonType>NotFilled</dcsset:comparisonType>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">web:MistyRose</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+		</ConditionalAppearance>
+	</Attributes>
+	<Commands>
+		<Command name="ПереместитьВлево" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить влево</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переместить влево</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПереместитьВлево</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="РаспределитьСумму" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить сумму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Распределить сумму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РаспределитьСумму</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<CommandInterface xmlns="http://v8.1c.ru/8.3/xcf/extrnprops" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<SubsystemsOrder>
+		<Subsystem>Subsystem.Журнал</Subsystem>
+		<Subsystem>Subsystem.Договоры</Subsystem>
+		<Subsystem>Subsystem.Проекты</Subsystem>
+		<Subsystem>3d16625e-4cdb-45e4-ac37-9aab82cd54f7</Subsystem>
+		<Subsystem>Subsystem.Продукты</Subsystem>
+		<Subsystem>Subsystem.ВысшиеЦели</Subsystem>
+		<Subsystem>Subsystem.Ресурсы</Subsystem>
+		<Subsystem>Subsystem.Бюджетирование</Subsystem>
+		<Subsystem>Subsystem.ОрганизационнаяСтруктура</Subsystem>
+		<Subsystem>Subsystem.Контрагенты</Subsystem>
+		<Subsystem>Subsystem.Служебные</Subsystem>
+		<Subsystem>Subsystem.Администрирование</Subsystem>
+	</SubsystemsOrder>
+</CommandInterface>

@@ -1,0 +1,391 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.18">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Родитель" id="7">
+			<DataPath>Объект.Parent</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="РодительКонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="РодительРасширеннаяПодсказка" id="9"/>
+		</InputField>
+		<InputField name="ВидСтатьи" id="10">
+			<DataPath>Объект.ВидСтатьи</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="ВидСтатьиКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ВидСтатьиРасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<InputField name="ПриоритетДляОтчета" id="13">
+			<DataPath>Объект.ПриоритетДляОтчета</DataPath>
+			<ContextMenu name="ПриоритетДляОтчетаКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ПриоритетДляОтчетаРасширеннаяПодсказка" id="15"/>
+		</InputField>
+		<CheckBoxField name="ИспользуетсяТолькоВОпределенныеМесяцы" id="37">
+			<DataPath>Объект.ИспользуетсяТолькоВОпределенныеМесяцы</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИспользуетсяТолькоВОпределенныеМесяцыКонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="ИспользуетсяТолькоВОпределенныеМесяцыРасширеннаяПодсказка" id="39"/>
+			<Events>
+				<Event name="OnChange">ИспользуетсяТолькоВОпределенныеМесяцыПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
+		<UsualGroup name="ГруппаПол" id="63">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пол</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа пол</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаПолРасширеннаяПодсказка" id="64"/>
+			<ChildItems>
+				<CheckBoxField name="ИспользуетсяТолькоДляПерсоналаОдногоПола" id="65">
+					<DataPath>Объект.ИспользуетсяТолькоДляПерсоналаОдногоПола</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ИспользуетсяТолькоДляПерсоналаОдногоПолаКонтекстноеМеню" id="66"/>
+					<ExtendedTooltip name="ИспользуетсяТолькоДляПерсоналаОдногоПолаРасширеннаяПодсказка" id="67"/>
+					<Events>
+						<Event name="OnChange">ИспользуетсяТолькоДляПерсоналаОдногоПолаПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<InputField name="Пол" id="68">
+					<DataPath>Объект.Пол</DataPath>
+					<ContextMenu name="ПолКонтекстноеМеню" id="69"/>
+					<ExtendedTooltip name="ПолРасширеннаяПодсказка" id="70"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="ГруппаСтраницы" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<Page name="ГруппаЗависимыеСтатьиЗатрат" id="35">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи затрат</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Зависимые статьи затрат</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>HorizontalIfPossible</Group>
+					<ExtendedTooltip name="ГруппаЗависимыеСтатьиЗатратРасширеннаяПодсказка" id="36"/>
+					<ChildItems>
+						<Table name="ЗависимыеСтатьиЗатрат" id="16">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.ЗависимыеСтатьиЗатрат</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ЗависимыеСтатьиЗатратКонтекстноеМеню" id="17"/>
+							<AutoCommandBar name="ЗависимыеСтатьиЗатратКоманднаяПанель" id="18"/>
+							<ExtendedTooltip name="ЗависимыеСтатьиЗатратРасширеннаяПодсказка" id="19"/>
+							<SearchStringAddition name="ЗависимыеСтатьиЗатратСтрокаПоиска" id="20">
+								<AdditionSource>
+									<Item>ЗависимыеСтатьиЗатрат</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗависимыеСтатьиЗатратСтрокаПоискаКонтекстноеМеню" id="21"/>
+								<ExtendedTooltip name="ЗависимыеСтатьиЗатратСтрокаПоискаРасширеннаяПодсказка" id="22"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ЗависимыеСтатьиЗатратСостояниеПросмотра" id="23">
+								<AdditionSource>
+									<Item>ЗависимыеСтатьиЗатрат</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗависимыеСтатьиЗатратСостояниеПросмотраКонтекстноеМеню" id="24"/>
+								<ExtendedTooltip name="ЗависимыеСтатьиЗатратСостояниеПросмотраРасширеннаяПодсказка" id="25"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ЗависимыеСтатьиЗатратУправлениеПоиском" id="26">
+								<AdditionSource>
+									<Item>ЗависимыеСтатьиЗатрат</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ЗависимыеСтатьиЗатратУправлениеПоискомКонтекстноеМеню" id="27"/>
+								<ExtendedTooltip name="ЗависимыеСтатьиЗатратУправлениеПоискомРасширеннаяПодсказка" id="28"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ЗависимыеСтатьиЗатратСтатьяЗатрат" id="32">
+									<DataPath>Объект.ЗависимыеСтатьиЗатрат.СтатьяЗатрат</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ЗависимыеСтатьиЗатратСтатьяЗатратКонтекстноеМеню" id="33"/>
+									<ExtendedTooltip name="ЗависимыеСтатьиЗатратСтатьяЗатратРасширеннаяПодсказка" id="34"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ГруппаМесяцыИспользования" id="42">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяцы использования</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Месяцы использования</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ГруппаМесяцыИспользованияРасширеннаяПодсказка" id="43"/>
+					<ChildItems>
+						<Table name="МесяцыИспользования" id="44">
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Объект.МесяцыИспользования</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="МесяцыИспользованияКонтекстноеМеню" id="45"/>
+							<AutoCommandBar name="МесяцыИспользованияКоманднаяПанель" id="46"/>
+							<ExtendedTooltip name="МесяцыИспользованияРасширеннаяПодсказка" id="47"/>
+							<SearchStringAddition name="МесяцыИспользованияСтрокаПоиска" id="48">
+								<AdditionSource>
+									<Item>МесяцыИспользования</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МесяцыИспользованияСтрокаПоискаКонтекстноеМеню" id="49"/>
+								<ExtendedTooltip name="МесяцыИспользованияСтрокаПоискаРасширеннаяПодсказка" id="50"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="МесяцыИспользованияСостояниеПросмотра" id="51">
+								<AdditionSource>
+									<Item>МесяцыИспользования</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="МесяцыИспользованияСостояниеПросмотраКонтекстноеМеню" id="52"/>
+								<ExtendedTooltip name="МесяцыИспользованияСостояниеПросмотраРасширеннаяПодсказка" id="53"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="МесяцыИспользованияУправлениеПоиском" id="54">
+								<AdditionSource>
+									<Item>МесяцыИспользования</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="МесяцыИспользованияУправлениеПоискомКонтекстноеМеню" id="55"/>
+								<ExtendedTooltip name="МесяцыИспользованияУправлениеПоискомРасширеннаяПодсказка" id="56"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="МесяцыИспользованияМесяц" id="60">
+									<DataPath>Объект.МесяцыИспользования.Месяц</DataPath>
+									<HorizontalAlign>Left</HorizontalAlign>
+									<EditMode>EnterOnInput</EditMode>
+									<ListChoiceMode>true</ListChoiceMode>
+									<MinValue xsi:type="xs:decimal">1</MinValue>
+									<MaxValue xsi:type="xs:decimal">12</MaxValue>
+									<ChoiceList>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Январь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">1</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Февраль</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">2</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Март</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">3</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Апрель</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">4</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Май</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">5</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Июнь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">6</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Июль</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">7</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Август</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">8</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Сентябрь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">9</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Октябрь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">10</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Ноябрь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">11</Value>
+											</xr:Value>
+										</xr:Item>
+										<xr:Item>
+											<xr:Presentation/>
+											<xr:CheckState>0</xr:CheckState>
+											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+												<Presentation>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Декабрь</v8:content>
+													</v8:item>
+												</Presentation>
+												<Value xsi:type="xs:decimal">12</Value>
+											</xr:Value>
+										</xr:Item>
+									</ChoiceList>
+									<ContextMenu name="МесяцыИспользованияМесяцКонтекстноеМеню" id="61"/>
+									<ExtendedTooltip name="МесяцыИспользованияМесяцРасширеннаяПодсказка" id="62"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.СтатьиЗатрат</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>

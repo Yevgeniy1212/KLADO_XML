@@ -1,0 +1,342 @@
+<?xml version="1.0"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>КЛАДО</Author>
+  <LastAuthor>КЛАДО</LastAuthor>
+  <Created>2025-01-01T00:00:00Z</Created>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Top"/>
+   <Borders/>
+   <Font ss:FontName="Segoe UI" ss:Size="10"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="sHeader">
+   <Font ss:Bold="1"/>
+   <Interior ss:Color="#F6F8FA" ss:Pattern="Solid"/>
+  </Style>
+ </Styles>
+
+ <Worksheet ss:Name="Документы">
+  <Table ss:DefaultColumnWidth="120" ss:DefaultRowHeight="14">
+   <Column ss:Width="180"/>
+   <Column ss:Width="520"/>
+   <Column ss:Width="280"/>
+   <Column ss:Width="380"/>
+   <Column ss:Width="320"/>
+   <Row ss:StyleID="sHeader">
+    <Cell><Data ss:Type="String">Имя</Data></Cell>
+    <Cell><Data ss:Type="String">Назначение (по коду модулей)</Data></Cell>
+    <Cell><Data ss:Type="String">Регистры движений/записей</Data></Cell>
+    <Cell><Data ss:Type="String">Ключевые реквизиты и ТЧ (кратко)</Data></Cell>
+    <Cell><Data ss:Type="String">Взаимосвязи (ссылки на объекты)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Бюджет</Data></Cell>
+    <Cell><Data ss:Type="String">Формирует план/факт доходов и расходов по продуктам, проектам, договорам и статьям затрат. ОбработкаПроведения создаёт движения по 4 регистрам (план/факт по продуктам и статьям), переносит суммы из ТЧ; ОбработкаЗаполнения — автоподстановка организации по константе.</Data></Cell>
+    <Cell><Data ss:Type="String">ПлановыйБюджетПоПродуктам; БюджетПоПродуктам; ПлановыйБюджетПоСтатьямЗатрат; БюджетПоСтатьямЗатрат</Data></Cell>
+    <Cell><Data ss:Type="String">Шапка: Организация; Подразделение; Сценарий; Ответственный; Даты; Комментарий; Статус. ТЧ Доходы: Продукт; Проект; Контрагент; Договор; Период; План/Факт и суммы. ТЧ Расходы: СтатьяЗатрат; Контрагент; Период; Договор; План/Факт/Сумма.</Data></Cell>
+    <Cell><Data ss:Type="String">Организации; Подразделения; Сценарии; Продукты; Проекты; Контрагенты; Договоры; СтатьиЗатрат; Перечисления</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЕжедневноеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">Фиксация факта расхода ресурсов. В проведении сворачивает ТЧ; при указанном договоре — прямые записи; при указанном только продукте — распределение по договорам продукта пропорционально плану. Заполнение: Автор и Сценарий по умолчанию.</Data></Cell>
+    <Cell><Data ss:Type="String">ФактическоеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">Статус; Автор; Организация; Сценарий; Комментарий. ТЧ по ресурсам: Ресурс; СтатьяЗатрат; Количество; Цена; Сумма; Договор/Продукт/Подразделение; флаги; причина отсутствия.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры; Продукты; Подразделения; Персонал/Инструменты/Материалы; СтатьиЗатрат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗаявкаНаРесурсы</Data></Cell>
+    <Cell><Data ss:Type="String">Оформление потребности в персонале/инструментах/материалах/деньгах по проектам/договорам. Проведение: приходы в регистры заявок. ПередЗаписью: автопереключение статусов по признакам согласования в ТЧ. Создание задач на согласование.</Data></Cell>
+    <Cell><Data ss:Type="String">ЗаявкиНаРесурсы; ЗаявкиНаРесурсыДС</Data></Cell>
+    <Cell><Data ss:Type="String">Организация; Проект; Договор; Задача; Администраторы; Статус; Период; Ответственный; Сценарий; СуммаДокумента. ТЧ: Персонал/Инструменты/Материалы/Деньги.</Data></Cell>
+    <Cell><Data ss:Type="String">Проекты; Договоры; Задачи; Пользователи/Сотрудники; Контрагенты; СтатьиЗатрат; Ресурсы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗаявкаНаЗакуп</Data></Cell>
+    <Cell><Data ss:Type="String">Формирование планов закупа материалов по заявкам; создание записей плана закупа.</Data></Cell>
+    <Cell><Data ss:Type="String">ПланЗакупаМатериалов</Data></Cell>
+    <Cell><Data ss:Type="String">Материалы; количества/цены/суммы и аналитики.</Data></Cell>
+    <Cell><Data ss:Type="String">Материалы; Договоры/Проекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ФактическоеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">Агрегированная фиксация фактических расходов по ресурсам; формирует движения по факту без распределительных алгоритмов.</Data></Cell>
+    <Cell><Data ss:Type="String">ФактическоеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">ТЧ ресурсоёмкости: суммы и статьи затрат.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры; СтатьиЗатрат и др.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">УстановкаПлановыхЦенНаРесурсы</Data></Cell>
+    <Cell><Data ss:Type="String">Установка плановых цен по ресурсам (инф. регистр).</Data></Cell>
+    <Cell><Data ss:Type="String">ПлановыеЦеныНаРесурсы (инф.)</Data></Cell>
+    <Cell><Data ss:Type="String">Ресурс; Цена; Период действия.</Data></Cell>
+    <Cell><Data ss:Type="String">Ресурсы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">УстановкаФактическихЦенНаРесурсы</Data></Cell>
+    <Cell><Data ss:Type="String">Фиксация фактических цен (импорт/ручной ввод) в инф. регистр.</Data></Cell>
+    <Cell><Data ss:Type="String">ФактическиеЦеныНаРесурсы (инф.)</Data></Cell>
+    <Cell><Data ss:Type="String">Ресурс; Цена; Период.</Data></Cell>
+    <Cell><Data ss:Type="String">Ресурсы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">НачислениеВремениПерсонала</Data></Cell>
+    <Cell><Data ss:Type="String">Начисляет время/часы персонала; формирует движения по учёту времени.</Data></Cell>
+    <Cell><Data ss:Type="String">УчетВремениПерсонала</Data></Cell>
+    <Cell><Data ss:Type="String">Позиции с часами/ставками.</Data></Cell>
+    <Cell><Data ss:Type="String">Персонал; Должности; СтатьиЗатрат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">СписаниеВремениПерсонала</Data></Cell>
+    <Cell><Data ss:Type="String">Списывает (закрывает) учёт времени персонала.</Data></Cell>
+    <Cell><Data ss:Type="String">УчетВремениПерсонала</Data></Cell>
+    <Cell><Data ss:Type="String">Позиции списания.</Data></Cell>
+    <Cell><Data ss:Type="String">Персонал; СтатьиЗатрат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">РаспределениеНачисленийОплатПоДоговорам</Data></Cell>
+    <Cell><Data ss:Type="String">Распределяет начисления/оплаты по договорам.</Data></Cell>
+    <Cell><Data ss:Type="String">НачисленияОплатыПоДоговорам</Data></Cell>
+    <Cell><Data ss:Type="String">Позиции распределения.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры; Контрагенты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">РаспределениеЗатратПоДоговорам</Data></Cell>
+    <Cell><Data ss:Type="String">Распределяет затраты по договорам.</Data></Cell>
+    <Cell><Data ss:Type="String">ЗатратыРаспределенные</Data></Cell>
+    <Cell><Data ss:Type="String">Позиции затрат.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры; СтатьиЗатрат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">РаспределениеЗатратПоДоговорамУС</Data></Cell>
+    <Cell><Data ss:Type="String">Распределяет затраты по договорам (данные из учётной системы).</Data></Cell>
+    <Cell><Data ss:Type="String">РаспределенияЗатратПоДоговорамУС</Data></Cell>
+    <Cell><Data ss:Type="String">Позиции затрат УС.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры; СтатьиЗатрат</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗагрузкаНачисленийИзУчетнойСистемы</Data></Cell>
+    <Cell><Data ss:Type="String">Импорт начислений из внешней учётной системы.</Data></Cell>
+    <Cell><Data ss:Type="String">НачисленияИзУчетнойСистемы</Data></Cell>
+    <Cell><Data ss:Type="String">Пакет записей начислений.</Data></Cell>
+    <Cell><Data ss:Type="String">Договоры/Контрагенты (по данным импорта)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗагрузкаЗатратИзУчетнойСистемы</Data></Cell>
+    <Cell><Data ss:Type="String">Импорт затрат из внешней учётной системы.</Data></Cell>
+    <Cell><Data ss:Type="String">ЗатратыИзУчетнойСистемы</Data></Cell>
+    <Cell><Data ss:Type="String">Пакет записей затрат.</Data></Cell>
+    <Cell><Data ss:Type="String">СтатьиЗатрат/Договоры</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Анкета</Data></Cell>
+    <Cell><Data ss:Type="String">Фиксирует ответы респондентов по шаблонам анкет; запись в инф. регистр.</Data></Cell>
+    <Cell><Data ss:Type="String">ОтветыНаВопросыАнкет (инф.)</Data></Cell>
+    <Cell><Data ss:Type="String">Ссылка на шаблон/вопросы/ответы.</Data></Cell>
+    <Cell><Data ss:Type="String">ШаблоныАнкет; Вопросы; ВариантыОтветов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Встреча</Data></Cell>
+    <Cell><Data ss:Type="String">Планирование/фиксация встреч (время, участники, тема, итоги). Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Дата/время; Участники; Тема; Место; Итоги.</Data></Cell>
+    <Cell><Data ss:Type="String">Пользователи/Сотрудники; Контрагенты; Файлы</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЗапланированноеВзаимодействие</Data></Cell>
+    <Cell><Data ss:Type="String">План взаимодействий (звонок/встреча/письмо) со сроками/статусами. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Тип; Дата/время; Адресаты; Тема; Статус.</Data></Cell>
+    <Cell><Data ss:Type="String">Пользователи; Контрагенты; Профили/Роли</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ТелефонныйЗвонок</Data></Cell>
+    <Cell><Data ss:Type="String">Регистрация входящих/исходящих звонков; тема; участники; результат. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Дата/время; Абонент; Номер; Тема; Результат.</Data></Cell>
+    <Cell><Data ss:Type="String">Контрагенты; Пользователи; Продукты/Проекты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЭлектронноеПисьмоВходящее</Data></Cell>
+    <Cell><Data ss:Type="String">Учёт входящих email, адресаты/тема/тело, вложения. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Отправитель; Тема; Текст; Вложения; Привязка.</Data></Cell>
+    <Cell><Data ss:Type="String">УчетныеЗаписиЭлектроннойПочты; Файлы; Контрагенты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЭлектронноеПисьмоИсходящее</Data></Cell>
+    <Cell><Data ss:Type="String">Формирование/отправка исходящих email; статусы доставки. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Получатели; Тема; Текст; Вложения; Подпись/учётная запись.</Data></Cell>
+    <Cell><Data ss:Type="String">УчетныеЗаписиЭлектроннойПочты; Файлы; Контрагенты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">СообщениеSMS</Data></Cell>
+    <Cell><Data ss:Type="String">Отправка/приём SMS (при интеграции), хранение статусов. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Адресат; Текст; Статус отправки/доставки; Привязка.</Data></Cell>
+    <Cell><Data ss:Type="String">СообщениеSMSПрисоединенныеФайлы; Контакты</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">НазначениеОпросов</Data></Cell>
+    <Cell><Data ss:Type="String">Назначение анкет/опросов; контроль прохождения. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Шаблон анкеты; Респонденты; Сроки; Статусы.</Data></Cell>
+    <Cell><Data ss:Type="String">ШаблоныАнкет; Пользователи/Группы; ВариантыОтветов</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ТабельУчетаИспользованияРабочегоВремени</Data></Cell>
+    <Cell><Data ss:Type="String">Формирование табеля рабочего времени по сотрудникам за период. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Период; Подразделение; Сотрудники; Часы (обычные/ночные/выходные); Причины отсутствия.</Data></Cell>
+    <Cell><Data ss:Type="String">Сотрудники; ПроизводственныеКалендари; ПричиныОтсутствия</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ТабельПоТранспорту</Data></Cell>
+    <Cell><Data ss:Type="String">Учёт работы транспорта (рейсы, время/пробег/затраты) за период. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Транспорт; Рейсы; Часы/пробег; Водители; Статьи затрат.</Data></Cell>
+    <Cell><Data ss:Type="String">Персонал; Маршруты; СтатьиЗатрат; Подразделения</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">БТС_МСП</Data></Cell>
+    <Cell><Data ss:Type="String">Отраслевой документ БТС/МСП: фиксация специализированных показателей. Движений нет.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+    <Cell><Data ss:Type="String">Поля предметной области; комментарии.</Data></Cell>
+    <Cell><Data ss:Type="String">Каталоги/Перечисления по предметной области</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <Worksheet ss:Name="Справочники">
+  <Table ss:DefaultColumnWidth="120" ss:DefaultRowHeight="14">
+   <Column ss:Width="240"/>
+   <Column ss:Width="520"/>
+   <Column ss:Width="520"/>
+   <Column ss:Width="360"/>
+   <Row ss:StyleID="sHeader">
+    <Cell><Data ss:Type="String">Имя</Data></Cell>
+    <Cell><Data ss:Type="String">Назначение</Data></Cell>
+    <Cell><Data ss:Type="String">Реквизиты/характеристики (кратко)</Data></Cell>
+    <Cell><Data ss:Type="String">Взаимосвязи (используется кем)</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Проекты</Data></Cell>
+    <Cell><Data ss:Type="String">Карточка проекта; связь с продуктом и оргструктурой; статусы исполнения.</Data></Cell>
+    <Cell><Data ss:Type="String">Администратор; Даты; Продукт; СостояниеИсполнения; Инициатор; Подразделение; Организация; НаименованиеПолное; доп. сведения (ПВХ).</Data></Cell>
+    <Cell><Data ss:Type="String">Документы: ЗаявкаНаРесурсы; Бюджет; др.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Продукты</Data></Cell>
+    <Cell><Data ss:Type="String">Классификация продуктов/направлений; администратор; приоритет для отчётов.</Data></Cell>
+    <Cell><Data ss:Type="String">ВидПродукта; Администратор; ПриоритетДляОтчета.</Data></Cell>
+    <Cell><Data ss:Type="String">Документы: Бюджет; ЕжедневноеИспользованиеРесурсов; др.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">СтатьиЗатрат</Data></Cell>
+    <Cell><Data ss:Type="String">Аналитика затрат для план/факт учёта.</Data></Cell>
+    <Cell><Data ss:Type="String">Классификационные поля по конфигурации.</Data></Cell>
+    <Cell><Data ss:Type="String">Ссылаются многие документы движения.</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Договоры</Data></Cell>
+    <Cell><Data ss:Type="String">Карточки договоров (тип, суммы план/факт, связки с проектами/контрагентами).</Data></Cell>
+    <Cell><Data ss:Type="String">Проект; Контрагент; СуммаПоДоговору; СостояниеИсполнения; Сценарий; др.</Data></Cell>
+    <Cell><Data ss:Type="String">Используются большинством документов-движений.</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <Worksheet ss:Name="Отчёты">
+  <Table ss:DefaultColumnWidth="120" ss:DefaultRowHeight="14">
+   <Column ss:Width="300"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="640"/>
+   <Column ss:Width="320"/>
+   <Row ss:StyleID="sHeader">
+    <Cell><Data ss:Type="String">Имя</Data></Cell>
+    <Cell><Data ss:Type="String">Тип</Data></Cell>
+    <Cell><Data ss:Type="String">Назначение</Data></Cell>
+    <Cell><Data ss:Type="String">Комментарий</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ОтчетПоБюджету</Data></Cell>
+    <Cell><Data ss:Type="String">Отчёт</Data></Cell>
+    <Cell><Data ss:Type="String">Аналитика бюджета по продуктам/статьям/договорам.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ЕжедневнаяСводка</Data></Cell>
+    <Cell><Data ss:Type="String">Отчёт</Data></Cell>
+    <Cell><Data ss:Type="String">Оперативная сводка по использованию ресурсов.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">УниверсальныйОбменДаннымиXML</Data></Cell>
+    <Cell><Data ss:Type="String">Обработка</Data></Cell>
+    <Cell><Data ss:Type="String">Импорт/экспорт данных по правилам обмена.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">ПоискИУдалениеДублей</Data></Cell>
+    <Cell><Data ss:Type="String">Обработка</Data></Cell>
+    <Cell><Data ss:Type="String">Поиск и устранение дублирующихся объектов.</Data></Cell>
+    <Cell><Data ss:Type="String"></Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+ <Worksheet ss:Name="Взаимосвязи">
+  <Table ss:DefaultColumnWidth="120" ss:DefaultRowHeight="14">
+   <Column ss:Width="120"/>
+   <Column ss:Width="320"/>
+   <Column ss:Width="120"/>
+   <Column ss:Width="320"/>
+   <Column ss:Width="220"/>
+   <Row ss:StyleID="sHeader">
+    <Cell><Data ss:Type="String">ИсточникТип</Data></Cell>
+    <Cell><Data ss:Type="String">ИсточникИмя</Data></Cell>
+    <Cell><Data ss:Type="String">ЦельТип</Data></Cell>
+    <Cell><Data ss:Type="String">ЦельИмя</Data></Cell>
+    <Cell><Data ss:Type="String">ТипСвязи</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Документ</Data></Cell>
+    <Cell><Data ss:Type="String">Бюджет</Data></Cell>
+    <Cell><Data ss:Type="String">Регистр (накопл.)</Data></Cell>
+    <Cell><Data ss:Type="String">БюджетПоПродуктам; БюджетПоСтатьямЗатрат; Плановые*</Data></Cell>
+    <Cell><Data ss:Type="String">Движения при проведении</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Документ</Data></Cell>
+    <Cell><Data ss:Type="String">ЕжедневноеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">Регистр (накопл.)</Data></Cell>
+    <Cell><Data ss:Type="String">ФактическоеИспользованиеРесурсов</Data></Cell>
+    <Cell><Data ss:Type="String">Движения при проведении</Data></Cell>
+   </Row>
+   <Row>
+    <Cell><Data ss:Type="String">Документ</Data></Cell>
+    <Cell><Data ss:Type="String">ЗаявкаНаРесурсы</Data></Cell>
+    <Cell><Data ss:Type="String">Регистр (накопл.)</Data></Cell>
+    <Cell><Data ss:Type="String">ЗаявкиНаРесурсы; ЗаявкиНаРесурсыДС</Data></Cell>
+    <Cell><Data ss:Type="String">Движения при проведении</Data></Cell>
+   </Row>
+  </Table>
+ </Worksheet>
+
+</Workbook>
+
+
